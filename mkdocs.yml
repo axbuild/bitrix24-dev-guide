@@ -1,0 +1,125 @@
+site_name: Bitrix FAQ
+site_url: https://bitrix-faq.kaymak.pro
+site_author: Your Name
+site_description: Frequently Asked Questions about Bitrix
+
+# Репозиторий
+repo_name: your-username/bitrix-faq
+repo_url: https://github.com/your-username/bitrix-faq
+edit_uri: edit/main/docs/
+
+# Конфигурация темы
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Расширения
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Плагины
+plugins:
+  - search:
+      lang: ru
+  - git-revision-date-localized:
+      type: datetime
+      fallback_to_build_date: true
+  - git-authors
+  - minify:
+      minify_html: true
+  - glightbox
+
+# Дополнительный CSS
+extra_css:
+  - assets/extra.css
+
+# Дополнительный JavaScript
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Кастомизация
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/your-channel
+
+# Структура навигации
+nav:
+  - Главная: index.md
+  - Начало работы:
+    - getting-started/index.md
+    - Установка: getting-started/installation.md
+    - Настройка: getting-started/configuration.md
+  - Разработка:
+    - development/index.md
+    - Компоненты: development/components.md
+    - Модули: development/modules.md
+  - API:
+    - api/index.md
+    - REST API: api/rest.md
+    - PHP API: api/php.md
+  - О проекте:
+    - about/index.md
+    - Контрибьюторы: about/contributors.md
