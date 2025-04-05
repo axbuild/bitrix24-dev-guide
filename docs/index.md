@@ -9,7 +9,7 @@ Welcome to the Bitrix API documentation. This guide focuses on practical example
 - REST API
 - D7 (Modern Core)
 - Legacy Core
-- DataManager ORM
+- DataManager ORM 
 
 Each topic includes code examples in multiple approaches to help you choose the best solution for your needs.
 
