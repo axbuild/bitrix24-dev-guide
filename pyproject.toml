@@ -2,10 +2,7 @@
 name = "bitrix24-dev-guide"
 version = "0.1.0"
 description = "Comprehensive Bitrix24 API Documentation and Developer Guide"
-authors = ["Axbuild <s.abdulakhatov@gmail.com>"]
-packages = [
-    { include = "docs" }
-]
+authors = ["Axbuild <axbuild.github@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
