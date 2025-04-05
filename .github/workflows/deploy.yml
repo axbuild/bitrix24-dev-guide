@@ -33,4 +33,5 @@ jobs:
           poetry install --no-interaction
       - name: Build and deploy
         run: |
-          poetry run mkdocs gh-deploy --force
+          poetry run mkdocs build --verbose
+          poetry run mkdocs gh-deploy --force --verbose
