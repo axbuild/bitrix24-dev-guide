@@ -1,11 +1,11 @@
-site_name: Bitrix FAQ
-site_url: https://bitrix-faq.kaymak.pro
+site_name: Bitrix24 Developer Guide
+site_url: https://your-username.github.io/bitrix24-dev-guide
 site_author: Your Name
-site_description: Frequently Asked Questions about Bitrix
+site_description: Comprehensive Bitrix24 API Documentation and Developer Guide
 
 # Репозиторий
-repo_name: your-username/bitrix-faq
-repo_url: https://github.com/your-username/bitrix-faq
+repo_name: your-username/bitrix24-dev-guide
+repo_url: https://github.com/your-username/bitrix24-dev-guide
 edit_uri: edit/main/docs/
 
 # Конфигурация темы
@@ -15,84 +15,39 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.indexes
     - navigation.top
     - navigation.tracking
-    - navigation.indexes
     - search.highlight
     - search.share
     - search.suggest
     - content.code.copy
-    - content.action.edit
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    scheme: slate
+    primary: indigo
+    accent: indigo
 
 # Расширения
 markdown_extensions:
-  - admonition
+  - tables
   - attr_list
-  - def_list
-  - footnotes
-  - meta
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.superfences
 
 # Плагины
 plugins:
   - search:
       lang: ru
-  - git-revision-date-localized:
-      type: datetime
-      fallback_to_build_date: true
-  - git-authors
-  - minify:
-      minify_html: true
-  - glightbox
-
-# Дополнительный CSS
-extra_css:
-  - assets/extra.css
 
 # Дополнительный JavaScript
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Дополнительный CSS
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css
 
 # Кастомизация
 extra:
@@ -108,18 +63,32 @@ extra:
 # Структура навигации
 nav:
   - Главная: index.md
-  - Начало работы:
-    - getting-started/index.md
-    - Установка: getting-started/installation.md
-    - Настройка: getting-started/configuration.md
-  - Разработка:
-    - development/index.md
-    - Компоненты: development/components.md
-    - Модули: development/modules.md
-  - API:
-    - api/index.md
-    - REST API: api/rest.md
-    - PHP API: api/php.md
+  - Модули:
+    - Main: modules/main/index.md
+    - CRM:
+      - Overview: modules/crm/index.md
+      - Leads: modules/crm/leads.md
+      - Deals: modules/crm/deals.md
+      - Contacts: modules/crm/contacts.md
+      - Companies: modules/crm/companies.md
+      - Products: modules/crm/products.md
+      - Quotes: modules/crm/quotes.md
+      - Invoices: modules/crm/invoices.md
+    - Tasks: modules/tasks/index.md
+    - Iblock: modules/iblock/index.md
+    - Form: modules/form/index.md
+    - Disk: modules/disk/index.md
+    - Pull: modules/pull/index.md
+    - Socialnetwork: modules/socialnetwork/index.md
+    - Calendar: modules/calendar/index.md
+    - Forum: modules/forum/index.md
+    - Blog: modules/blog/index.md
+    - Sale: modules/sale/index.md
+    - Catalog: modules/catalog/index.md
+    - Support: modules/support/index.md
+    - Voximplant: modules/voximplant/index.md
+    - Im: modules/im/index.md
+    - Mobile: modules/mobile/index.md
   - О проекте:
-    - about/index.md
-    - Контрибьюторы: about/contributors.md
+    - Contributing: about/contributing.md
+    - Changelog: about/changelog.md
