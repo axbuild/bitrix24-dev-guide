@@ -2,495 +2,581 @@
 
 ## Overview | Обзор
 
-The Iblock module provides functionality for managing information blocks, including elements, properties, and sections. | Модуль Информационные блоки предоставляет функциональность для управления информационными блоками, включая элементы, свойства и разделы.
+The Iblock module provides functionality for managing information blocks, their elements, sections, and properties in Bitrix24. It is a core module for content management and data structuring. | Модуль Информационные блоки предоставляет функциональность для управления информационными блоками, их элементами, разделами и свойствами в Bitrix24. Это основной модуль для управления контентом и структурирования данных.
 
 ## Methods | Методы
 
-### Elements | Элементы
+### Information Blocks | Информационные блоки
 
-#### Get List | Получение списка
+#### Get Iblock | Получение информационного блока
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.element.list',
-    [
-        'iblockId' => 1,
-        'select' => ['*', 'PROPERTY_*'],
-        'filter' => ['ACTIVE' => 'Y'],
-        'order' => ['SORT' => 'ASC', 'ID' => 'DESC'],
-        'start' => 0
-    ]
-);
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$iblock = \Bitrix\Iblock\IblockTable::getList([
+    'filter' => ['=ID' => $iblockId],
+    'select' => ['*']
+])->fetch();
 
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$iblock = CIBlock::GetByID($iblockId)->Fetch();
+```
+
+#### Get Iblock List | Получение списка информационных блоков
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$iblocks = \Bitrix\Iblock\IblockTable::getList([
+    'filter' => ['=ACTIVE' => 'Y'],
+    'select' => ['*'],
+    'order' => ['SORT' => 'ASC']
+])->fetchAll();
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$iblocks = CIBlock::GetList(
+    ['SORT' => 'ASC'],
+    ['ACTIVE' => 'Y']
+);
+```
+
+#### Add Iblock | Добавление информационного блока
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$result = \Bitrix\Iblock\IblockTable::add([
+    'NAME' => 'News',
+    'CODE' => 'news',
+    'IBLOCK_TYPE_ID' => 'content',
+    'SITE_ID' => ['s1'],
+    'SORT' => 100,
+    'GROUP_ID' => ['1' => 'X', '2' => 'R'],
+    'VERSION' => 2,
+    'ACTIVE' => 'Y',
+    'DESCRIPTION' => 'News information block',
+    'DESCRIPTION_TYPE' => 'text',
+    'XML_ID' => 'NEWS_IBLOCK_XML_ID'
+]);
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$result = CIBlock::Add([
+    'NAME' => 'News',
+    'CODE' => 'news',
+    'IBLOCK_TYPE_ID' => 'content',
+    'SITE_ID' => ['s1'],
+    'SORT' => 100,
+    'GROUP_ID' => ['1' => 'X', '2' => 'R'],
+    'VERSION' => 2,
+    'ACTIVE' => 'Y',
+    'DESCRIPTION' => 'News information block',
+    'DESCRIPTION_TYPE' => 'text',
+    'XML_ID' => 'NEWS_IBLOCK_XML_ID'
+]);
+```
+
+#### Update Iblock | Обновление информационного блока
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$result = \Bitrix\Iblock\IblockTable::update($iblockId, [
+    'NAME' => 'Updated News',
+    'SORT' => 200
+]);
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$result = CIBlock::SetFields($iblockId, [
+    'NAME' => 'Updated News',
+    'SORT' => 200
+]);
+```
+
+#### Delete Iblock | Удаление информационного блока
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$result = \Bitrix\Iblock\IblockTable::delete($iblockId);
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$result = CIBlock::Delete($iblockId);
+```
+
+### Elements | Элементы
+
+#### Get Element | Получение элемента
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$element = \Bitrix\Iblock\ElementTable::getList([
+    'filter' => ['=ID' => $elementId],
+    'select' => ['*', 'PROPERTY_*']
+])->fetch();
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$element = CIBlockElement::GetByID($elementId)->Fetch();
+```
+
+#### Get Element List | Получение списка элементов
+
+```php
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
 $elements = \Bitrix\Iblock\ElementTable::getList([
+    'filter' => [
+        '=IBLOCK_ID' => $iblockId,
+        '=ACTIVE' => 'Y'
+    ],
     'select' => ['*', 'PROPERTY_*'],
-    'filter' => ['=IBLOCK_ID' => 1, '=ACTIVE' => 'Y'],
-    'order' => ['SORT' => 'ASC', 'ID' => 'DESC'],
-    'limit' => 50,
-    'offset' => 0
-]);
+    'order' => ['SORT' => 'ASC'],
+    'limit' => 10
+])->fetchAll();
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
 $elements = CIBlockElement::GetList(
-    ['SORT' => 'ASC', 'ID' => 'DESC'],
-    ['IBLOCK_ID' => 1, 'ACTIVE' => 'Y'],
+    ['SORT' => 'ASC'],
+    ['IBLOCK_ID' => $iblockId, 'ACTIVE' => 'Y'],
     false,
-    ['nTopCount' => 50],
+    ['nTopCount' => 10],
     ['*', 'PROPERTY_*']
 );
 ```
 
-#### Add | Добавление
+#### Add Element | Добавление элемента
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.element.add',
-    [
-        'iblockId' => 1,
-        'fields' => [
-            'NAME' => 'New Element',
-            'CODE' => 'new-element',
-            'IBLOCK_ID' => 1,
-            'ACTIVE' => 'Y',
-            'SORT' => 500,
-            'PROPERTY_VALUES' => [
-                'PROPERTY_CODE' => 'Property Value'
-            ]
-        ]
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
 $result = \Bitrix\Iblock\ElementTable::add([
+    'IBLOCK_ID' => $iblockId,
     'NAME' => 'New Element',
     'CODE' => 'new-element',
-    'IBLOCK_ID' => 1,
     'ACTIVE' => 'Y',
-    'SORT' => 500
+    'SORT' => 100,
+    'PREVIEW_TEXT' => 'Preview text',
+    'PREVIEW_TEXT_TYPE' => 'text',
+    'DETAIL_TEXT' => 'Detail text',
+    'DETAIL_TEXT_TYPE' => 'text',
+    'DATE_ACTIVE_FROM' => new \Bitrix\Main\Type\DateTime(),
+    'DATE_ACTIVE_TO' => new \Bitrix\Main\Type\DateTime(),
+    'XML_ID' => 'NEW_ELEMENT_XML_ID'
 ]);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$elementFields = [
+$result = CIBlockElement::Add([
+    'IBLOCK_ID' => $iblockId,
     'NAME' => 'New Element',
     'CODE' => 'new-element',
-    'IBLOCK_ID' => 1,
     'ACTIVE' => 'Y',
-    'SORT' => 500
-];
-$element = new CIBlockElement();
-$elementId = $element->Add($elementFields);
-
-// Add properties after element creation
-// Добавление свойств после создания элемента
-$element->SetPropertyValues($elementId, 'Property Value', 'PROPERTY_CODE');
+    'SORT' => 100,
+    'PREVIEW_TEXT' => 'Preview text',
+    'PREVIEW_TEXT_TYPE' => 'text',
+    'DETAIL_TEXT' => 'Detail text',
+    'DETAIL_TEXT_TYPE' => 'text',
+    'DATE_ACTIVE_FROM' => new \Bitrix\Main\Type\DateTime(),
+    'DATE_ACTIVE_TO' => new \Bitrix\Main\Type\DateTime(),
+    'XML_ID' => 'NEW_ELEMENT_XML_ID'
+]);
 ```
 
-#### Update | Обновление
+#### Update Element | Обновление элемента
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.element.update',
-    [
-        'iblockId' => 1,
-        'elementId' => 123,
-        'fields' => [
-            'NAME' => 'Updated Element',
-            'ACTIVE' => 'N',
-            'PROPERTY_VALUES' => [
-                'PROPERTY_CODE' => 'Updated Property Value'
-            ]
-        ]
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
-$result = \Bitrix\Iblock\ElementTable::update(123, [
+$result = \Bitrix\Iblock\ElementTable::update($elementId, [
     'NAME' => 'Updated Element',
-    'ACTIVE' => 'N'
+    'SORT' => 200
 ]);
 
-// Update properties
-// Обновление свойств
-\Bitrix\Iblock\Element::setPropertyValues(123, 1, 'Updated Property Value', 'PROPERTY_CODE');
-
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$elementFields = [
+$result = CIBlockElement::Update($elementId, [
     'NAME' => 'Updated Element',
-    'ACTIVE' => 'N'
-];
-$element = new CIBlockElement();
-$element->Update(123, $elementFields);
-
-// Update properties
-// Обновление свойств
-$element->SetPropertyValues(123, 'Updated Property Value', 'PROPERTY_CODE');
+    'SORT' => 200
+]);
 ```
 
-#### Delete | Удаление
+#### Delete Element | Удаление элемента
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.element.delete',
-    [
-        'iblockId' => 1,
-        'elementId' => 123
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
-$result = \Bitrix\Iblock\ElementTable::delete(123);
+$result = \Bitrix\Iblock\ElementTable::delete($elementId);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$element = new CIBlockElement();
-$element->Delete(123);
+$result = CIBlockElement::Delete($elementId);
 ```
 
 ### Sections | Разделы
 
-#### Get List | Получение списка
+#### Get Section | Получение раздела
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.section.list',
-    [
-        'iblockId' => 1,
-        'select' => ['*', 'UF_*'],
-        'filter' => ['ACTIVE' => 'Y'],
-        'order' => ['SORT' => 'ASC', 'ID' => 'DESC'],
-        'start' => 0
-    ]
-);
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$section = \Bitrix\Iblock\SectionTable::getList([
+    'filter' => ['=ID' => $sectionId],
+    'select' => ['*']
+])->fetch();
 
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$section = CIBlockSection::GetByID($sectionId)->Fetch();
+```
+
+#### Get Section List | Получение списка разделов
+
+```php
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
 $sections = \Bitrix\Iblock\SectionTable::getList([
-    'select' => ['*', 'UF_*'],
-    'filter' => ['=IBLOCK_ID' => 1, '=ACTIVE' => 'Y'],
-    'order' => ['SORT' => 'ASC', 'ID' => 'DESC'],
-    'limit' => 50,
-    'offset' => 0
-]);
+    'filter' => [
+        '=IBLOCK_ID' => $iblockId,
+        '=ACTIVE' => 'Y'
+    ],
+    'select' => ['*'],
+    'order' => ['SORT' => 'ASC']
+])->fetchAll();
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
 $sections = CIBlockSection::GetList(
-    ['SORT' => 'ASC', 'ID' => 'DESC'],
-    ['IBLOCK_ID' => 1, 'ACTIVE' => 'Y'],
-    false,
-    ['*', 'UF_*'],
-    ['nTopCount' => 50]
+    ['SORT' => 'ASC'],
+    ['IBLOCK_ID' => $iblockId, 'ACTIVE' => 'Y']
 );
 ```
 
-#### Add | Добавление
+#### Add Section | Добавление раздела
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.section.add',
-    [
-        'iblockId' => 1,
-        'fields' => [
-            'NAME' => 'New Section',
-            'CODE' => 'new-section',
-            'IBLOCK_ID' => 1,
-            'ACTIVE' => 'Y',
-            'SORT' => 500,
-            'SECTION_ID' => 0,
-            'DESCRIPTION' => 'Section description'
-        ]
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
 $result = \Bitrix\Iblock\SectionTable::add([
+    'IBLOCK_ID' => $iblockId,
     'NAME' => 'New Section',
     'CODE' => 'new-section',
-    'IBLOCK_ID' => 1,
+    'SORT' => 100,
     'ACTIVE' => 'Y',
-    'SORT' => 500,
-    'SECTION_ID' => 0,
-    'DESCRIPTION' => 'Section description'
+    'DESCRIPTION' => 'Section description',
+    'DESCRIPTION_TYPE' => 'text',
+    'PICTURE' => null,
+    'DETAIL_PICTURE' => null,
+    'XML_ID' => 'NEW_SECTION_XML_ID'
 ]);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$sectionFields = [
+$result = CIBlockSection::Add([
+    'IBLOCK_ID' => $iblockId,
     'NAME' => 'New Section',
     'CODE' => 'new-section',
-    'IBLOCK_ID' => 1,
+    'SORT' => 100,
     'ACTIVE' => 'Y',
-    'SORT' => 500,
-    'SECTION_ID' => 0,
-    'DESCRIPTION' => 'Section description'
-];
-$section = new CIBlockSection();
-$sectionId = $section->Add($sectionFields);
+    'DESCRIPTION' => 'Section description',
+    'DESCRIPTION_TYPE' => 'text',
+    'PICTURE' => null,
+    'DETAIL_PICTURE' => null,
+    'XML_ID' => 'NEW_SECTION_XML_ID'
+]);
 ```
 
-#### Update | Обновление
+#### Update Section | Обновление раздела
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.section.update',
-    [
-        'iblockId' => 1,
-        'sectionId' => 123,
-        'fields' => [
-            'NAME' => 'Updated Section',
-            'ACTIVE' => 'N',
-            'DESCRIPTION' => 'Updated description'
-        ]
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
-$result = \Bitrix\Iblock\SectionTable::update(123, [
+$result = \Bitrix\Iblock\SectionTable::update($sectionId, [
     'NAME' => 'Updated Section',
-    'ACTIVE' => 'N',
-    'DESCRIPTION' => 'Updated description'
+    'SORT' => 200
 ]);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$sectionFields = [
+$result = CIBlockSection::Update($sectionId, [
     'NAME' => 'Updated Section',
-    'ACTIVE' => 'N',
-    'DESCRIPTION' => 'Updated description'
-];
-$section = new CIBlockSection();
-$section->Update(123, $sectionFields);
+    'SORT' => 200
+]);
 ```
 
-#### Delete | Удаление
+#### Delete Section | Удаление раздела
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.section.delete',
-    [
-        'iblockId' => 1,
-        'sectionId' => 123
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
-$result = \Bitrix\Iblock\SectionTable::delete(123);
+$result = \Bitrix\Iblock\SectionTable::delete($sectionId);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$section = new CIBlockSection();
-$section->Delete(123);
+$result = CIBlockSection::Delete($sectionId);
 ```
 
 ### Properties | Свойства
 
-#### Get List | Получение списка
+#### Get Property | Получение свойства
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.property.list',
-    [
-        'iblockId' => 1,
-        'select' => ['*'],
-        'filter' => ['ACTIVE' => 'Y'],
-        'order' => ['SORT' => 'ASC', 'ID' => 'DESC'],
-        'start' => 0
-    ]
-);
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$property = \Bitrix\Iblock\PropertyTable::getList([
+    'filter' => ['=ID' => $propertyId],
+    'select' => ['*']
+])->fetch();
 
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$property = CIBlockProperty::GetByID($propertyId)->Fetch();
+```
+
+#### Get Property List | Получение списка свойств
+
+```php
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
 $properties = \Bitrix\Iblock\PropertyTable::getList([
+    'filter' => [
+        '=IBLOCK_ID' => $iblockId,
+        '=ACTIVE' => 'Y'
+    ],
     'select' => ['*'],
-    'filter' => ['=IBLOCK_ID' => 1, '=ACTIVE' => 'Y'],
-    'order' => ['SORT' => 'ASC', 'ID' => 'DESC'],
-    'limit' => 50,
-    'offset' => 0
-]);
+    'order' => ['SORT' => 'ASC']
+])->fetchAll();
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
 $properties = CIBlockProperty::GetList(
-    ['SORT' => 'ASC', 'ID' => 'DESC'],
-    ['IBLOCK_ID' => 1, 'ACTIVE' => 'Y']
+    ['SORT' => 'ASC'],
+    ['IBLOCK_ID' => $iblockId, 'ACTIVE' => 'Y']
 );
 ```
 
-#### Add | Добавление
+#### Add Property | Добавление свойства
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.property.add',
-    [
-        'iblockId' => 1,
-        'fields' => [
-            'NAME' => 'New Property',
-            'CODE' => 'NEW_PROPERTY',
-            'IBLOCK_ID' => 1,
-            'ACTIVE' => 'Y',
-            'SORT' => 500,
-            'PROPERTY_TYPE' => 'S',
-            'WITH_DESCRIPTION' => 'N',
-            'MULTIPLE' => 'N',
-            'IS_REQUIRED' => 'N'
-        ]
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
 $result = \Bitrix\Iblock\PropertyTable::add([
+    'IBLOCK_ID' => $iblockId,
     'NAME' => 'New Property',
-    'CODE' => 'NEW_PROPERTY',
-    'IBLOCK_ID' => 1,
-    'ACTIVE' => 'Y',
-    'SORT' => 500,
+    'CODE' => 'new_property',
     'PROPERTY_TYPE' => 'S',
+    'SORT' => 100,
+    'ACTIVE' => 'Y',
     'WITH_DESCRIPTION' => 'N',
     'MULTIPLE' => 'N',
-    'IS_REQUIRED' => 'N'
+    'MULTIPLE_CNT' => 1,
+    'IS_REQUIRED' => 'N',
+    'XML_ID' => 'NEW_PROPERTY_XML_ID'
 ]);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$propertyFields = [
+$result = CIBlockProperty::Add([
+    'IBLOCK_ID' => $iblockId,
     'NAME' => 'New Property',
-    'CODE' => 'NEW_PROPERTY',
-    'IBLOCK_ID' => 1,
-    'ACTIVE' => 'Y',
-    'SORT' => 500,
+    'CODE' => 'new_property',
     'PROPERTY_TYPE' => 'S',
+    'SORT' => 100,
+    'ACTIVE' => 'Y',
     'WITH_DESCRIPTION' => 'N',
     'MULTIPLE' => 'N',
-    'IS_REQUIRED' => 'N'
-];
-$property = new CIBlockProperty();
-$propertyId = $property->Add($propertyFields);
+    'MULTIPLE_CNT' => 1,
+    'IS_REQUIRED' => 'N',
+    'XML_ID' => 'NEW_PROPERTY_XML_ID'
+]);
 ```
 
-#### Update | Обновление
+#### Update Property | Обновление свойства
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.property.update',
-    [
-        'iblockId' => 1,
-        'propertyId' => 123,
-        'fields' => [
-            'NAME' => 'Updated Property',
-            'ACTIVE' => 'N',
-            'IS_REQUIRED' => 'Y'
-        ]
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
-$result = \Bitrix\Iblock\PropertyTable::update(123, [
+$result = \Bitrix\Iblock\PropertyTable::update($propertyId, [
     'NAME' => 'Updated Property',
-    'ACTIVE' => 'N',
-    'IS_REQUIRED' => 'Y'
+    'SORT' => 200
 ]);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$propertyFields = [
+$result = CIBlockProperty::Update($propertyId, [
     'NAME' => 'Updated Property',
-    'ACTIVE' => 'N',
-    'IS_REQUIRED' => 'Y'
-];
-$property = new CIBlockProperty();
-$property->Update(123, $propertyFields);
+    'SORT' => 200
+]);
 ```
 
-#### Delete | Удаление
+#### Delete Property | Удаление свойства
 
 ```php
-// REST API
-// Requires: CRest::Init() with proper credentials
-// Требуется: CRest::Init() с правильными учетными данными
-$result = CRest::call(
-    'crm.iblock.property.delete',
-    [
-        'iblockId' => 1,
-        'propertyId' => 123
-    ]
-);
-
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('iblock')
 // Требуется: Bitrix\Main\Loader::includeModule('iblock')
-$result = \Bitrix\Iblock\PropertyTable::delete(123);
+$result = \Bitrix\Iblock\PropertyTable::delete($propertyId);
 
 // Legacy
 // Requires: CModule::IncludeModule('iblock')
 // Требуется: CModule::IncludeModule('iblock')
-$property = new CIBlockProperty();
-$property->Delete(123);
+$result = CIBlockProperty::Delete($propertyId);
+```
+
+### Property Values | Значения свойств
+
+#### Get Property Value | Получение значения свойства
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$propertyValue = \Bitrix\Iblock\ElementPropertyTable::getList([
+    'filter' => [
+        '=IBLOCK_PROPERTY_ID' => $propertyId,
+        '=IBLOCK_ELEMENT_ID' => $elementId
+    ],
+    'select' => ['*']
+])->fetch();
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$propertyValue = CIBlockElement::GetProperty(
+    $iblockId,
+    $elementId,
+    ['sort' => 'asc'],
+    ['ID' => $propertyId]
+)->Fetch();
+```
+
+#### Get Property Values | Получение значений свойств
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$propertyValues = \Bitrix\Iblock\ElementPropertyTable::getList([
+    'filter' => ['=IBLOCK_ELEMENT_ID' => $elementId],
+    'select' => ['*', 'PROPERTY.NAME']
+])->fetchAll();
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$propertyValues = CIBlockElement::GetProperty(
+    $iblockId,
+    $elementId,
+    ['sort' => 'asc'],
+    ['*']
+);
+```
+
+#### Set Property Value | Установка значения свойства
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$result = \Bitrix\Iblock\ElementPropertyTable::add([
+    'IBLOCK_PROPERTY_ID' => $propertyId,
+    'IBLOCK_ELEMENT_ID' => $elementId,
+    'VALUE' => 'Property value',
+    'DESCRIPTION' => 'Property description'
+]);
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$result = CIBlockElement::SetPropertyValues(
+    $elementId,
+    $iblockId,
+    'Property value',
+    $propertyId
+);
+```
+
+#### Update Property Value | Обновление значения свойства
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$result = \Bitrix\Iblock\ElementPropertyTable::update($propertyValueId, [
+    'VALUE' => 'Updated property value',
+    'DESCRIPTION' => 'Updated property description'
+]);
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$result = CIBlockElement::SetPropertyValues(
+    $elementId,
+    $iblockId,
+    'Updated property value',
+    $propertyId
+);
+```
+
+#### Delete Property Value | Удаление значения свойства
+
+```php
+// D7
+// Requires: Bitrix\Main\Loader::includeModule('iblock')
+// Требуется: Bitrix\Main\Loader::includeModule('iblock')
+$result = \Bitrix\Iblock\ElementPropertyTable::delete($propertyValueId);
+
+// Legacy
+// Requires: CModule::IncludeModule('iblock')
+// Требуется: CModule::IncludeModule('iblock')
+$result = CIBlockElement::SetPropertyValues(
+    $elementId,
+    $iblockId,
+    null,
+    $propertyId
+);
 ``` 
