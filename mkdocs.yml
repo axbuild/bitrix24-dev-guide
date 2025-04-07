@@ -1,14 +1,14 @@
 site_name: Bitrix24 Developer Guide
 site_url: https://axbuild.github.io/bitrix24-dev-guide/
 site_author: "Axbuild"
-site_description: Comprehensive Bitrix24 API Documentation and Developer Guide
+site_description: "Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices."
 
 # Repository
 repo_name: axbuild/bitrix24-dev-guide
 repo_url: https://github.com/axbuild/bitrix24-dev-guide
 edit_uri: edit/main/docs/
 
-# Конфигурация темы
+# SEO and Meta Tags
 theme:
   name: material
   language: ru
@@ -29,6 +29,35 @@ theme:
     scheme: slate
     primary: indigo
     accent: indigo
+  # SEO optimization
+  icon:
+    logo: material/book-open-page-variant
+  favicon: assets/favicon.png
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# SEO Extensions
+markdown_extensions:
+  - meta
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
 
 # Расширения
 markdown_extensions:
@@ -41,7 +70,25 @@ markdown_extensions:
 # Плагины
 plugins:
   - search:
-      lang: ru
+      lang: 
+        - ru
+        - en
+      separator: '[\s\-\.]+'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  - social:
+      cards_color:
+        fill: "#0FF1CE" 
+        text: "#FFFFFF"
+  - tags:
+      tags_file: tags.md
+  - redirects:
+      redirect_maps:
+        'old/path.md': 'new/path.md'
 
 # Дополнительный JavaScript
 extra_javascript:
@@ -63,6 +110,29 @@ extra:
       link: https://github.com/axbuild
     - icon: fontawesome/brands/telegram
       link: https://t.me/axbuild
+  alternate:
+    - name: Русский
+      link: /
+      lang: ru
+    - name: English
+      link: /en/
+      lang: en
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  tags:
+    - Bitrix24
+    - API
+    - REST API
+    - CRM
+    - Development
+    - Integration
+    - Modules
+    - Documentation
 
 # Структура навигации
 nav:

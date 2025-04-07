@@ -1,4 +1,24 @@
-# Bitrix API Documentation / Документация по API Битрикс
+---
+title: Bitrix24 Developer Guide - Полное руководство по разработке
+description: Comprehensive guide for Bitrix24 development, including REST API, modules, integration methods and best practices
+keywords:
+  - Bitrix24
+  - API Documentation
+  - REST API
+  - CRM Integration
+  - Bitrix24 Development
+  - Modules
+  - PHP Development
+authors:
+  - Axbuild Team
+tags:
+  - documentation
+  - getting-started
+search:
+  boost: 2.0
+---
+
+# Bitrix24 Developer Guide
 
 [English](#english) | [Русский](#russian)
 
