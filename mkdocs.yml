@@ -18,6 +18,9 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.tracking
+    - navigation.expand
+    - navigation.path
+    - toc.integrate
     - search.highlight
     - search.share
     - search.suggest
@@ -48,6 +51,7 @@ extra_javascript:
 # Дополнительный CSS
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css
+  - stylesheets/extra.css
 
 # Кастомизация
 extra:
@@ -65,15 +69,7 @@ nav:
   - Главная: index.md
   - Модули:
     - Main: modules/main/index.md
-    - CRM:
-      - Overview: modules/crm/index.md
-      - Leads: modules/crm/leads.md
-      - Deals: modules/crm/deals.md
-      - Contacts: modules/crm/contacts.md
-      - Companies: modules/crm/companies.md
-      - Products: modules/crm/products.md
-      - Quotes: modules/crm/quotes.md
-      - Invoices: modules/crm/invoices.md
+    - CRM: modules/crm/index.md
     - Tasks: modules/tasks/index.md
     - Iblock: modules/iblock/index.md
     - Form: modules/form/index.md
