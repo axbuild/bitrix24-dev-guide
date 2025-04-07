@@ -12,13 +12,13 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/crm/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/iblock/">
       
       
-        <link rel="prev" href="../main/">
+        <link rel="prev" href="../tasks/">
       
       
-        <link rel="next" href="leads/">
+        <link rel="next" href="../form/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Overview - Bitrix24 Developer Guide</title>
+        <title>Iblock - Bitrix24 Developer Guide</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crm-module-crm" class="md-skip">
+        <a href="#iblock-module" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Iblock
             
           </span>
         </div>
@@ -439,8 +439,6 @@
                 
   
   
-    
-  
   
   
     
@@ -476,15 +474,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../crm/" class="md-nav__link ">
               
   
   
@@ -497,13 +495,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             CRM
@@ -519,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="leads/" class="md-nav__link">
+      <a href="../crm/leads/" class="md-nav__link">
         
   
   
@@ -542,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deals.md" class="md-nav__link">
+      <a href="../crm/deals.md" class="md-nav__link">
         
   
   
@@ -565,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contacts.md" class="md-nav__link">
+      <a href="../crm/contacts.md" class="md-nav__link">
         
   
   
@@ -588,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="companies.md" class="md-nav__link">
+      <a href="../crm/companies.md" class="md-nav__link">
         
   
   
@@ -611,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="products.md" class="md-nav__link">
+      <a href="../crm/products.md" class="md-nav__link">
         
   
   
@@ -634,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quotes.md" class="md-nav__link">
+      <a href="../crm/quotes.md" class="md-nav__link">
         
   
   
@@ -657,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="invoices.md" class="md-nav__link">
+      <a href="../crm/invoices.md" class="md-nav__link">
         
   
   
@@ -708,10 +706,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../iblock/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Iblock
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -722,6 +742,203 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements | Элементы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements | Элементы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sections | Разделы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sections | Разделы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties | Свойства
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties | Свойства">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1181,13 +1398,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#leads" class="md-nav__link">
+  <a href="#elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Leads | Лиды
+      Elements | Элементы
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Leads | Лиды">
+    <nav class="md-nav" aria-label="Elements | Элементы">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1232,13 +1449,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deals" class="md-nav__link">
+  <a href="#sections" class="md-nav__link">
     <span class="md-ellipsis">
-      Deals | Сделки
+      Sections | Разделы
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deals | Сделки">
+    <nav class="md-nav" aria-label="Sections | Разделы">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1283,13 +1500,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contacts" class="md-nav__link">
+  <a href="#properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Contacts | Контакты
+      Properties | Свойства
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Contacts | Контакты">
+    <nav class="md-nav" aria-label="Properties | Свойства">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1333,57 +1550,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#companies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Companies | Компании
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Companies | Компании">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1408,45 +1574,46 @@
   
 
 
-<h1 id="crm-module-crm">CRM Module | Модуль CRM</h1>
+<h1 id="iblock-module">Iblock Module | Модуль Информационные блоки</h1>
 <h2 id="overview">Overview | Обзор</h2>
-<p>The CRM module provides functionality for managing customer relationships, including leads, deals, contacts, and companies. | Модуль CRM предоставляет функциональность для управления взаимоотношениями с клиентами, включая лиды, сделки, контакты и компании.</p>
+<p>The Iblock module provides functionality for managing information blocks, including elements, properties, and sections. | Модуль Информационные блоки предоставляет функциональность для управления информационными блоками, включая элементы, свойства и разделы.</p>
 <h2 id="methods">Methods | Методы</h2>
-<h3 id="leads">Leads | Лиды</h3>
+<h3 id="elements">Elements | Элементы</h3>
 <h4 id="get-list">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.list&#39;,</span>
+<span class="x">    &#39;crm.iblock.element.list&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY_*&#39;],</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">        &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$leads = \Bitrix\Crm\LeadTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$elements = \Bitrix\Iblock\ElementTable::getList([</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY_*&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ID&#39; =&gt; 1, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leads = CCrmLead::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    true,</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$elements = CIBlockElement::GetList(</span>
+<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    [&#39;IBLOCK_ID&#39; =&gt; 1, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    false,</span>
 <span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">    [&#39;*&#39;, &#39;PROPERTY_*&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add">Add | Добавление</h4>
@@ -1454,133 +1621,154 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.add&#39;,</span>
+<span class="x">    &#39;crm.iblock.element.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">            &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">            &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">            &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;New Element&#39;,</span>
+<span class="x">            &#39;CODE&#39; =&gt; &#39;new-element&#39;,</span>
+<span class="x">            &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">            &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">            &#39;PROPERTY_VALUES&#39; =&gt; [</span>
+<span class="x">                &#39;PROPERTY_CODE&#39; =&gt; &#39;Property Value&#39;</span>
+<span class="x">            ]</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\ElementTable::add([</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Element&#39;,</span>
+<span class="x">    &#39;CODE&#39; =&gt; &#39;new-element&#39;,</span>
+<span class="x">    &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leadFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$elementFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Element&#39;,</span>
+<span class="x">    &#39;CODE&#39; =&gt; &#39;new-element&#39;,</span>
+<span class="x">    &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500</span>
 <span class="x">];</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$leadId = $lead-&gt;Add($leadFields);</span>
+<span class="x">$element = new CIBlockElement();</span>
+<span class="x">$elementId = $element-&gt;Add($elementFields);</span>
+
+<span class="x">// Add properties after element creation</span>
+<span class="x">// Добавление свойств после создания элемента</span>
+<span class="x">$element-&gt;SetPropertyValues($elementId, &#39;Property Value&#39;, &#39;PROPERTY_CODE&#39;);</span>
 </code></pre></div>
 <h4 id="update">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.update&#39;,</span>
+<span class="x">    &#39;crm.iblock.element.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;elementId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;Updated Element&#39;,</span>
+<span class="x">            &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;PROPERTY_VALUES&#39; =&gt; [</span>
+<span class="x">                &#39;PROPERTY_CODE&#39; =&gt; &#39;Updated Property Value&#39;</span>
+<span class="x">            ]</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::update(123, [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\ElementTable::update(123, [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Element&#39;,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;N&#39;</span>
 <span class="x">]);</span>
 
+<span class="x">// Update properties</span>
+<span class="x">// Обновление свойств</span>
+<span class="x">\Bitrix\Iblock\Element::setPropertyValues(123, 1, &#39;Updated Property Value&#39;, &#39;PROPERTY_CODE&#39;);</span>
+
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leadFields = [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$elementFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Element&#39;,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;N&#39;</span>
 <span class="x">];</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$lead-&gt;Update(123, $leadFields);</span>
+<span class="x">$element = new CIBlockElement();</span>
+<span class="x">$element-&gt;Update(123, $elementFields);</span>
+
+<span class="x">// Update properties</span>
+<span class="x">// Обновление свойств</span>
+<span class="x">$element-&gt;SetPropertyValues(123, &#39;Updated Property Value&#39;, &#39;PROPERTY_CODE&#39;);</span>
 </code></pre></div>
 <h4 id="delete">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">    &#39;crm.iblock.element.delete&#39;,</span>
+<span class="x">    [</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;elementId&#39; =&gt; 123</span>
+<span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::delete(123);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\ElementTable::delete(123);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$lead-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$element = new CIBlockElement();</span>
+<span class="x">$element-&gt;Delete(123);</span>
 </code></pre></div>
-<h3 id="deals">Deals | Сделки</h3>
+<h3 id="sections">Sections | Разделы</h3>
 <h4 id="get-list_1">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.list&#39;,</span>
+<span class="x">    &#39;crm.iblock.section.list&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
 <span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">        &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$deals = \Bitrix\Crm\DealTable::getList([</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$sections = \Bitrix\Iblock\SectionTable::getList([</span>
 <span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ID&#39; =&gt; 1, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$deals = CCrmDeal::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$sections = CIBlockSection::GetList(</span>
+<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    [&#39;IBLOCK_ID&#39; =&gt; 1, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    false,</span>
+<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
+<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add_1">Add | Добавление</h4>
@@ -1588,130 +1776,142 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.add&#39;,</span>
+<span class="x">    &#39;crm.iblock.section.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">            &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">            &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">            &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
+<span class="x">            &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
+<span class="x">            &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">            &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">            &#39;SECTION_ID&#39; =&gt; 0,</span>
+<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\SectionTable::add([</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
+<span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
+<span class="x">    &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;SECTION_ID&#39; =&gt; 0,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$dealFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$sectionFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
+<span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
+<span class="x">    &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;SECTION_ID&#39; =&gt; 0,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;</span>
 <span class="x">];</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$dealId = $deal-&gt;Add($dealFields);</span>
+<span class="x">$section = new CIBlockSection();</span>
+<span class="x">$sectionId = $section-&gt;Add($sectionFields);</span>
 </code></pre></div>
 <h4 id="update_1">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.update&#39;,</span>
+<span class="x">    &#39;crm.iblock.section.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;sectionId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">            &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
+<span class="x">            &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::update(123, [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\SectionTable::update(123, [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$dealFields = [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$sectionFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;</span>
 <span class="x">];</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$deal-&gt;Update(123, $dealFields);</span>
+<span class="x">$section = new CIBlockSection();</span>
+<span class="x">$section-&gt;Update(123, $sectionFields);</span>
 </code></pre></div>
 <h4 id="delete_1">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">    &#39;crm.iblock.section.delete&#39;,</span>
+<span class="x">    [</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;sectionId&#39; =&gt; 123</span>
+<span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::delete(123);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\SectionTable::delete(123);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$deal-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$section = new CIBlockSection();</span>
+<span class="x">$section-&gt;Delete(123);</span>
 </code></pre></div>
-<h3 id="contacts">Contacts | Контакты</h3>
+<h3 id="properties">Properties | Свойства</h3>
 <h4 id="get-list_2">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.list&#39;,</span>
+<span class="x">    &#39;crm.iblock.property.list&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">        &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$contacts = \Bitrix\Crm\ContactTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$properties = \Bitrix\Iblock\PropertyTable::getList([</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ID&#39; =&gt; 1, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contacts = CCrmContact::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$properties = CIBlockProperty::GetList(</span>
+<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    [&#39;IBLOCK_ID&#39; =&gt; 1, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add_2">Add | Добавление</h4>
@@ -1719,222 +1919,114 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.add&#39;,</span>
+<span class="x">    &#39;crm.iblock.property.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">            &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">            &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;New Property&#39;,</span>
+<span class="x">            &#39;CODE&#39; =&gt; &#39;NEW_PROPERTY&#39;,</span>
+<span class="x">            &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">            &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">            &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<span class="x">            &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\PropertyTable::add([</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Property&#39;,</span>
+<span class="x">    &#39;CODE&#39; =&gt; &#39;NEW_PROPERTY&#39;,</span>
+<span class="x">    &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contactFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$propertyFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Property&#39;,</span>
+<span class="x">    &#39;CODE&#39; =&gt; &#39;NEW_PROPERTY&#39;,</span>
+<span class="x">    &#39;IBLOCK_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;</span>
 <span class="x">];</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contactId = $contact-&gt;Add($contactFields);</span>
+<span class="x">$property = new CIBlockProperty();</span>
+<span class="x">$propertyId = $property-&gt;Add($propertyFields);</span>
 </code></pre></div>
 <h4 id="update_2">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.update&#39;,</span>
+<span class="x">    &#39;crm.iblock.property.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;propertyId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;Updated Property&#39;,</span>
+<span class="x">            &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;IS_REQUIRED&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::update(123, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\PropertyTable::update(123, [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property&#39;,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contactFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$propertyFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property&#39;,</span>
+<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">];</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contact-&gt;Update(123, $contactFields);</span>
+<span class="x">$property = new CIBlockProperty();</span>
+<span class="x">$property-&gt;Update(123, $propertyFields);</span>
 </code></pre></div>
 <h4 id="delete_2">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contact-&gt;Delete(123);</span>
-</code></pre></div>
-<h3 id="companies">Companies | Компании</h3>
-<h4 id="get-list_3">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.list&#39;,</span>
+<span class="x">    &#39;crm.iblock.property.delete&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
+<span class="x">        &#39;iblockId&#39; =&gt; 1,</span>
+<span class="x">        &#39;propertyId&#39; =&gt; 123</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$companies = \Bitrix\Crm\CompanyTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
-<span class="x">]);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">$result = \Bitrix\Iblock\PropertyTable::delete(123);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companies = CCrmCompany::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="add_3">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">            &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">            &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">            &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">    &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companyFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">    &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">];</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$companyId = $company-&gt;Add($companyFields);</span>
-</code></pre></div>
-<h4 id="update_3">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">            &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::update(123, [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companyFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">];</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$company-&gt;Update(123, $companyFields);</span>
-</code></pre></div>
-<h4 id="delete_3">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$company-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
+<span class="x">$property = new CIBlockProperty();</span>
+<span class="x">$property-&gt;Delete(123);</span>
 </code></pre></div>
 
 

@@ -12,13 +12,13 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/crm/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/tasks/">
       
       
-        <link rel="prev" href="../main/">
+        <link rel="prev" href="../crm/leads/">
       
       
-        <link rel="next" href="leads/">
+        <link rel="next" href="../iblock/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Overview - Bitrix24 Developer Guide</title>
+        <title>Tasks - Bitrix24 Developer Guide</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crm-module-crm" class="md-skip">
+        <a href="#tasks-module" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Tasks
             
           </span>
         </div>
@@ -439,8 +439,6 @@
                 
   
   
-    
-  
   
   
     
@@ -476,15 +474,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../crm/" class="md-nav__link ">
               
   
   
@@ -497,13 +495,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             CRM
@@ -519,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="leads/" class="md-nav__link">
+      <a href="../crm/leads/" class="md-nav__link">
         
   
   
@@ -542,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deals.md" class="md-nav__link">
+      <a href="../crm/deals.md" class="md-nav__link">
         
   
   
@@ -565,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contacts.md" class="md-nav__link">
+      <a href="../crm/contacts.md" class="md-nav__link">
         
   
   
@@ -588,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="companies.md" class="md-nav__link">
+      <a href="../crm/companies.md" class="md-nav__link">
         
   
   
@@ -611,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="products.md" class="md-nav__link">
+      <a href="../crm/products.md" class="md-nav__link">
         
   
   
@@ -634,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quotes.md" class="md-nav__link">
+      <a href="../crm/quotes.md" class="md-nav__link">
         
   
   
@@ -657,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="invoices.md" class="md-nav__link">
+      <a href="../crm/invoices.md" class="md-nav__link">
         
   
   
@@ -685,10 +683,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tasks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -699,6 +719,203 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks | Задачи
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasks | Задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Comments | Комментарии к задачам
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Comments | Комментарии к задачам">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-checklists-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Checklists | Чек-листы задач
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Checklists | Чек-листы задач">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1181,13 +1398,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#leads" class="md-nav__link">
+  <a href="#tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Leads | Лиды
+      Tasks | Задачи
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Leads | Лиды">
+    <nav class="md-nav" aria-label="Tasks | Задачи">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1232,13 +1449,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deals" class="md-nav__link">
+  <a href="#task-comments" class="md-nav__link">
     <span class="md-ellipsis">
-      Deals | Сделки
+      Task Comments | Комментарии к задачам
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deals | Сделки">
+    <nav class="md-nav" aria-label="Task Comments | Комментарии к задачам">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1283,13 +1500,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contacts" class="md-nav__link">
+  <a href="#task-checklists-" class="md-nav__link">
     <span class="md-ellipsis">
-      Contacts | Контакты
+      Task Checklists | Чек-листы задач
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Contacts | Контакты">
+    <nav class="md-nav" aria-label="Task Checklists | Чек-листы задач">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1333,57 +1550,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#companies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Companies | Компании
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Companies | Компании">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1408,45 +1574,44 @@
   
 
 
-<h1 id="crm-module-crm">CRM Module | Модуль CRM</h1>
+<h1 id="tasks-module">Tasks Module | Модуль Задачи</h1>
 <h2 id="overview">Overview | Обзор</h2>
-<p>The CRM module provides functionality for managing customer relationships, including leads, deals, contacts, and companies. | Модуль CRM предоставляет функциональность для управления взаимоотношениями с клиентами, включая лиды, сделки, контакты и компании.</p>
+<p>The Tasks module provides functionality for managing tasks, including creating, updating, and tracking task progress. | Модуль Задачи предоставляет функциональность для управления задачами, включая создание, обновление и отслеживание прогресса задач.</p>
 <h2 id="methods">Methods | Методы</h2>
-<h3 id="leads">Leads | Лиды</h3>
+<h3 id="tasks">Tasks | Задачи</h3>
 <h4 id="get-list">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.list&#39;,</span>
+<span class="x">    &#39;tasks.task.list&#39;,</span>
 <span class="x">    [</span>
 <span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;RESPONSIBLE_ID&#39; =&gt; 1],</span>
+<span class="x">        &#39;order&#39; =&gt; [&#39;DEADLINE&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$leads = \Bitrix\Crm\LeadTable::getList([</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$tasks = \Bitrix\Tasks\TaskTable::getList([</span>
 <span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=RESPONSIBLE_ID&#39; =&gt; 1],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;DEADLINE&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leads = CCrmLead::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$tasks = CTasks::GetList(</span>
+<span class="x">    [&#39;DEADLINE&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    [&#39;RESPONSIBLE_ID&#39; =&gt; 1],</span>
+<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
+<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add">Add | Добавление</h4>
@@ -1454,133 +1619,135 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.add&#39;,</span>
+<span class="x">    &#39;tasks.task.add&#39;,</span>
 <span class="x">    [</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">            &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">            &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">            &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Task&#39;,</span>
+<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Task description&#39;,</span>
+<span class="x">            &#39;RESPONSIBLE_ID&#39; =&gt; 1,</span>
+<span class="x">            &#39;CREATED_BY&#39; =&gt; 1,</span>
+<span class="x">            &#39;DEADLINE&#39; =&gt; &#39;2023-12-31&#39;,</span>
+<span class="x">            &#39;PRIORITY&#39; =&gt; 2</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\Task::add([</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Task&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Task description&#39;,</span>
+<span class="x">    &#39;RESPONSIBLE_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;CREATED_BY&#39; =&gt; 1,</span>
+<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2023-12-31&#39;,</span>
+<span class="x">    &#39;PRIORITY&#39; =&gt; 2</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leadFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$taskFields = [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Task&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Task description&#39;,</span>
+<span class="x">    &#39;RESPONSIBLE_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;CREATED_BY&#39; =&gt; 1,</span>
+<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2023-12-31&#39;,</span>
+<span class="x">    &#39;PRIORITY&#39; =&gt; 2</span>
 <span class="x">];</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$leadId = $lead-&gt;Add($leadFields);</span>
+<span class="x">$task = new CTasks();</span>
+<span class="x">$taskId = $task-&gt;Add($taskFields);</span>
 </code></pre></div>
 <h4 id="update">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.update&#39;,</span>
+<span class="x">    &#39;tasks.task.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated Task&#39;,</span>
+<span class="x">            &#39;STATUS&#39; =&gt; 5,</span>
+<span class="x">            &#39;DEADLINE&#39; =&gt; &#39;2024-01-15&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::update(123, [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\Task::update(123, [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Task&#39;,</span>
+<span class="x">    &#39;STATUS&#39; =&gt; 5,</span>
+<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2024-01-15&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leadFields = [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$taskFields = [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Task&#39;,</span>
+<span class="x">    &#39;STATUS&#39; =&gt; 5,</span>
+<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2024-01-15&#39;</span>
 <span class="x">];</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$lead-&gt;Update(123, $leadFields);</span>
+<span class="x">$task = new CTasks();</span>
+<span class="x">$task-&gt;Update(123, $taskFields);</span>
 </code></pre></div>
 <h4 id="delete">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">    &#39;tasks.task.delete&#39;,</span>
+<span class="x">    [&#39;taskId&#39; =&gt; 123]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::delete(123);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\Task::delete(123);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$lead-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$task = new CTasks();</span>
+<span class="x">$task-&gt;Delete(123);</span>
 </code></pre></div>
-<h3 id="deals">Deals | Сделки</h3>
+<h3 id="task-comments">Task Comments | Комментарии к задачам</h3>
 <h4 id="get-list_1">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.list&#39;,</span>
+<span class="x">    &#39;tasks.comment.list&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
 <span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;order&#39; =&gt; [&#39;POST_DATE&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$deals = \Bitrix\Crm\DealTable::getList([</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$comments = \Bitrix\Tasks\CommentTable::getList([</span>
 <span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=TASK_ID&#39; =&gt; 123],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;POST_DATE&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$deals = CCrmDeal::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$comments = CTaskComment::GetList(</span>
+<span class="x">    [&#39;POST_DATE&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    [&#39;TASK_ID&#39; =&gt; 123],</span>
+<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
+<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add_1">Add | Добавление</h4>
@@ -1588,130 +1755,124 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.add&#39;,</span>
+<span class="x">    &#39;tasks.comment.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">            &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">            &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">            &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">            &#39;POST_MESSAGE&#39; =&gt; &#39;New comment&#39;,</span>
+<span class="x">            &#39;AUTHOR_ID&#39; =&gt; 1</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\Comment::add([</span>
+<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;New comment&#39;,</span>
+<span class="x">    &#39;AUTHOR_ID&#39; =&gt; 1</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$dealFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$commentFields = [</span>
+<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;New comment&#39;,</span>
+<span class="x">    &#39;AUTHOR_ID&#39; =&gt; 1</span>
 <span class="x">];</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$dealId = $deal-&gt;Add($dealFields);</span>
+<span class="x">$comment = new CTaskComment();</span>
+<span class="x">$commentId = $comment-&gt;Add($commentFields);</span>
 </code></pre></div>
 <h4 id="update_1">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.update&#39;,</span>
+<span class="x">    &#39;tasks.comment.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
+<span class="x">        &#39;commentId&#39; =&gt; 456,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">            &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">            &#39;POST_MESSAGE&#39; =&gt; &#39;Updated comment&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::update(123, [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\Comment::update(456, [</span>
+<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;Updated comment&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$dealFields = [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$commentFields = [</span>
+<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;Updated comment&#39;</span>
 <span class="x">];</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$deal-&gt;Update(123, $dealFields);</span>
+<span class="x">$comment = new CTaskComment();</span>
+<span class="x">$comment-&gt;Update(456, $commentFields);</span>
 </code></pre></div>
 <h4 id="delete_1">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">    &#39;tasks.comment.delete&#39;,</span>
+<span class="x">    [</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
+<span class="x">        &#39;commentId&#39; =&gt; 456</span>
+<span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::delete(123);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\Comment::delete(456);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$deal-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$comment = new CTaskComment();</span>
+<span class="x">$comment-&gt;Delete(456);</span>
 </code></pre></div>
-<h3 id="contacts">Contacts | Контакты</h3>
+<h3 id="task-checklists-">Task Checklists | Чек-листы задач</h3>
 <h4 id="get-list_2">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.list&#39;,</span>
+<span class="x">    &#39;tasks.checklistitem.list&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
 <span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;order&#39; =&gt; [&#39;SORT_INDEX&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$contacts = \Bitrix\Crm\ContactTable::getList([</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$checklistItems = \Bitrix\Tasks\CheckListTable::getList([</span>
 <span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=TASK_ID&#39; =&gt; 123],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;SORT_INDEX&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contacts = CCrmContact::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$checklistItems = CTaskCheckListItem::GetList(</span>
+<span class="x">    [&#39;SORT_INDEX&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    [&#39;TASK_ID&#39; =&gt; 123],</span>
+<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
+<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add_2">Add | Добавление</h4>
@@ -1719,222 +1880,95 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.add&#39;,</span>
+<span class="x">    &#39;tasks.checklistitem.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">            &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">            &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">            &#39;TITLE&#39; =&gt; &#39;New checklist item&#39;,</span>
+<span class="x">            &#39;IS_COMPLETE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;SORT_INDEX&#39; =&gt; 0</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\CheckList::add([</span>
+<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;New checklist item&#39;,</span>
+<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;SORT_INDEX&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contactFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$checklistFields = [</span>
+<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;New checklist item&#39;,</span>
+<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;SORT_INDEX&#39; =&gt; 0</span>
 <span class="x">];</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contactId = $contact-&gt;Add($contactFields);</span>
+<span class="x">$checklist = new CTaskCheckListItem();</span>
+<span class="x">$checklistId = $checklist-&gt;Add($checklistFields);</span>
 </code></pre></div>
 <h4 id="update_2">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.update&#39;,</span>
+<span class="x">    &#39;tasks.checklistitem.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
+<span class="x">        &#39;itemId&#39; =&gt; 456,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated checklist item&#39;,</span>
+<span class="x">            &#39;IS_COMPLETE&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::update(123, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\CheckList::update(456, [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated checklist item&#39;,</span>
+<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contactFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$checklistFields = [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated checklist item&#39;,</span>
+<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">];</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contact-&gt;Update(123, $contactFields);</span>
+<span class="x">$checklist = new CTaskCheckListItem();</span>
+<span class="x">$checklist-&gt;Update(456, $checklistFields);</span>
 </code></pre></div>
 <h4 id="delete_2">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contact-&gt;Delete(123);</span>
-</code></pre></div>
-<h3 id="companies">Companies | Компании</h3>
-<h4 id="get-list_3">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.list&#39;,</span>
+<span class="x">    &#39;tasks.checklistitem.delete&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
+<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
+<span class="x">        &#39;itemId&#39; =&gt; 456</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$companies = \Bitrix\Crm\CompanyTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
-<span class="x">]);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
+<span class="x">$result = \Bitrix\Tasks\CheckList::delete(456);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companies = CCrmCompany::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="add_3">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">            &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">            &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">            &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">    &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companyFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">    &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">];</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$companyId = $company-&gt;Add($companyFields);</span>
-</code></pre></div>
-<h4 id="update_3">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">            &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::update(123, [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companyFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">];</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$company-&gt;Update(123, $companyFields);</span>
-</code></pre></div>
-<h4 id="delete_3">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$company-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
+<span class="x">$checklist = new CTaskCheckListItem();</span>
+<span class="x">$checklist-&gt;Delete(456);</span>
 </code></pre></div>
 
 

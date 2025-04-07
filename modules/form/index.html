@@ -12,13 +12,11 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/crm/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/form/">
       
       
-        <link rel="prev" href="../main/">
+        <link rel="prev" href="../iblock/">
       
-      
-        <link rel="next" href="leads/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Overview - Bitrix24 Developer Guide</title>
+        <title>Form - Bitrix24 Developer Guide</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crm-module-crm" class="md-skip">
+        <a href="#form-module" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Form
             
           </span>
         </div>
@@ -439,8 +437,6 @@
                 
   
   
-    
-  
   
   
     
@@ -476,15 +472,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../crm/" class="md-nav__link ">
               
   
   
@@ -497,13 +493,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             CRM
@@ -519,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="leads/" class="md-nav__link">
+      <a href="../crm/leads/" class="md-nav__link">
         
   
   
@@ -542,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deals.md" class="md-nav__link">
+      <a href="../crm/deals.md" class="md-nav__link">
         
   
   
@@ -565,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contacts.md" class="md-nav__link">
+      <a href="../crm/contacts.md" class="md-nav__link">
         
   
   
@@ -588,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="companies.md" class="md-nav__link">
+      <a href="../crm/companies.md" class="md-nav__link">
         
   
   
@@ -611,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="products.md" class="md-nav__link">
+      <a href="../crm/products.md" class="md-nav__link">
         
   
   
@@ -634,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quotes.md" class="md-nav__link">
+      <a href="../crm/quotes.md" class="md-nav__link">
         
   
   
@@ -657,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="invoices.md" class="md-nav__link">
+      <a href="../crm/invoices.md" class="md-nav__link">
         
   
   
@@ -731,10 +727,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../form/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Form
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -745,6 +763,236 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms | Формы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forms | Формы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Fields | Поля форм
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Fields | Поля форм">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Results | Результаты форм
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Results | Результаты форм">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-list_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get List | Получение списка
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add | Добавление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update | Обновление
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete | Удаление
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Display | Отображение форм
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Display | Отображение форм">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Form | Показать форму
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Results | Показать результаты
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1181,13 +1429,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#leads" class="md-nav__link">
+  <a href="#forms" class="md-nav__link">
     <span class="md-ellipsis">
-      Leads | Лиды
+      Forms | Формы
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Leads | Лиды">
+    <nav class="md-nav" aria-label="Forms | Формы">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1232,13 +1480,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deals" class="md-nav__link">
+  <a href="#form-fields" class="md-nav__link">
     <span class="md-ellipsis">
-      Deals | Сделки
+      Form Fields | Поля форм
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deals | Сделки">
+    <nav class="md-nav" aria-label="Form Fields | Поля форм">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1283,13 +1531,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contacts" class="md-nav__link">
+  <a href="#form-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Contacts | Контакты
+      Form Results | Результаты форм
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Contacts | Контакты">
+    <nav class="md-nav" aria-label="Form Results | Результаты форм">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1334,46 +1582,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#companies" class="md-nav__link">
+  <a href="#form-display" class="md-nav__link">
     <span class="md-ellipsis">
-      Companies | Компании
+      Form Display | Отображение форм
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Companies | Компании">
+    <nav class="md-nav" aria-label="Form Display | Отображение форм">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-list_3" class="md-nav__link">
+  <a href="#show-form" class="md-nav__link">
     <span class="md-ellipsis">
-      Get List | Получение списка
+      Show Form | Показать форму
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add_3" class="md-nav__link">
+  <a href="#show-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
+      Show Results | Показать результаты
     </span>
   </a>
   
@@ -1408,45 +1638,43 @@
   
 
 
-<h1 id="crm-module-crm">CRM Module | Модуль CRM</h1>
+<h1 id="form-module">Form Module | Модуль Формы</h1>
 <h2 id="overview">Overview | Обзор</h2>
-<p>The CRM module provides functionality for managing customer relationships, including leads, deals, contacts, and companies. | Модуль CRM предоставляет функциональность для управления взаимоотношениями с клиентами, включая лиды, сделки, контакты и компании.</p>
+<p>The Form module provides functionality for creating and managing web forms in Bitrix24, including form fields, validation, and submission handling. | Модуль Формы предоставляет функциональность для создания и управления веб-формами в Bitrix24, включая поля форм, валидацию и обработку отправки.</p>
 <h2 id="methods">Methods | Методы</h2>
-<h3 id="leads">Leads | Лиды</h3>
+<h3 id="forms">Forms | Формы</h3>
 <h4 id="get-list">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.list&#39;,</span>
+<span class="x">    &#39;form.get&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$leads = \Bitrix\Crm\LeadTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$forms = \Bitrix\Form\FormTable::getList([</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leads = CCrmLead::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    true,</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$forms = CForm::GetList(</span>
+<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    false,</span>
 <span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">    [&#39;*&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add">Add | Добавление</h4>
@@ -1454,133 +1682,148 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.add&#39;,</span>
+<span class="x">    &#39;form.add&#39;,</span>
 <span class="x">    [</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">            &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">            &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">            &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
+<span class="x">            &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
+<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
+<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">            &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
+<span class="x">            &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
+<span class="x">            &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">            &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">            &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
+<span class="x">            &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\FormTable::add([</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
+<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
+<span class="x">    &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
+<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
+<span class="x">    &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leadFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Lead&#39;,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$formFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
+<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
+<span class="x">    &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
+<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
+<span class="x">    &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
 <span class="x">];</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$leadId = $lead-&gt;Add($leadFields);</span>
+<span class="x">$formId = CForm::Add($formFields);</span>
 </code></pre></div>
 <h4 id="update">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.update&#39;,</span>
+<span class="x">    &#39;form.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;ID&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">            &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
+<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
+<span class="x">            &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::update(123, [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\FormTable::update(123, [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
+<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$leadFields = [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;CONVERTED&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$formFields = [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
+<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
 <span class="x">];</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$lead-&gt;Update(123, $leadFields);</span>
+<span class="x">CForm::Set($formFields, 123);</span>
 </code></pre></div>
 <h4 id="delete">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.lead.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">    &#39;form.delete&#39;,</span>
+<span class="x">    [&#39;ID&#39; =&gt; 123]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Lead::delete(123);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\FormTable::delete(123);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$lead = new CCrmLead();</span>
-<span class="x">$lead-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">CForm::Delete(123);</span>
 </code></pre></div>
-<h3 id="deals">Deals | Сделки</h3>
+<h3 id="form-fields">Form Fields | Поля форм</h3>
 <h4 id="get-list_1">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.list&#39;,</span>
+<span class="x">    &#39;form.field.get&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$deals = \Bitrix\Crm\DealTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$fields = \Bitrix\Form\FieldTable::getList([</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=FORM_ID&#39; =&gt; 123, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$deals = CCrmDeal::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;&gt;OPPORTUNITY&#39; =&gt; 1000],</span>
-<span class="x">    true,</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$fields = CFormField::GetList(</span>
+<span class="x">    123,</span>
+<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">    false,</span>
 <span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">    [&#39;*&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add_1">Add | Добавление</h4>
@@ -1588,130 +1831,146 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.add&#39;,</span>
+<span class="x">    &#39;form.field.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">            &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">            &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">            &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
+<span class="x">            &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
+<span class="x">            &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<span class="x">            &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">            &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
+<span class="x">            &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
+<span class="x">            &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\FieldTable::add([</span>
+<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
+<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
+<span class="x">    &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
+<span class="x">    &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
+<span class="x">    &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$dealFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Deal&#39;,</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 5000,</span>
-<span class="x">    &#39;CURRENCY_ID&#39; =&gt; &#39;USD&#39;,</span>
-<span class="x">    &#39;ASSIGNED_BY_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;NEW&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$fieldFields = [</span>
+<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
+<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
+<span class="x">    &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
+<span class="x">    &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
+<span class="x">    &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
 <span class="x">];</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$dealId = $deal-&gt;Add($dealFields);</span>
+<span class="x">$fieldId = CFormField::Add($fieldFields);</span>
 </code></pre></div>
 <h4 id="update_1">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.update&#39;,</span>
+<span class="x">    &#39;form.field.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<span class="x">        &#39;fieldId&#39; =&gt; 456,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">            &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
+<span class="x">            &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">            &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::update(123, [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\FieldTable::update(456, [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
+<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$dealFields = [</span>
-<span class="x">    &#39;OPPORTUNITY&#39; =&gt; 6000,</span>
-<span class="x">    &#39;STAGE_ID&#39; =&gt; &#39;WON&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$fieldFields = [</span>
+<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
+<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
 <span class="x">];</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$deal-&gt;Update(123, $dealFields);</span>
+<span class="x">CFormField::Set($fieldFields, 456);</span>
 </code></pre></div>
 <h4 id="delete_1">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.deal.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">    &#39;form.field.delete&#39;,</span>
+<span class="x">    [</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<span class="x">        &#39;fieldId&#39; =&gt; 456</span>
+<span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Deal::delete(123);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\FieldTable::delete(456);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$deal = new CCrmDeal();</span>
-<span class="x">$deal-&gt;Delete(123);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">CFormField::Delete(456);</span>
 </code></pre></div>
-<h3 id="contacts">Contacts | Контакты</h3>
+<h3 id="form-results">Form Results | Результаты форм</h3>
 <h4 id="get-list_2">Get List | Получение списка</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.list&#39;,</span>
+<span class="x">    &#39;form.result.get&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<span class="x">        &#39;filter&#39; =&gt; [&#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
 <span class="x">        &#39;start&#39; =&gt; 0</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$contacts = \Bitrix\Crm\ContactTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$results = \Bitrix\Form\ResultTable::getList([</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=FORM_ID&#39; =&gt; 123, &#39;=STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
+<span class="x">    &#39;order&#39; =&gt; [&#39;DATE_CREATE&#39; =&gt; &#39;DESC&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 50,</span>
 <span class="x">    &#39;offset&#39; =&gt; 0</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contacts = CCrmContact::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;TYPE_ID&#39; =&gt; &#39;EMPLOYEE&#39;],</span>
-<span class="x">    true,</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$results = CFormResult::GetList(</span>
+<span class="x">    123,</span>
+<span class="x">    [&#39;DATE_CREATE&#39; =&gt; &#39;DESC&#39;],</span>
+<span class="x">    [&#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
+<span class="x">    false,</span>
 <span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
+<span class="x">    [&#39;*&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add_2">Add | Добавление</h4>
@@ -1719,222 +1978,218 @@
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.add&#39;,</span>
+<span class="x">    &#39;form.result.add&#39;,</span>
 <span class="x">    [</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">            &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">            &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
+<span class="x">            &#39;USER_ID&#39; =&gt; 1,</span>
+<span class="x">            &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
+<span class="x">            &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
+<span class="x">            &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
+<span class="x">            &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<span class="x">            &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<span class="x">            &#39;ANSWERS&#39; =&gt; [</span>
+<span class="x">                &#39;NEW_FIELD&#39; =&gt; &#39;Field value&#39;</span>
+<span class="x">            ]</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\ResultTable::add([</span>
+<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
+<span class="x">    &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
+<span class="x">    &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
+<span class="x">    &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<span class="x">    &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime()</span>
 <span class="x">]);</span>
 
+<span class="x">// Add answers</span>
+<span class="x">// Добавление ответов</span>
+<span class="x">if ($result-&gt;isSuccess()) {</span>
+<span class="x">    $resultId = $result-&gt;getId();</span>
+<span class="x">    \Bitrix\Form\AnswerTable::add([</span>
+<span class="x">        &#39;RESULT_ID&#39; =&gt; $resultId,</span>
+<span class="x">        &#39;FIELD_ID&#39; =&gt; 456,</span>
+<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Field value&#39;</span>
+<span class="x">    ]);</span>
+<span class="x">}</span>
+
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contactFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;John&#39;,</span>
-<span class="x">    &#39;LAST_NAME&#39; =&gt; &#39;Doe&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;john@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$resultFields = [</span>
+<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; 1,</span>
+<span class="x">    &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
+<span class="x">    &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
+<span class="x">    &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
+<span class="x">    &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<span class="x">    &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime()</span>
 <span class="x">];</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contactId = $contact-&gt;Add($contactFields);</span>
+<span class="x">$resultId = CFormResult::Add($resultFields);</span>
+
+<span class="x">// Add answers</span>
+<span class="x">// Добавление ответов</span>
+<span class="x">if ($resultId) {</span>
+<span class="x">    CFormAnswer::Add([</span>
+<span class="x">        &#39;RESULT_ID&#39; =&gt; $resultId,</span>
+<span class="x">        &#39;FIELD_ID&#39; =&gt; 456,</span>
+<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Field value&#39;</span>
+<span class="x">    ]);</span>
+<span class="x">}</span>
 </code></pre></div>
 <h4 id="update_2">Update | Обновление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.update&#39;,</span>
+<span class="x">    &#39;form.result.update&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<span class="x">        &#39;resultId&#39; =&gt; 456,</span>
 <span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;,</span>
+<span class="x">            &#39;ANSWERS&#39; =&gt; [</span>
+<span class="x">                &#39;NEW_FIELD&#39; =&gt; &#39;Updated field value&#39;</span>
+<span class="x">            ]</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::update(123, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\ResultTable::update(456, [</span>
+<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;</span>
 <span class="x">]);</span>
 
+<span class="x">// Update answers</span>
+<span class="x">// Обновление ответов</span>
+<span class="x">$answers = \Bitrix\Form\AnswerTable::getList([</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;ID&#39;],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=RESULT_ID&#39; =&gt; 456, &#39;=FIELD_ID&#39; =&gt; 789],</span>
+<span class="x">    &#39;limit&#39; =&gt; 1</span>
+<span class="x">])-&gt;fetch();</span>
+
+<span class="x">if ($answers) {</span>
+<span class="x">    \Bitrix\Form\AnswerTable::update($answers[&#39;ID&#39;], [</span>
+<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Updated field value&#39;</span>
+<span class="x">    ]);</span>
+<span class="x">}</span>
+
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contactFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Johnny&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;johnny@example.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$resultFields = [</span>
+<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;</span>
 <span class="x">];</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contact-&gt;Update(123, $contactFields);</span>
+<span class="x">CFormResult::Set($resultFields, 456);</span>
+
+<span class="x">// Update answers</span>
+<span class="x">// Обновление ответов</span>
+<span class="x">$answers = CFormAnswer::GetList(456, [&#39;FIELD_ID&#39; =&gt; 789]);</span>
+<span class="x">if ($answer = $answers-&gt;GetNext()) {</span>
+<span class="x">    CFormAnswer::Set([</span>
+<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Updated field value&#39;</span>
+<span class="x">    ], $answer[&#39;ID&#39;]);</span>
+<span class="x">}</span>
 </code></pre></div>
 <h4 id="delete_2">Delete | Удаление</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
 <span class="x">// Requires: CRest::Init() with proper credentials</span>
 <span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
 <span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.contact.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Contact::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$contact = new CCrmContact();</span>
-<span class="x">$contact-&gt;Delete(123);</span>
-</code></pre></div>
-<h3 id="companies">Companies | Компании</h3>
-<h4 id="get-list_3">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.list&#39;,</span>
+<span class="x">    &#39;form.result.delete&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
+<span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<span class="x">        &#39;resultId&#39; =&gt; 456</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
 <span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$companies = \Bitrix\Crm\CompanyTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
-<span class="x">]);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$result = \Bitrix\Form\ResultTable::delete(456);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companies = CCrmCompany::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;],</span>
-<span class="x">    true,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;]</span>
-<span class="x">);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">CFormResult::Delete(456);</span>
 </code></pre></div>
-<h4 id="add_3">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.add&#39;,</span>
+<h3 id="form-display">Form Display | Отображение форм</h3>
+<h4 id="show-form">Show Form | Показать форму</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<span class="x">    &#39;bitrix:form&#39;,</span>
+<span class="x">    &#39;&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">            &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">            &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">            &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">            &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">        ]</span>
+<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">    &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">]);</span>
-
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companyFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corp&#39;,</span>
-<span class="x">    &#39;COMPANY_TYPE&#39; =&gt; &#39;CUSTOMER&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;IT&#39;,</span>
-<span class="x">    &#39;EMAIL&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;info@acme.com&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]],</span>
-<span class="x">    &#39;PHONE&#39; =&gt; [[&#39;VALUE&#39; =&gt; &#39;+1234567890&#39;, &#39;VALUE_TYPE&#39; =&gt; &#39;WORK&#39;]]</span>
-<span class="x">];</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$companyId = $company-&gt;Add($companyFields);</span>
-</code></pre></div>
-<h4 id="update_3">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.update&#39;,</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<span class="x">    &#39;bitrix:form&#39;,</span>
+<span class="x">    &#39;&#39;,</span>
 <span class="x">    [</span>
-<span class="x">        &#39;id&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">            &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">        ]</span>
+<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
+<span class="x">    ]</span>
+<span class="x">);</span>
+</code></pre></div>
+<h4 id="show-results">Show Results | Показать результаты</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<span class="x">    &#39;bitrix:form.result.list&#39;,</span>
+<span class="x">    &#39;&#39;,</span>
+<span class="x">    [</span>
+<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::update(123, [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">]);</span>
-
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$companyFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Acme Corporation&#39;,</span>
-<span class="x">    &#39;INDUSTRY&#39; =&gt; &#39;Technology&#39;</span>
-<span class="x">];</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$company-&gt;Update(123, $companyFields);</span>
-</code></pre></div>
-<h4 id="delete_3">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;crm.company.delete&#39;,</span>
-<span class="x">    [&#39;id&#39; =&gt; 123]</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<span class="x">    &#39;bitrix:form.result.list&#39;,</span>
+<span class="x">    &#39;&#39;,</span>
+<span class="x">    [</span>
+<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
+<span class="x">    ]</span>
 <span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;crm&#39;)</span>
-<span class="x">$result = \Bitrix\Crm\Company::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;crm&#39;)</span>
-<span class="x">$company = new CCrmCompany();</span>
-<span class="x">$company-&gt;Delete(123);</span>
 </code></pre></div>
 
 
