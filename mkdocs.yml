@@ -59,14 +59,6 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
-# Расширения
-markdown_extensions:
-  - tables
-  - attr_list
-  - md_in_html
-  - pymdownx.highlight
-  - pymdownx.superfences
-
 # Плагины
 plugins:
   - search:
@@ -104,12 +96,12 @@ extra_css:
 extra:
   analytics:
     provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+    property: G-XXXXXXXXXX  # Replace with your actual Google Analytics ID
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/axbuild
     - icon: fontawesome/brands/telegram
-      link: https://t.me/axbuild
+      link: https://t.me/bitrixdevelopers
   alternate:
     - name: Русский
       link: /
