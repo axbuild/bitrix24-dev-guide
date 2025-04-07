@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive Bitrix24 API Documentation and Developer Guide">
+        <meta name="description" content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices.">
       
       
         <meta name="author" content="Axbuild">
@@ -21,7 +21,7 @@
         <link rel="next" href="../pull/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -63,12 +65,38 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
   
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
   
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Form - Bitrix24 Developer Guide" >
+      
+        <meta  property="og:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
+      
+        <meta  property="og:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/form/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://axbuild.github.io/bitrix24-dev-guide/modules/form/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Form - Bitrix24 Developer Guide" >
+      
+        <meta  name="twitter:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
+      
+        <meta  name="twitter:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/form/index.png" >
+      
     
     
   </head>
@@ -105,7 +133,7 @@
     <a href="../.." title="Bitrix24 Developer Guide" class="md-header__button md-logo" aria-label="Bitrix24 Developer Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,6 +160,32 @@
       
     
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -293,12 +347,14 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Bitrix24 Developer Guide" class="md-nav__button md-logo" aria-label="Bitrix24 Developer Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
     Bitrix24 Developer Guide
@@ -441,49 +497,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../crm/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../crm/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -492,188 +508,7 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            CRM
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/leads/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Leads
-    
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/deals.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/contacts.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Contacts
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/companies.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Companies
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/products.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Products
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/quotes.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quotes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/invoices.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Invoices
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -807,48 +642,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Forms | Формы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -857,48 +650,6 @@
       Form Fields | Поля форм
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Form Fields | Поля форм">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -909,48 +660,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Form Results | Результаты форм">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -959,30 +668,6 @@
       Form Display | Отображение форм
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Form Display | Отображение форм">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#show-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show Form | Показать форму
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show Results | Показать результаты
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1309,7 +994,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1392,242 +1079,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview | Обзор
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods | Методы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods | Методы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#forms" class="md-nav__link">
-    <span class="md-ellipsis">
-      Forms | Формы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Forms | Формы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#form-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      Form Fields | Поля форм
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Form Fields | Поля форм">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#form-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Form Results | Результаты форм
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Form Results | Результаты форм">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#form-display" class="md-nav__link">
-    <span class="md-ellipsis">
-      Form Display | Отображение форм
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Form Display | Отображение форм">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#show-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show Form | Показать форму
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#show-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Show Results | Показать результаты
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1640,558 +1091,558 @@
   
 
 
-<h1 id="form-module">Form Module | Модуль Формы</h1>
-<h2 id="overview">Overview | Обзор</h2>
+<h1 id="form-module">Form Module | Модуль Формы<a class="headerlink" href="#form-module" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview | Обзор<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The Form module provides functionality for creating and managing web forms in Bitrix24, including form fields, validation, and submission handling. | Модуль Формы предоставляет функциональность для создания и управления веб-формами в Bitrix24, включая поля форм, валидацию и обработку отправки.</p>
-<h2 id="methods">Methods | Методы</h2>
-<h3 id="forms">Forms | Формы</h3>
-<h4 id="get-list">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.get&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$forms = \Bitrix\Form\FormTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$forms = CForm::GetList(</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    false,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;]</span>
-<span class="x">);</span>
+<h2 id="methods">Methods | Методы<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="forms">Forms | Формы<a class="headerlink" href="#forms" title="Permanent link">&para;</a></h3>
+<h4 id="get-list">Get List | Получение списка<a class="headerlink" href="#get-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">    &#39;form.get&#39;,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">    [</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">        &#39;start&#39; =&gt; 0</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">    ]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">// D7</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="x">$forms = \Bitrix\Form\FormTable::getList([</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="x">    &#39;limit&#39; =&gt; 50,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="x">    &#39;offset&#39; =&gt; 0</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="x">]);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="x">// Legacy</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="x">$forms = CForm::GetList(</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="x">    false,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="x">    [&#39;*&#39;]</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="add">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
-<span class="x">            &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
-<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
-<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
-<span class="x">            &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
-<span class="x">            &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
-<span class="x">            &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">            &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">            &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">            &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
-<span class="x">            &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\FormTable::add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
-<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
-<span class="x">    &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
-<span class="x">    &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
-<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
-<span class="x">    &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$formFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
-<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
-<span class="x">    &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
-<span class="x">    &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
-<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
-<span class="x">    &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
-<span class="x">];</span>
-<span class="x">$formId = CForm::Add($formFields);</span>
+<h4 id="add">Add | Добавление<a class="headerlink" href="#add" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">    &#39;form.add&#39;,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">    [</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">        &#39;fields&#39; =&gt; [</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="x">            &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">            &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="x">            &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="x">            &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="x">            &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="x">            &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="x">            &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="x">            &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="x">            &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="x">        ]</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="x">    ]</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="x">);</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="x">// D7</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="x">$result = \Bitrix\Form\FormTable::add([</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="x">    &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="x">    &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="x">    &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="x">    &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="x">    &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="x">    &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="x">]);</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="x">// Legacy</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="x">$formFields = [</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;New Form&#39;,</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FORM&#39;,</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Form description&#39;,</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="x">    &#39;C_SITE&#39; =&gt; [&#39;s1&#39;],</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="x">    &#39;BUTTON&#39; =&gt; &#39;Submit&#39;,</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="x">    &#39;SHOW_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="x">    &#39;SHOW_RESULT_TEMPLATE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="x">    &#39;MAIL_EVENT_TYPE&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;,</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="x">    &#39;MAIL_EVENT_MESSAGE&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;, &#39;EVENT_NAME&#39; =&gt; &#39;FORM_FILLING_NEW_FORM&#39;, &#39;LID&#39; =&gt; [&#39;s1&#39;], &#39;EMAIL_FROM&#39; =&gt; &#39;#DEFAULT_EMAIL_FROM#&#39;, &#39;EMAIL_TO&#39; =&gt; &#39;#EMAIL_TO#&#39;, &#39;SUBJECT&#39; =&gt; &#39;New form submission&#39;, &#39;MESSAGE&#39; =&gt; &#39;New form submission from #SITE_NAME#\n\nForm: #FORM_NAME#\n\n#ALL_RESULT#\n\nThis message was sent from the form on the site #SITE_NAME# (#SERVER_NAME#)&#39;]</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="x">];</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="x">$formId = CForm::Add($formFields);</span>
 </code></pre></div>
-<h4 id="update">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;ID&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
-<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
-<span class="x">            &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\FormTable::update(123, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
-<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$formFields = [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
-<span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">];</span>
-<span class="x">CForm::Set($formFields, 123);</span>
+<h4 id="update">Update | Обновление<a class="headerlink" href="#update" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    &#39;form.update&#39;,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    [</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">        &#39;ID&#39; =&gt; 123,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">        &#39;fields&#39; =&gt; [</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">            &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="x">            &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="x">        ]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="x">    ]</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="x">);</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="x">// D7</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="x">$result = \Bitrix\Form\FormTable::update(123, [</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="x">]);</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="x">// Legacy</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="x">$formFields = [</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Form&#39;,</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated description&#39;,</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="x">    &#39;USE_CAPTCHA&#39; =&gt; &#39;Y&#39;</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="x">];</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="x">CForm::Set($formFields, 123);</span>
 </code></pre></div>
-<h4 id="delete">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.delete&#39;,</span>
-<span class="x">    [&#39;ID&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\FormTable::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">CForm::Delete(123);</span>
+<h4 id="delete">Delete | Удаление<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">    &#39;form.delete&#39;,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">    [&#39;ID&#39; =&gt; 123]</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">);</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">// D7</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="x">$result = \Bitrix\Form\FormTable::delete(123);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="x">// Legacy</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="x">CForm::Delete(123);</span>
 </code></pre></div>
-<h3 id="form-fields">Form Fields | Поля форм</h3>
-<h4 id="get-list_1">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.field.get&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$fields = \Bitrix\Form\FieldTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=FORM_ID&#39; =&gt; 123, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$fields = CFormField::GetList(</span>
-<span class="x">    123,</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    false,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;]</span>
-<span class="x">);</span>
+<h3 id="form-fields">Form Fields | Поля форм<a class="headerlink" href="#form-fields" title="Permanent link">&para;</a></h3>
+<h4 id="get-list_1">Get List | Получение списка<a class="headerlink" href="#get-list_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &#39;form.field.get&#39;,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">    [</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">        &#39;filter&#39; =&gt; [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">        &#39;start&#39; =&gt; 0</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">    ]</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">);</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="x">// D7</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="x">$fields = \Bitrix\Form\FieldTable::getList([</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=FORM_ID&#39; =&gt; 123, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="x">    &#39;limit&#39; =&gt; 50,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="x">    &#39;offset&#39; =&gt; 0</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="x">]);</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="x">// Legacy</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="x">$fields = CFormField::GetList(</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="x">    123,</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;, &#39;NAME&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="x">    false,</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="x">    [&#39;*&#39;]</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="add_1">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.field.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
-<span class="x">            &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
-<span class="x">            &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">            &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">            &#39;SORT&#39; =&gt; 500,</span>
-<span class="x">            &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
-<span class="x">            &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
-<span class="x">            &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\FieldTable::add([</span>
-<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
-<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
-<span class="x">    &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
-<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
-<span class="x">    &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
-<span class="x">    &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$fieldFields = [</span>
-<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
-<span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
-<span class="x">    &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 500,</span>
-<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
-<span class="x">    &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
-<span class="x">    &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
-<span class="x">];</span>
-<span class="x">$fieldId = CFormField::Add($fieldFields);</span>
+<h4 id="add_1">Add | Добавление<a class="headerlink" href="#add_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">    &#39;form.field.add&#39;,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">    [</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="x">        &#39;fields&#39; =&gt; [</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="x">            &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="x">            &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">            &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">            &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="x">            &#39;SORT&#39; =&gt; 500,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="x">            &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="x">            &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="x">            &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="x">        ]</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="x">    ]</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="x">);</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="x">// D7</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="x">$result = \Bitrix\Form\FieldTable::add([</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="x">    &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="x">    &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="x">    &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="x">    &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="x">]);</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="x">// Legacy</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="x">$fieldFields = [</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;New Field&#39;,</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="x">    &#39;SID&#39; =&gt; &#39;NEW_FIELD&#39;,</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="x">    &#39;FIELD_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="x">    &#39;REQUIRED&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="x">    &#39;SORT&#39; =&gt; 500,</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Field description&#39;,</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="x">    &#39;VALIDATION&#39; =&gt; [&#39;PATTERN&#39; =&gt; &#39;&#39;, &#39;MIN_LENGTH&#39; =&gt; 0, &#39;MAX_LENGTH&#39; =&gt; 0],</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="x">    &#39;SETTINGS&#39; =&gt; [&#39;SIZE&#39; =&gt; 30, &#39;MAX_LENGTH&#39; =&gt; 0, &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;]</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="x">];</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="x">$fieldId = CFormField::Add($fieldFields);</span>
 </code></pre></div>
-<h4 id="update_1">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.field.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fieldId&#39; =&gt; 456,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
-<span class="x">            &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">            &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\FieldTable::update(456, [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
-<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$fieldFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
-<span class="x">    &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
-<span class="x">];</span>
-<span class="x">CFormField::Set($fieldFields, 456);</span>
+<h4 id="update_1">Update | Обновление<a class="headerlink" href="#update_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">    &#39;form.field.update&#39;,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    [</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="x">        &#39;fieldId&#39; =&gt; 456,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">        &#39;fields&#39; =&gt; [</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">            &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="x">            &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="x">        ]</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="x">    ]</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="x">);</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="x">// D7</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="x">$result = \Bitrix\Form\FieldTable::update(456, [</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="x">    &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="x">]);</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="x">// Legacy</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="x">$fieldFields = [</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Field&#39;,</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="x">    &#39;REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="x">    &#39;COMMENTS&#39; =&gt; &#39;Updated description&#39;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="x">];</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="x">CFormField::Set($fieldFields, 456);</span>
 </code></pre></div>
-<h4 id="delete_1">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.field.delete&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fieldId&#39; =&gt; 456</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\FieldTable::delete(456);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">CFormField::Delete(456);</span>
+<h4 id="delete_1">Delete | Удаление<a class="headerlink" href="#delete_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">    &#39;form.field.delete&#39;,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">    [</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">        &#39;fieldId&#39; =&gt; 456</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">    ]</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="x">);</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="x">// D7</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="x">$result = \Bitrix\Form\FieldTable::delete(456);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="x">CFormField::Delete(456);</span>
 </code></pre></div>
-<h3 id="form-results">Form Results | Результаты форм</h3>
-<h4 id="get-list_2">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.result.get&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$results = \Bitrix\Form\ResultTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=FORM_ID&#39; =&gt; 123, &#39;=STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;DATE_CREATE&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$results = CFormResult::GetList(</span>
-<span class="x">    123,</span>
-<span class="x">    [&#39;DATE_CREATE&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
-<span class="x">    false,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
-<span class="x">    [&#39;*&#39;]</span>
-<span class="x">);</span>
+<h3 id="form-results">Form Results | Результаты форм<a class="headerlink" href="#form-results" title="Permanent link">&para;</a></h3>
+<h4 id="get-list_2">Get List | Получение списка<a class="headerlink" href="#get-list_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">    &#39;form.result.get&#39;,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">    [</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="x">        &#39;filter&#39; =&gt; [&#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">        &#39;start&#39; =&gt; 0</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">    ]</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">);</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="x">// D7</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="x">$results = \Bitrix\Form\ResultTable::getList([</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=FORM_ID&#39; =&gt; 123, &#39;=STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="x">    &#39;order&#39; =&gt; [&#39;DATE_CREATE&#39; =&gt; &#39;DESC&#39;],</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="x">    &#39;limit&#39; =&gt; 50,</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="x">    &#39;offset&#39; =&gt; 0</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="x">]);</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="x">// Legacy</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="x">$results = CFormResult::GetList(</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="x">    123,</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="x">    [&#39;DATE_CREATE&#39; =&gt; &#39;DESC&#39;],</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="x">    [&#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;],</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="x">    false,</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="x">    [&#39;nTopCount&#39; =&gt; 50],</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="x">    [&#39;*&#39;]</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="add_2">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.result.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
-<span class="x">            &#39;USER_ID&#39; =&gt; 1,</span>
-<span class="x">            &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
-<span class="x">            &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
-<span class="x">            &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
-<span class="x">            &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">            &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">            &#39;ANSWERS&#39; =&gt; [</span>
-<span class="x">                &#39;NEW_FIELD&#39; =&gt; &#39;Field value&#39;</span>
-<span class="x">            ]</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\ResultTable::add([</span>
-<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
-<span class="x">    &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
-<span class="x">    &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
-<span class="x">    &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">    &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime()</span>
-<span class="x">]);</span>
-
-<span class="x">// Add answers</span>
-<span class="x">// Добавление ответов</span>
-<span class="x">if ($result-&gt;isSuccess()) {</span>
-<span class="x">    $resultId = $result-&gt;getId();</span>
-<span class="x">    \Bitrix\Form\AnswerTable::add([</span>
-<span class="x">        &#39;RESULT_ID&#39; =&gt; $resultId,</span>
-<span class="x">        &#39;FIELD_ID&#39; =&gt; 456,</span>
-<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Field value&#39;</span>
-<span class="x">    ]);</span>
-<span class="x">}</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$resultFields = [</span>
-<span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
-<span class="x">    &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
-<span class="x">    &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
-<span class="x">    &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">    &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime()</span>
-<span class="x">];</span>
-<span class="x">$resultId = CFormResult::Add($resultFields);</span>
-
-<span class="x">// Add answers</span>
-<span class="x">// Добавление ответов</span>
-<span class="x">if ($resultId) {</span>
-<span class="x">    CFormAnswer::Add([</span>
-<span class="x">        &#39;RESULT_ID&#39; =&gt; $resultId,</span>
-<span class="x">        &#39;FIELD_ID&#39; =&gt; 456,</span>
-<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Field value&#39;</span>
-<span class="x">    ]);</span>
-<span class="x">}</span>
+<h4 id="add_2">Add | Добавление<a class="headerlink" href="#add_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="x">    &#39;form.result.add&#39;,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="x">    [</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="x">        &#39;fields&#39; =&gt; [</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="x">            &#39;USER_ID&#39; =&gt; 1,</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="x">            &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="x">            &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="x">            &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="x">            &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="x">            &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="x">            &#39;ANSWERS&#39; =&gt; [</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="x">                &#39;NEW_FIELD&#39; =&gt; &#39;Field value&#39;</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="x">            ]</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="x">        ]</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="x">    ]</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="x">);</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="x">// D7</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="x">$result = \Bitrix\Form\ResultTable::add([</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="x">    &#39;USER_ID&#39; =&gt; 1,</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="x">    &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="x">    &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="x">    &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="x">    &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="x">    &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime()</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="x">]);</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="x">// Add answers</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="x">// Добавление ответов</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="x">if ($result-&gt;isSuccess()) {</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="x">    $resultId = $result-&gt;getId();</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="x">    \Bitrix\Form\AnswerTable::add([</span>
+<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="x">        &#39;RESULT_ID&#39; =&gt; $resultId,</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="x">        &#39;FIELD_ID&#39; =&gt; 456,</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Field value&#39;</span>
+<a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a><span class="x">    ]);</span>
+<a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a><span class="x">}</span>
+<a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a>
+<a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a><span class="x">// Legacy</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a><span class="x">$resultFields = [</span>
+<a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a><span class="x">    &#39;FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a><span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_1&#39;,</span>
+<a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a><span class="x">    &#39;USER_ID&#39; =&gt; 1,</span>
+<a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a><span class="x">    &#39;STAT_GUEST_ID&#39; =&gt; 0,</span>
+<a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a><span class="x">    &#39;STAT_SESSION_ID&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a><span class="x">    &#39;IP&#39; =&gt; $_SERVER[&#39;REMOTE_ADDR&#39;],</span>
+<a id="__codelineno-9-58" name="__codelineno-9-58" href="#__codelineno-9-58"></a><span class="x">    &#39;DATE_CREATE&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
+<a id="__codelineno-9-59" name="__codelineno-9-59" href="#__codelineno-9-59"></a><span class="x">    &#39;DATE_UPDATE&#39; =&gt; new \Bitrix\Main\Type\DateTime()</span>
+<a id="__codelineno-9-60" name="__codelineno-9-60" href="#__codelineno-9-60"></a><span class="x">];</span>
+<a id="__codelineno-9-61" name="__codelineno-9-61" href="#__codelineno-9-61"></a><span class="x">$resultId = CFormResult::Add($resultFields);</span>
+<a id="__codelineno-9-62" name="__codelineno-9-62" href="#__codelineno-9-62"></a>
+<a id="__codelineno-9-63" name="__codelineno-9-63" href="#__codelineno-9-63"></a><span class="x">// Add answers</span>
+<a id="__codelineno-9-64" name="__codelineno-9-64" href="#__codelineno-9-64"></a><span class="x">// Добавление ответов</span>
+<a id="__codelineno-9-65" name="__codelineno-9-65" href="#__codelineno-9-65"></a><span class="x">if ($resultId) {</span>
+<a id="__codelineno-9-66" name="__codelineno-9-66" href="#__codelineno-9-66"></a><span class="x">    CFormAnswer::Add([</span>
+<a id="__codelineno-9-67" name="__codelineno-9-67" href="#__codelineno-9-67"></a><span class="x">        &#39;RESULT_ID&#39; =&gt; $resultId,</span>
+<a id="__codelineno-9-68" name="__codelineno-9-68" href="#__codelineno-9-68"></a><span class="x">        &#39;FIELD_ID&#39; =&gt; 456,</span>
+<a id="__codelineno-9-69" name="__codelineno-9-69" href="#__codelineno-9-69"></a><span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Field value&#39;</span>
+<a id="__codelineno-9-70" name="__codelineno-9-70" href="#__codelineno-9-70"></a><span class="x">    ]);</span>
+<a id="__codelineno-9-71" name="__codelineno-9-71" href="#__codelineno-9-71"></a><span class="x">}</span>
 </code></pre></div>
-<h4 id="update_2">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.result.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;resultId&#39; =&gt; 456,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;,</span>
-<span class="x">            &#39;ANSWERS&#39; =&gt; [</span>
-<span class="x">                &#39;NEW_FIELD&#39; =&gt; &#39;Updated field value&#39;</span>
-<span class="x">            ]</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\ResultTable::update(456, [</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Update answers</span>
-<span class="x">// Обновление ответов</span>
-<span class="x">$answers = \Bitrix\Form\AnswerTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;ID&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=RESULT_ID&#39; =&gt; 456, &#39;=FIELD_ID&#39; =&gt; 789],</span>
-<span class="x">    &#39;limit&#39; =&gt; 1</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">if ($answers) {</span>
-<span class="x">    \Bitrix\Form\AnswerTable::update($answers[&#39;ID&#39;], [</span>
-<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Updated field value&#39;</span>
-<span class="x">    ]);</span>
-<span class="x">}</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$resultFields = [</span>
-<span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;</span>
-<span class="x">];</span>
-<span class="x">CFormResult::Set($resultFields, 456);</span>
-
-<span class="x">// Update answers</span>
-<span class="x">// Обновление ответов</span>
-<span class="x">$answers = CFormAnswer::GetList(456, [&#39;FIELD_ID&#39; =&gt; 789]);</span>
-<span class="x">if ($answer = $answers-&gt;GetNext()) {</span>
-<span class="x">    CFormAnswer::Set([</span>
-<span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Updated field value&#39;</span>
-<span class="x">    ], $answer[&#39;ID&#39;]);</span>
-<span class="x">}</span>
+<h4 id="update_2">Update | Обновление<a class="headerlink" href="#update_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">    &#39;form.result.update&#39;,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">    [</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">        &#39;resultId&#39; =&gt; 456,</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">        &#39;fields&#39; =&gt; [</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">            &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;,</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">            &#39;ANSWERS&#39; =&gt; [</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="x">                &#39;NEW_FIELD&#39; =&gt; &#39;Updated field value&#39;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="x">            ]</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="x">        ]</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="x">    ]</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="x">);</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="x">// D7</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="x">$result = \Bitrix\Form\ResultTable::update(456, [</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="x">]);</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="x">// Update answers</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="x">// Обновление ответов</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="x">$answers = \Bitrix\Form\AnswerTable::getList([</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="x">    &#39;select&#39; =&gt; [&#39;ID&#39;],</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=RESULT_ID&#39; =&gt; 456, &#39;=FIELD_ID&#39; =&gt; 789],</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="x">    &#39;limit&#39; =&gt; 1</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="x">if ($answers) {</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="x">    \Bitrix\Form\AnswerTable::update($answers[&#39;ID&#39;], [</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Updated field value&#39;</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="x">    ]);</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="x">}</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="x">// Legacy</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="x">$resultFields = [</span>
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a><span class="x">    &#39;STATUS_ID&#39; =&gt; &#39;FORM_STATUS_2&#39;</span>
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="x">];</span>
+<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="x">CFormResult::Set($resultFields, 456);</span>
+<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>
+<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="x">// Update answers</span>
+<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="x">// Обновление ответов</span>
+<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="x">$answers = CFormAnswer::GetList(456, [&#39;FIELD_ID&#39; =&gt; 789]);</span>
+<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a><span class="x">if ($answer = $answers-&gt;GetNext()) {</span>
+<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a><span class="x">    CFormAnswer::Set([</span>
+<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="x">        &#39;ANSWER_TEXT&#39; =&gt; &#39;Updated field value&#39;</span>
+<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="x">    ], $answer[&#39;ID&#39;]);</span>
+<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="x">}</span>
 </code></pre></div>
-<h4 id="delete_2">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;form.result.delete&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;formId&#39; =&gt; 123,</span>
-<span class="x">        &#39;resultId&#39; =&gt; 456</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$result = \Bitrix\Form\ResultTable::delete(456);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">CFormResult::Delete(456);</span>
+<h4 id="delete_2">Delete | Удаление<a class="headerlink" href="#delete_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">// REST API</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: CRest::Init() with proper credentials</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$result = CRest::call(</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">    &#39;form.result.delete&#39;,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">    [</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">        &#39;formId&#39; =&gt; 123,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">        &#39;resultId&#39; =&gt; 456</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">    ]</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">// D7</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="x">$result = \Bitrix\Form\ResultTable::delete(456);</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="x">CFormResult::Delete(456);</span>
 </code></pre></div>
-<h3 id="form-display">Form Display | Отображение форм</h3>
-<h4 id="show-form">Show Form | Показать форму</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
-<span class="x">    &#39;bitrix:form&#39;,</span>
-<span class="x">    &#39;&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
-<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
-<span class="x">    &#39;bitrix:form&#39;,</span>
-<span class="x">    &#39;&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
-<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
+<h3 id="form-display">Form Display | Отображение форм<a class="headerlink" href="#form-display" title="Permanent link">&para;</a></h3>
+<h4 id="show-form">Show Form | Показать форму<a class="headerlink" href="#show-form" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">// D7</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">    &#39;bitrix:form&#39;,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="x">    &#39;&#39;,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">    [</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="x">    ]</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="x">);</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="x">    &#39;bitrix:form&#39;,</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="x">    &#39;&#39;,</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="x">    [</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="x">    ]</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="show-results">Show Results | Показать результаты</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
-<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
-<span class="x">    &#39;bitrix:form.result.list&#39;,</span>
-<span class="x">    &#39;&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
-<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
-<span class="x">$APPLICATION-&gt;IncludeComponent(</span>
-<span class="x">    &#39;bitrix:form.result.list&#39;,</span>
-<span class="x">    &#39;&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
-<span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
+<h4 id="show-results">Show Results | Показать результаты<a class="headerlink" href="#show-results" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">// D7</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;form&#39;)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="x">    &#39;bitrix:form.result.list&#39;,</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">    &#39;&#39;,</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">    [</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="x">    ]</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="x">);</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;form&#39;)</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="x">$APPLICATION-&gt;IncludeComponent(</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="x">    &#39;bitrix:form.result.list&#39;,</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="x">    &#39;&#39;,</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="x">    [</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="x">        &#39;WEB_FORM_ID&#39; =&gt; 123,</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="x">        &#39;AJAX_MODE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="x">        &#39;AJAX_OPTION_SHADOW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="x">        &#39;AJAX_OPTION_JUMP&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="x">        &#39;AJAX_OPTION_STYLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="x">        &#39;AJAX_OPTION_HISTORY&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="x">    ]</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="x">);</span>
 </code></pre></div>
 
 
@@ -2199,6 +1650,9 @@
 
 
 
+
+  
+  
 
 
 
@@ -2257,7 +1711,7 @@
       
       
     
-    <a href="https://t.me/axbuild" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+    <a href="https://t.me/bitrixdevelopers" target="_blank" rel="noopener" title="t.me" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8m114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.45 10.45 0 0 1 3.53 6.716 43.8 43.8 0 0 1 .417 9.769"/></svg>
     </a>
   
@@ -2273,9 +1727,84 @@
     </div>
     
     
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Принять</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Управлять настройками</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.expand", "navigation.path", "toc.integrate", "search.highlight", "search.share", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": ["Bitrix24", "API", "REST API", "CRM", "Development", "Integration", "Modules", "Documentation"], "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>

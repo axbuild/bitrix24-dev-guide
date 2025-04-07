@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive Bitrix24 API Documentation and Developer Guide">
+        <meta name="description" content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices.">
       
       
         <meta name="author" content="Axbuild">
@@ -21,7 +21,7 @@
         <link rel="next" href="../sale/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -63,12 +65,38 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
   
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
   
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Pull - Bitrix24 Developer Guide" >
+      
+        <meta  property="og:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
+      
+        <meta  property="og:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/pull/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://axbuild.github.io/bitrix24-dev-guide/modules/pull/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Pull - Bitrix24 Developer Guide" >
+      
+        <meta  name="twitter:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
+      
+        <meta  name="twitter:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/pull/index.png" >
+      
     
     
   </head>
@@ -105,7 +133,7 @@
     <a href="../.." title="Bitrix24 Developer Guide" class="md-header__button md-logo" aria-label="Bitrix24 Developer Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,6 +160,32 @@
       
     
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -293,12 +347,14 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Bitrix24 Developer Guide" class="md-nav__button md-logo" aria-label="Bitrix24 Developer Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
     Bitrix24 Developer Guide
@@ -441,49 +497,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../crm/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../crm/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -492,188 +508,7 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            CRM
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/leads/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Leads
-    
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/deals.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/contacts.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Contacts
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/companies.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Companies
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/products.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Products
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/quotes.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quotes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/invoices.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Invoices
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -853,39 +688,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration | Конфигурация">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initialize-pull-pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialize Pull | Инициализация Pull
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-pull-settings-pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Pull Settings | Получение настроек Pull
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-pull-settings-pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Pull Settings | Обновление настроек Pull
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -894,39 +696,6 @@
       Channel Management | Управление каналами
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Channel Management | Управление каналами">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Channel | Создание канала
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Channel | Получение канала
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Channel | Удаление канала
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -937,39 +706,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Message Management | Управление сообщениями">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Message | Отправка сообщения
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-message-to-multiple-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Message to Multiple Users | Отправка сообщения нескольким пользователям
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-message-to-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Message to Group | Отправка сообщения группе
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -978,39 +714,6 @@
       Subscription Management | Управление подписками
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Subscription Management | Управление подписками">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subscribe-to-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subscribe to Channel | Подписка на канал
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unsubscribe-from-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unsubscribe from Channel | Отписка от канала
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-subscriptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Subscriptions | Получение подписок
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1021,39 +724,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Event Management | Управление событиями">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#register-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Register Event | Регистрация события
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Events | Получение событий
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Events | Удаление событий
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1062,48 +732,6 @@
       Client Integration | Интеграция с клиентом
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Client Integration | Интеграция с клиентом">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-client-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Client Script | Получение клиентского скрипта
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialize-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialize Client | Инициализация клиента
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscribe-to-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subscribe to Events | Подписка на события
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unsubscribe-from-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unsubscribe from Events | Отписка от событий
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1384,7 +1012,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1467,317 +1097,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview | Обзор
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods | Методы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods | Методы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration | Конфигурация
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration | Конфигурация">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initialize-pull-pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialize Pull | Инициализация Pull
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-pull-settings-pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Pull Settings | Получение настроек Pull
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-pull-settings-pull" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Pull Settings | Обновление настроек Pull
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#channel-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Channel Management | Управление каналами
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Channel Management | Управление каналами">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Channel | Создание канала
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Channel | Получение канала
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Channel | Удаление канала
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Management | Управление сообщениями
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Message Management | Управление сообщениями">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Message | Отправка сообщения
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-message-to-multiple-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Message to Multiple Users | Отправка сообщения нескольким пользователям
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-message-to-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Message to Group | Отправка сообщения группе
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscription-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subscription Management | Управление подписками
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Subscription Management | Управление подписками">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subscribe-to-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subscribe to Channel | Подписка на канал
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unsubscribe-from-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unsubscribe from Channel | Отписка от канала
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-subscriptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Subscriptions | Получение подписок
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Event Management | Управление событиями
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Event Management | Управление событиями">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#register-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Register Event | Регистрация события
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Events | Получение событий
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Events | Удаление событий
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#client-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Client Integration | Интеграция с клиентом
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Client Integration | Интеграция с клиентом">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-client-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Client Script | Получение клиентского скрипта
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialize-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialize Client | Инициализация клиента
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscribe-to-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subscribe to Events | Подписка на события
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unsubscribe-from-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unsubscribe from Events | Отписка от событий
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1790,362 +1109,362 @@
   
 
 
-<h1 id="pull-module-pull">Pull Module | Модуль Pull</h1>
-<h2 id="overview">Overview | Обзор</h2>
+<h1 id="pull-module-pull">Pull Module | Модуль Pull<a class="headerlink" href="#pull-module-pull" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview | Обзор<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The Pull module provides functionality for real-time push notifications and updates in Bitrix24. It enables instant delivery of messages, events, and data updates to users through various channels including web browsers and mobile applications. | Модуль Pull предоставляет функциональность для отправки push-уведомлений и обновлений в реальном времени в Bitrix24. Он обеспечивает мгновенную доставку сообщений, событий и обновлений данных пользователям через различные каналы, включая веб-браузеры и мобильные приложения.</p>
-<h2 id="methods">Methods | Методы</h2>
-<h3 id="configuration">Configuration | Конфигурация</h3>
-<h4 id="initialize-pull-pull">Initialize Pull | Инициализация Pull</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">\Bitrix\Pull\Config::getInstance()-&gt;init([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
-<span class="x">    &#39;serverKey&#39; =&gt; &#39;your_server_key&#39;,</span>
-<span class="x">    &#39;serverSecret&#39; =&gt; &#39;your_server_secret&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">CPullOptions::Init();</span>
+<h2 id="methods">Methods | Методы<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="configuration">Configuration | Конфигурация<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<h4 id="initialize-pull-pull">Initialize Pull | Инициализация Pull<a class="headerlink" href="#initialize-pull-pull" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">// D7</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">\Bitrix\Pull\Config::getInstance()-&gt;init([</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">    &#39;serverKey&#39; =&gt; &#39;your_server_key&#39;,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">    &#39;serverSecret&#39; =&gt; &#39;your_server_secret&#39;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">]);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">// Legacy</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="x">CPullOptions::Init();</span>
 </code></pre></div>
-<h4 id="get-pull-settings-pull">Get Pull Settings | Получение настроек Pull</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$settings = \Bitrix\Pull\Config::getInstance()-&gt;getSettings();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$settings = CPullOptions::GetSettings();</span>
+<h4 id="get-pull-settings-pull">Get Pull Settings | Получение настроек Pull<a class="headerlink" href="#get-pull-settings-pull" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">// D7</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">$settings = \Bitrix\Pull\Config::getInstance()-&gt;getSettings();</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">$settings = CPullOptions::GetSettings();</span>
 </code></pre></div>
-<h4 id="update-pull-settings-pull">Update Pull Settings | Обновление настроек Pull</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Config::getInstance()-&gt;updateSettings([</span>
-<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://new.pull.example.com&#39;,</span>
-<span class="x">    &#39;serverKey&#39; =&gt; &#39;new_server_key&#39;,</span>
-<span class="x">    &#39;serverSecret&#39; =&gt; &#39;new_server_secret&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullOptions::UpdateSettings([</span>
-<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://new.pull.example.com&#39;,</span>
-<span class="x">    &#39;serverKey&#39; =&gt; &#39;new_server_key&#39;,</span>
-<span class="x">    &#39;serverSecret&#39; =&gt; &#39;new_server_secret&#39;</span>
-<span class="x">]);</span>
+<h4 id="update-pull-settings-pull">Update Pull Settings | Обновление настроек Pull<a class="headerlink" href="#update-pull-settings-pull" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">// D7</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">$result = \Bitrix\Pull\Config::getInstance()-&gt;updateSettings([</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://new.pull.example.com&#39;,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;serverKey&#39; =&gt; &#39;new_server_key&#39;,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">    &#39;serverSecret&#39; =&gt; &#39;new_server_secret&#39;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">]);</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="x">$result = CPullOptions::UpdateSettings([</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://new.pull.example.com&#39;,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="x">    &#39;serverKey&#39; =&gt; &#39;new_server_key&#39;,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="x">    &#39;serverSecret&#39; =&gt; &#39;new_server_secret&#39;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="x">]);</span>
 </code></pre></div>
-<h3 id="channel-management">Channel Management | Управление каналами</h3>
-<h4 id="create-channel">Create Channel | Создание канала</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$channel = \Bitrix\Pull\Channel::create([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;type&#39; =&gt; &#39;user&#39;,</span>
-<span class="x">    &#39;expires&#39; =&gt; 86400 // 24 hours</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$channel = CPullChannel::Create([</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;,</span>
-<span class="x">    &#39;EXPIRES&#39; =&gt; 86400 // 24 hours</span>
-<span class="x">]);</span>
+<h3 id="channel-management">Channel Management | Управление каналами<a class="headerlink" href="#channel-management" title="Permanent link">&para;</a></h3>
+<h4 id="create-channel">Create Channel | Создание канала<a class="headerlink" href="#create-channel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// D7</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$channel = \Bitrix\Pull\Channel::create([</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">    &#39;type&#39; =&gt; &#39;user&#39;,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">    &#39;expires&#39; =&gt; 86400 // 24 hours</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">]);</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="x">$channel = CPullChannel::Create([</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="x">    &#39;EXPIRES&#39; =&gt; 86400 // 24 hours</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="get-channel">Get Channel | Получение канала</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$channel = \Bitrix\Pull\Channel::get([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;type&#39; =&gt; &#39;user&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$channel = CPullChannel::Get([</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;</span>
-<span class="x">]);</span>
+<h4 id="get-channel">Get Channel | Получение канала<a class="headerlink" href="#get-channel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">// D7</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$channel = \Bitrix\Pull\Channel::get([</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">    &#39;type&#39; =&gt; &#39;user&#39;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">]);</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="x">$channel = CPullChannel::Get([</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-channel">Delete Channel | Удаление канала</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Channel::delete([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;type&#39; =&gt; &#39;user&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullChannel::Delete([</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;</span>
-<span class="x">]);</span>
+<h4 id="delete-channel">Delete Channel | Удаление канала<a class="headerlink" href="#delete-channel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">// D7</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$result = \Bitrix\Pull\Channel::delete([</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">    &#39;type&#39; =&gt; &#39;user&#39;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">]);</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">$result = CPullChannel::Delete([</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h3 id="message-management">Message Management | Управление сообщениями</h3>
-<h4 id="send-message">Send Message | Отправка сообщения</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Message::send([</span>
-<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
-<span class="x">    &#39;params&#39; =&gt; [</span>
-<span class="x">        &#39;title&#39; =&gt; &#39;New Message&#39;,</span>
-<span class="x">        &#39;text&#39; =&gt; &#39;You have a new message&#39;,</span>
-<span class="x">        &#39;link&#39; =&gt; &#39;/messages/&#39;</span>
-<span class="x">    ]</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullWatch::AddToStack(&#39;user_&#39; . $USER-&gt;GetID(), [</span>
-<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
-<span class="x">    &#39;params&#39; =&gt; [</span>
-<span class="x">        &#39;title&#39; =&gt; &#39;New Message&#39;,</span>
-<span class="x">        &#39;text&#39; =&gt; &#39;You have a new message&#39;,</span>
-<span class="x">        &#39;link&#39; =&gt; &#39;/messages/&#39;</span>
-<span class="x">    ]</span>
-<span class="x">]);</span>
+<h3 id="message-management">Message Management | Управление сообщениями<a class="headerlink" href="#message-management" title="Permanent link">&para;</a></h3>
+<h4 id="send-message">Send Message | Отправка сообщения<a class="headerlink" href="#send-message" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// D7</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$result = \Bitrix\Pull\Message::send([</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="x">    &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">        &#39;title&#39; =&gt; &#39;New Message&#39;,</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="x">        &#39;text&#39; =&gt; &#39;You have a new message&#39;,</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">        &#39;link&#39; =&gt; &#39;/messages/&#39;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="x">    ]</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="x">]);</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="x">// Legacy</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="x">$result = CPullWatch::AddToStack(&#39;user_&#39; . $USER-&gt;GetID(), [</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="x">    &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="x">        &#39;title&#39; =&gt; &#39;New Message&#39;,</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="x">        &#39;text&#39; =&gt; &#39;You have a new message&#39;,</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="x">        &#39;link&#39; =&gt; &#39;/messages/&#39;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="x">    ]</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="send-message-to-multiple-users">Send Message to Multiple Users | Отправка сообщения нескольким пользователям</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Message::sendToUsers(</span>
-<span class="x">    [1, 2, 3], // User IDs</span>
-<span class="x">    [</span>
-<span class="x">        &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">        &#39;command&#39; =&gt; &#39;notification&#39;,</span>
-<span class="x">        &#39;params&#39; =&gt; [</span>
-<span class="x">            &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
-<span class="x">            &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
-<span class="x">            &#39;link&#39; =&gt; &#39;/group/&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullWatch::AddToStack(&#39;user_1,user_2,user_3&#39;, [</span>
-<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
-<span class="x">    &#39;params&#39; =&gt; [</span>
-<span class="x">        &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
-<span class="x">        &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
-<span class="x">        &#39;link&#39; =&gt; &#39;/group/&#39;</span>
-<span class="x">    ]</span>
-<span class="x">]);</span>
+<h4 id="send-message-to-multiple-users">Send Message to Multiple Users | Отправка сообщения нескольким пользователям<a class="headerlink" href="#send-message-to-multiple-users" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// D7</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$result = \Bitrix\Pull\Message::sendToUsers(</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">    [1, 2, 3], // User IDs</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">    [</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">        &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">        &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">        &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="x">            &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="x">            &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="x">            &#39;link&#39; =&gt; &#39;/group/&#39;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="x">        ]</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="x">    ]</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="x">);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="x">$result = CPullWatch::AddToStack(&#39;user_1,user_2,user_3&#39;, [</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="x">    &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="x">        &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="x">        &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="x">        &#39;link&#39; =&gt; &#39;/group/&#39;</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="x">    ]</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="send-message-to-group">Send Message to Group | Отправка сообщения группе</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Message::sendToGroup(</span>
-<span class="x">    &#39;group_1&#39;, // Group ID</span>
-<span class="x">    [</span>
-<span class="x">        &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">        &#39;command&#39; =&gt; &#39;notification&#39;,</span>
-<span class="x">        &#39;params&#39; =&gt; [</span>
-<span class="x">            &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
-<span class="x">            &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
-<span class="x">            &#39;link&#39; =&gt; &#39;/group/&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullWatch::AddToStack(&#39;group_1&#39;, [</span>
-<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
-<span class="x">    &#39;params&#39; =&gt; [</span>
-<span class="x">        &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
-<span class="x">        &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
-<span class="x">        &#39;link&#39; =&gt; &#39;/group/&#39;</span>
-<span class="x">    ]</span>
-<span class="x">]);</span>
+<h4 id="send-message-to-group">Send Message to Group | Отправка сообщения группе<a class="headerlink" href="#send-message-to-group" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">// D7</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$result = \Bitrix\Pull\Message::sendToGroup(</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">    &#39;group_1&#39;, // Group ID</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">    [</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">        &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="x">        &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">        &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">            &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">            &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="x">            &#39;link&#39; =&gt; &#39;/group/&#39;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="x">        ]</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="x">    ]</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="x">);</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="x">$result = CPullWatch::AddToStack(&#39;group_1&#39;, [</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="x">    &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="x">        &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="x">        &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="x">        &#39;link&#39; =&gt; &#39;/group/&#39;</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="x">    ]</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="x">]);</span>
 </code></pre></div>
-<h3 id="subscription-management">Subscription Management | Управление подписками</h3>
-<h4 id="subscribe-to-channel">Subscribe to Channel | Подписка на канал</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Watch::subscribe([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullWatch::Add($USER-&gt;GetID(), &#39;user_&#39; . $USER-&gt;GetID(), true);</span>
+<h3 id="subscription-management">Subscription Management | Управление подписками<a class="headerlink" href="#subscription-management" title="Permanent link">&para;</a></h3>
+<h4 id="subscribe-to-channel">Subscribe to Channel | Подписка на канал<a class="headerlink" href="#subscribe-to-channel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">// D7</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$result = \Bitrix\Pull\Watch::subscribe([</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="x">]);</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="x">$result = CPullWatch::Add($USER-&gt;GetID(), &#39;user_&#39; . $USER-&gt;GetID(), true);</span>
 </code></pre></div>
-<h4 id="unsubscribe-from-channel">Unsubscribe from Channel | Отписка от канала</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Watch::unsubscribe([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullWatch::Delete($USER-&gt;GetID(), &#39;user_&#39; . $USER-&gt;GetID());</span>
+<h4 id="unsubscribe-from-channel">Unsubscribe from Channel | Отписка от канала<a class="headerlink" href="#unsubscribe-from-channel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">// D7</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$result = \Bitrix\Pull\Watch::unsubscribe([</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">]);</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="x">$result = CPullWatch::Delete($USER-&gt;GetID(), &#39;user_&#39; . $USER-&gt;GetID());</span>
 </code></pre></div>
-<h4 id="get-subscriptions">Get Subscriptions | Получение подписок</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$subscriptions = \Bitrix\Pull\Watch::getSubscriptions([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID()</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$subscriptions = CPullWatch::GetList([</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID()</span>
-<span class="x">]);</span>
+<h4 id="get-subscriptions">Get Subscriptions | Получение подписок<a class="headerlink" href="#get-subscriptions" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">// D7</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$subscriptions = \Bitrix\Pull\Watch::getSubscriptions([</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">]);</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">// Legacy</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="x">$subscriptions = CPullWatch::GetList([</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">]);</span>
 </code></pre></div>
-<h3 id="event-management">Event Management | Управление событиями</h3>
-<h4 id="register-event">Register Event | Регистрация события</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Event::register([</span>
-<span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">    &#39;event&#39; =&gt; &#39;user_login&#39;,</span>
-<span class="x">    &#39;params&#39; =&gt; [</span>
-<span class="x">        &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">        &#39;userName&#39; =&gt; $USER-&gt;GetLogin()</span>
-<span class="x">    ]</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullEvent::Add([</span>
-<span class="x">    &#39;MODULE_ID&#39; =&gt; &#39;main&#39;,</span>
-<span class="x">    &#39;EVENT&#39; =&gt; &#39;user_login&#39;,</span>
-<span class="x">    &#39;PARAMS&#39; =&gt; [</span>
-<span class="x">        &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">        &#39;USER_NAME&#39; =&gt; $USER-&gt;GetLogin()</span>
-<span class="x">    ]</span>
-<span class="x">]);</span>
+<h3 id="event-management">Event Management | Управление событиями<a class="headerlink" href="#event-management" title="Permanent link">&para;</a></h3>
+<h4 id="register-event">Register Event | Регистрация события<a class="headerlink" href="#register-event" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">// D7</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">$result = \Bitrix\Pull\Event::register([</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="x">    &#39;event&#39; =&gt; &#39;user_login&#39;,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">    &#39;params&#39; =&gt; [</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="x">        &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">        &#39;userName&#39; =&gt; $USER-&gt;GetLogin()</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="x">    ]</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">]);</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="x">// Legacy</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="x">$result = CPullEvent::Add([</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="x">    &#39;MODULE_ID&#39; =&gt; &#39;main&#39;,</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="x">    &#39;EVENT&#39; =&gt; &#39;user_login&#39;,</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="x">    &#39;PARAMS&#39; =&gt; [</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="x">        &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="x">        &#39;USER_NAME&#39; =&gt; $USER-&gt;GetLogin()</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="x">    ]</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="get-events">Get Events | Получение событий</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$events = \Bitrix\Pull\Event::get([</span>
-<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;lastId&#39; =&gt; 0,</span>
-<span class="x">    &#39;limit&#39; =&gt; 50</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$events = CPullEvent::GetList([</span>
-<span class="x">    &#39;CHANNEL_ID&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;LAST_ID&#39; =&gt; 0,</span>
-<span class="x">    &#39;LIMIT&#39; =&gt; 50</span>
-<span class="x">]);</span>
+<h4 id="get-events">Get Events | Получение событий<a class="headerlink" href="#get-events" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">// D7</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">$events = \Bitrix\Pull\Event::get([</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">    &#39;lastId&#39; =&gt; 0,</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">    &#39;limit&#39; =&gt; 50</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="x">]);</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="x">$events = CPullEvent::GetList([</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="x">    &#39;CHANNEL_ID&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="x">    &#39;LAST_ID&#39; =&gt; 0,</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="x">    &#39;LIMIT&#39; =&gt; 50</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-events">Delete Events | Удаление событий</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$result = \Bitrix\Pull\Event::delete([</span>
-<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;lastId&#39; =&gt; 100</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$result = CPullEvent::Delete([</span>
-<span class="x">    &#39;CHANNEL_ID&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
-<span class="x">    &#39;LAST_ID&#39; =&gt; 100</span>
-<span class="x">]);</span>
+<h4 id="delete-events">Delete Events | Удаление событий<a class="headerlink" href="#delete-events" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="x">// D7</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="x">$result = \Bitrix\Pull\Event::delete([</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="x">    &#39;lastId&#39; =&gt; 100</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">]);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="x">$result = CPullEvent::Delete([</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="x">    &#39;CHANNEL_ID&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="x">    &#39;LAST_ID&#39; =&gt; 100</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h3 id="client-integration">Client Integration | Интеграция с клиентом</h3>
-<h4 id="get-client-script">Get Client Script | Получение клиентского скрипта</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
-<span class="x">$script = \Bitrix\Pull\Client::getScript([</span>
-<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
-<span class="x">    &#39;serverKey&#39; =&gt; &#39;your_server_key&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
-<span class="x">$script = CPullWatch::GetScript([</span>
-<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
-<span class="x">    &#39;SERVER_URL&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
-<span class="x">    &#39;SERVER_KEY&#39; =&gt; &#39;your_server_key&#39;</span>
-<span class="x">]);</span>
+<h3 id="client-integration">Client Integration | Интеграция с клиентом<a class="headerlink" href="#client-integration" title="Permanent link">&para;</a></h3>
+<h4 id="get-client-script">Get Client Script | Получение клиентского скрипта<a class="headerlink" href="#get-client-script" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">// D7</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="x">$script = \Bitrix\Pull\Client::getScript([</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="x">    &#39;serverKey&#39; =&gt; &#39;your_server_key&#39;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="x">]);</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="x">$script = CPullWatch::GetScript([</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="x">    &#39;SERVER_URL&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="x">    &#39;SERVER_KEY&#39; =&gt; &#39;your_server_key&#39;</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="initialize-client">Initialize Client | Инициализация клиента</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// JavaScript</span>
-<span class="x">// Requires: Pull client script</span>
-<span class="x">// Требуется: Скрипт клиента Pull</span>
-<span class="x">BX.Pull.init({</span>
-<span class="x">    userId: 1,</span>
-<span class="x">    serverUrl: &#39;https://pull.example.com&#39;,</span>
-<span class="x">    serverKey: &#39;your_server_key&#39;,</span>
-<span class="x">    onConnect: function() {</span>
-<span class="x">        console.log(&#39;Connected to Pull server&#39;);</span>
-<span class="x">    },</span>
-<span class="x">    onError: function(error) {</span>
-<span class="x">        console.error(&#39;Pull error:&#39;, error);</span>
-<span class="x">    }</span>
-<span class="x">});</span>
+<h4 id="initialize-client">Initialize Client | Инициализация клиента<a class="headerlink" href="#initialize-client" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">// JavaScript</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="x">// Requires: Pull client script</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="x">// Требуется: Скрипт клиента Pull</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="x">BX.Pull.init({</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="x">    userId: 1,</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="x">    serverUrl: &#39;https://pull.example.com&#39;,</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="x">    serverKey: &#39;your_server_key&#39;,</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="x">    onConnect: function() {</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="x">        console.log(&#39;Connected to Pull server&#39;);</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="x">    },</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="x">    onError: function(error) {</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="x">        console.error(&#39;Pull error:&#39;, error);</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="x">    }</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="x">});</span>
 </code></pre></div>
-<h4 id="subscribe-to-events">Subscribe to Events | Подписка на события</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// JavaScript</span>
-<span class="x">// Requires: Pull client script</span>
-<span class="x">// Требуется: Скрипт клиента Pull</span>
-<span class="x">BX.Pull.subscribe({</span>
-<span class="x">    moduleId: &#39;main&#39;,</span>
-<span class="x">    callback: function(data) {</span>
-<span class="x">        console.log(&#39;Received event:&#39;, data);</span>
-<span class="x">    }</span>
-<span class="x">});</span>
+<h4 id="subscribe-to-events">Subscribe to Events | Подписка на события<a class="headerlink" href="#subscribe-to-events" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="x">// JavaScript</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="x">// Requires: Pull client script</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="x">// Требуется: Скрипт клиента Pull</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="x">BX.Pull.subscribe({</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="x">    moduleId: &#39;main&#39;,</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="x">    callback: function(data) {</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="x">        console.log(&#39;Received event:&#39;, data);</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="x">    }</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="x">});</span>
 </code></pre></div>
-<h4 id="unsubscribe-from-events">Unsubscribe from Events | Отписка от событий</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// JavaScript</span>
-<span class="x">// Requires: Pull client script</span>
-<span class="x">// Требуется: Скрипт клиента Pull</span>
-<span class="x">BX.Pull.unsubscribe({</span>
-<span class="x">    moduleId: &#39;main&#39;</span>
-<span class="x">});</span>
+<h4 id="unsubscribe-from-events">Unsubscribe from Events | Отписка от событий<a class="headerlink" href="#unsubscribe-from-events" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="x">// JavaScript</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="x">// Requires: Pull client script</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="x">// Требуется: Скрипт клиента Pull</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="x">BX.Pull.unsubscribe({</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="x">    moduleId: &#39;main&#39;</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="x">});</span>
 </code></pre></div>
 
 
@@ -2153,6 +1472,9 @@
 
 
 
+
+  
+  
 
 
 
@@ -2211,7 +1533,7 @@
       
       
     
-    <a href="https://t.me/axbuild" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+    <a href="https://t.me/bitrixdevelopers" target="_blank" rel="noopener" title="t.me" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8m114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.45 10.45 0 0 1 3.53 6.716 43.8 43.8 0 0 1 .417 9.769"/></svg>
     </a>
   
@@ -2227,9 +1549,84 @@
     </div>
     
     
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Принять</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Управлять настройками</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.expand", "navigation.path", "toc.integrate", "search.highlight", "search.share", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": ["Bitrix24", "API", "REST API", "CRM", "Development", "Integration", "Modules", "Documentation"], "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>

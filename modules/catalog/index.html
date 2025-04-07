@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive Bitrix24 API Documentation and Developer Guide">
+        <meta name="description" content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices.">
       
       
         <meta name="author" content="Axbuild">
@@ -19,7 +19,7 @@
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
@@ -52,6 +52,8 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -61,12 +63,38 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
   
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
   
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Catalog - Bitrix24 Developer Guide" >
+      
+        <meta  property="og:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
+      
+        <meta  property="og:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/catalog/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://axbuild.github.io/bitrix24-dev-guide/modules/catalog/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Catalog - Bitrix24 Developer Guide" >
+      
+        <meta  name="twitter:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
+      
+        <meta  name="twitter:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/catalog/index.png" >
+      
     
     
   </head>
@@ -103,7 +131,7 @@
     <a href="../.." title="Bitrix24 Developer Guide" class="md-header__button md-logo" aria-label="Bitrix24 Developer Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -130,6 +158,32 @@
       
     
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -291,12 +345,14 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Bitrix24 Developer Guide" class="md-nav__button md-logo" aria-label="Bitrix24 Developer Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
 
     </a>
     Bitrix24 Developer Guide
@@ -439,49 +495,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../crm/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../crm/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -490,188 +506,7 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            CRM
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/leads/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Leads
-    
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/deals.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/contacts.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Contacts
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/companies.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Companies
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/products.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Products
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/quotes.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quotes
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../crm/invoices.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Invoices
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -989,57 +824,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Products | Товары">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Product | Получение товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-product-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Product List | Получение списка товаров
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Product | Добавление товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Product | Обновление товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Product | Удаление товара
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1048,57 +832,6 @@
       Prices | Цены
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Prices | Цены">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Price | Получение цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-price-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Price List | Получение списка цен
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Price | Установка цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Price | Обновление цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Price | Удаление цены
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1109,48 +842,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Price Types | Типы цен">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-price-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Price Types | Получение типов цен
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-price-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Price Type | Добавление типа цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-price-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Price Type | Обновление типа цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-price-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Price Type | Удаление типа цены
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1160,48 +851,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Product Properties | Свойства товаров">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-product-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Product Properties | Получение свойств товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-product-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Product Property | Установка свойства товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-product-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Product Property | Обновление свойства товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-product-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Product Property | Удаление свойства товара
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1210,57 +859,6 @@
       Product Sections | Разделы товаров
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Product Sections | Разделы товаров">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Section | Получение раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-section-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Section List | Получение списка разделов
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Section | Добавление раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Section | Обновление раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Section | Удаление раздела
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1403,7 +1001,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1486,338 +1086,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview | Обзор
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods | Методы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods | Методы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#products" class="md-nav__link">
-    <span class="md-ellipsis">
-      Products | Товары
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Products | Товары">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Product | Получение товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-product-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Product List | Получение списка товаров
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Product | Добавление товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Product | Обновление товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Product | Удаление товара
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prices | Цены
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prices | Цены">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Price | Получение цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-price-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Price List | Получение списка цен
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Price | Установка цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Price | Обновление цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-price" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Price | Удаление цены
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#price-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Price Types | Типы цен
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Price Types | Типы цен">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-price-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Price Types | Получение типов цен
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-price-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Price Type | Добавление типа цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-price-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Price Type | Обновление типа цены
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-price-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Price Type | Удаление типа цены
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Product Properties | Свойства товаров
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Product Properties | Свойства товаров">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-product-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Product Properties | Получение свойств товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-product-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Product Property | Установка свойства товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-product-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Product Property | Обновление свойства товара
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-product-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Product Property | Удаление свойства товара
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-sections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Product Sections | Разделы товаров
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Product Sections | Разделы товаров">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Section | Получение раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-section-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Section List | Получение списка разделов
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Section | Добавление раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Section | Обновление раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Section | Удаление раздела
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1830,396 +1098,396 @@
   
 
 
-<h1 id="catalog-module">Catalog Module | Модуль Каталог</h1>
-<h2 id="overview">Overview | Обзор</h2>
+<h1 id="catalog-module">Catalog Module | Модуль Каталог<a class="headerlink" href="#catalog-module" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview | Обзор<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The Catalog module provides functionality for managing products, prices, and product properties in Bitrix24. It is essential for e-commerce operations and product management. | Модуль Каталог предоставляет функциональность для управления товарами, ценами и свойствами товаров в Bitrix24. Он необходим для операций электронной коммерции и управления товарами.</p>
-<h2 id="methods">Methods | Методы</h2>
-<h3 id="products">Products | Товары</h3>
-<h4 id="get-product">Get Product | Получение товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$product = \Bitrix\Catalog\ProductTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $productId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;]</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$product = CCatalogProduct::GetByID($productId);</span>
+<h2 id="methods">Methods | Методы<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="products">Products | Товары<a class="headerlink" href="#products" title="Permanent link">&para;</a></h3>
+<h4 id="get-product">Get Product | Получение товара<a class="headerlink" href="#get-product" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">// D7</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">$product = \Bitrix\Catalog\ProductTable::getList([</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $productId],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">$product = CCatalogProduct::GetByID($productId);</span>
 </code></pre></div>
-<h4 id="get-product-list">Get Product List | Получение списка товаров</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$products = \Bitrix\Catalog\ProductTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 10</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$products = CCatalogProduct::GetList(</span>
-<span class="x">    [&#39;ID&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    false,</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 10],</span>
-<span class="x">    [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;]</span>
-<span class="x">);</span>
+<h4 id="get-product-list">Get Product List | Получение списка товаров<a class="headerlink" href="#get-product-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">// D7</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">$products = \Bitrix\Catalog\ProductTable::getList([</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;],</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">    &#39;limit&#39; =&gt; 10</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="x">])-&gt;fetchAll();</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="x">$products = CCatalogProduct::GetList(</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="x">    [&#39;ID&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="x">    false,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="x">    [&#39;nTopCount&#39; =&gt; 10],</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="x">    [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;]</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="add-product">Add Product | Добавление товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\ProductTable::add([</span>
-<span class="x">    &#39;ID&#39; =&gt; $elementId,</span>
-<span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
-<span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;WEIGHT&#39; =&gt; 1000,</span>
-<span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;NEGATIVE_AMOUNT_TRACE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
-<span class="x">    &#39;TYPE&#39; =&gt; \Bitrix\Catalog\ProductTable::TYPE_PRODUCT,</span>
-<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;BUNDLE&#39; =&gt; &#39;N&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::Add([</span>
-<span class="x">    &#39;ID&#39; =&gt; $elementId,</span>
-<span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
-<span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;WEIGHT&#39; =&gt; 1000,</span>
-<span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;NEGATIVE_AMOUNT_TRACE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
-<span class="x">    &#39;TYPE&#39; =&gt; CCatalogProduct::TYPE_PRODUCT,</span>
-<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;BUNDLE&#39; =&gt; &#39;N&#39;</span>
-<span class="x">]);</span>
+<h4 id="add-product">Add Product | Добавление товара<a class="headerlink" href="#add-product" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">// D7</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">$result = \Bitrix\Catalog\ProductTable::add([</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    &#39;ID&#39; =&gt; $elementId,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">    &#39;WEIGHT&#39; =&gt; 1000,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="x">    &#39;NEGATIVE_AMOUNT_TRACE&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="x">    &#39;TYPE&#39; =&gt; \Bitrix\Catalog\ProductTable::TYPE_PRODUCT,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="x">    &#39;BUNDLE&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="x">]);</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="x">// Legacy</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="x">$result = CCatalogProduct::Add([</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="x">    &#39;ID&#39; =&gt; $elementId,</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="x">    &#39;WEIGHT&#39; =&gt; 1000,</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="x">    &#39;NEGATIVE_AMOUNT_TRACE&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="x">    &#39;TYPE&#39; =&gt; CCatalogProduct::TYPE_PRODUCT,</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="x">    &#39;BUNDLE&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-product">Update Product | Обновление товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\ProductTable::update($productId, [</span>
-<span class="x">    &#39;QUANTITY&#39; =&gt; 50,</span>
-<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::Update($productId, [</span>
-<span class="x">    &#39;QUANTITY&#39; =&gt; 50,</span>
-<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">]);</span>
+<h4 id="update-product">Update Product | Обновление товара<a class="headerlink" href="#update-product" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// D7</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$result = \Bitrix\Catalog\ProductTable::update($productId, [</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 50,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">]);</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="x">$result = CCatalogProduct::Update($productId, [</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 50,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-product">Delete Product | Удаление товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\ProductTable::delete($productId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::Delete($productId);</span>
+<h4 id="delete-product">Delete Product | Удаление товара<a class="headerlink" href="#delete-product" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">// D7</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$result = \Bitrix\Catalog\ProductTable::delete($productId);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">$result = CCatalogProduct::Delete($productId);</span>
 </code></pre></div>
-<h3 id="prices">Prices | Цены</h3>
-<h4 id="get-price">Get Price | Получение цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$price = \Bitrix\Catalog\PriceTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [</span>
-<span class="x">        &#39;=PRODUCT_ID&#39; =&gt; $productId,</span>
-<span class="x">        &#39;=CATALOG_GROUP_ID&#39; =&gt; $priceTypeId</span>
-<span class="x">    ]</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$price = CCatalogProduct::GetOptimalPrice($productId, 1, $USER-&gt;GetUserGroupArray());</span>
+<h3 id="prices">Prices | Цены<a class="headerlink" href="#prices" title="Permanent link">&para;</a></h3>
+<h4 id="get-price">Get Price | Получение цены<a class="headerlink" href="#get-price" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">// D7</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$price = \Bitrix\Catalog\PriceTable::getList([</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">    &#39;filter&#39; =&gt; [</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">        &#39;=PRODUCT_ID&#39; =&gt; $productId,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">        &#39;=CATALOG_GROUP_ID&#39; =&gt; $priceTypeId</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="x">    ]</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">// Legacy</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="x">$price = CCatalogProduct::GetOptimalPrice($productId, 1, $USER-&gt;GetUserGroupArray());</span>
 </code></pre></div>
-<h4 id="get-price-list">Get Price List | Получение списка цен</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$prices = \Bitrix\Catalog\PriceTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=PRODUCT_ID&#39; =&gt; $productId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;CATALOG_GROUP.NAME&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$prices = CCatalogProduct::GetPriceList($productId);</span>
+<h4 id="get-price-list">Get Price List | Получение списка цен<a class="headerlink" href="#get-price-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// D7</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$prices = \Bitrix\Catalog\PriceTable::getList([</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=PRODUCT_ID&#39; =&gt; $productId],</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;CATALOG_GROUP.NAME&#39;]</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">])-&gt;fetchAll();</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="x">$prices = CCatalogProduct::GetPriceList($productId);</span>
 </code></pre></div>
-<h4 id="set-price">Set Price | Установка цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\PriceTable::setBasePrice($productId, $price, $currency);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::SetOptimalPrice($productId, $price, $currency);</span>
+<h4 id="set-price">Set Price | Установка цены<a class="headerlink" href="#set-price" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// D7</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$result = \Bitrix\Catalog\PriceTable::setBasePrice($productId, $price, $currency);</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">$result = CCatalogProduct::SetOptimalPrice($productId, $price, $currency);</span>
 </code></pre></div>
-<h4 id="update-price">Update Price | Обновление цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\PriceTable::update($priceId, [</span>
-<span class="x">    &#39;PRICE&#39; =&gt; $newPrice,</span>
-<span class="x">    &#39;CURRENCY&#39; =&gt; $currency</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::UpdatePrice($productId, $priceTypeId, $newPrice, $currency);</span>
+<h4 id="update-price">Update Price | Обновление цены<a class="headerlink" href="#update-price" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">// D7</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$result = \Bitrix\Catalog\PriceTable::update($priceId, [</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">    &#39;PRICE&#39; =&gt; $newPrice,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">    &#39;CURRENCY&#39; =&gt; $currency</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">]);</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="x">$result = CCatalogProduct::UpdatePrice($productId, $priceTypeId, $newPrice, $currency);</span>
 </code></pre></div>
-<h4 id="delete-price">Delete Price | Удаление цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\PriceTable::delete($priceId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::DeletePrice($productId, $priceTypeId);</span>
+<h4 id="delete-price">Delete Price | Удаление цены<a class="headerlink" href="#delete-price" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">// D7</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$result = \Bitrix\Catalog\PriceTable::delete($priceId);</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="x">$result = CCatalogProduct::DeletePrice($productId, $priceTypeId);</span>
 </code></pre></div>
-<h3 id="price-types">Price Types | Типы цен</h3>
-<h4 id="get-price-types">Get Price Types | Получение типов цен</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$priceTypes = \Bitrix\Catalog\GroupTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=BASE&#39; =&gt; &#39;N&#39;],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$priceTypes = CCatalogGroup::GetList(</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;BASE&#39; =&gt; &#39;N&#39;]</span>
-<span class="x">);</span>
+<h3 id="price-types">Price Types | Типы цен<a class="headerlink" href="#price-types" title="Permanent link">&para;</a></h3>
+<h4 id="get-price-types">Get Price Types | Получение типов цен<a class="headerlink" href="#get-price-types" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">// D7</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$priceTypes = \Bitrix\Catalog\GroupTable::getList([</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=BASE&#39; =&gt; &#39;N&#39;],</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">])-&gt;fetchAll();</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="x">$priceTypes = CCatalogGroup::GetList(</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="x">    [&#39;BASE&#39; =&gt; &#39;N&#39;]</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="add-price-type">Add Price Type | Добавление типа цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\GroupTable::add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Wholesale Price&#39;,</span>
-<span class="x">    &#39;BASE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;WHOLESALE&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Wholesale price for bulk purchases&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogGroup::Add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Wholesale Price&#39;,</span>
-<span class="x">    &#39;BASE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;WHOLESALE&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Wholesale price for bulk purchases&#39;</span>
-<span class="x">]);</span>
+<h4 id="add-price-type">Add Price Type | Добавление типа цены<a class="headerlink" href="#add-price-type" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">// D7</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$result = \Bitrix\Catalog\GroupTable::add([</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Wholesale Price&#39;,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">    &#39;BASE&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">    &#39;XML_ID&#39; =&gt; &#39;WHOLESALE&#39;,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Wholesale price for bulk purchases&#39;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">]);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">// Legacy</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="x">$result = CCatalogGroup::Add([</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Wholesale Price&#39;,</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="x">    &#39;BASE&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="x">    &#39;XML_ID&#39; =&gt; &#39;WHOLESALE&#39;,</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Wholesale price for bulk purchases&#39;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-price-type">Update Price Type | Обновление типа цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\GroupTable::update($priceTypeId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Wholesale Price&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogGroup::Update($priceTypeId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Wholesale Price&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
+<h4 id="update-price-type">Update Price Type | Обновление типа цены<a class="headerlink" href="#update-price-type" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">// D7</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">$result = \Bitrix\Catalog\GroupTable::update($priceTypeId, [</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;New Wholesale Price&#39;,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="x">    &#39;SORT&#39; =&gt; 200</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">]);</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="x">$result = CCatalogGroup::Update($priceTypeId, [</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;New Wholesale Price&#39;,</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="x">    &#39;SORT&#39; =&gt; 200</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-price-type">Delete Price Type | Удаление типа цены</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\GroupTable::delete($priceTypeId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogGroup::Delete($priceTypeId);</span>
+<h4 id="delete-price-type">Delete Price Type | Удаление типа цены<a class="headerlink" href="#delete-price-type" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">// D7</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">$result = \Bitrix\Catalog\GroupTable::delete($priceTypeId);</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="x">$result = CCatalogGroup::Delete($priceTypeId);</span>
 </code></pre></div>
-<h3 id="product-properties">Product Properties | Свойства товаров</h3>
-<h4 id="get-product-properties">Get Product Properties | Получение свойств товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$properties = \Bitrix\Catalog\ProductPropertyTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=PRODUCT_ID&#39; =&gt; $productId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY.NAME&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$properties = CCatalogProduct::GetProductProperties($productId);</span>
+<h3 id="product-properties">Product Properties | Свойства товаров<a class="headerlink" href="#product-properties" title="Permanent link">&para;</a></h3>
+<h4 id="get-product-properties">Get Product Properties | Получение свойств товара<a class="headerlink" href="#get-product-properties" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="x">// D7</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="x">$properties = \Bitrix\Catalog\ProductPropertyTable::getList([</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=PRODUCT_ID&#39; =&gt; $productId],</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY.NAME&#39;]</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">])-&gt;fetchAll();</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="x">$properties = CCatalogProduct::GetProductProperties($productId);</span>
 </code></pre></div>
-<h4 id="set-product-property">Set Product Property | Установка свойства товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::add([</span>
-<span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
-<span class="x">    &#39;PROPERTY_ID&#39; =&gt; $propertyId,</span>
-<span class="x">    &#39;VALUE&#39; =&gt; $propertyValue</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::SetProductProperties($productId, [</span>
-<span class="x">    $propertyId =&gt; $propertyValue</span>
-<span class="x">]);</span>
+<h4 id="set-product-property">Set Product Property | Установка свойства товара<a class="headerlink" href="#set-product-property" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">// D7</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::add([</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">    &#39;PROPERTY_ID&#39; =&gt; $propertyId,</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="x">    &#39;VALUE&#39; =&gt; $propertyValue</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="x">]);</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="x">$result = CCatalogProduct::SetProductProperties($productId, [</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="x">    $propertyId =&gt; $propertyValue</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-product-property">Update Product Property | Обновление свойства товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::update($propertyId, [</span>
-<span class="x">    &#39;VALUE&#39; =&gt; $newPropertyValue</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::SetProductProperties($productId, [</span>
-<span class="x">    $propertyId =&gt; $newPropertyValue</span>
-<span class="x">]);</span>
+<h4 id="update-product-property">Update Product Property | Обновление свойства товара<a class="headerlink" href="#update-product-property" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">// D7</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::update($propertyId, [</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="x">    &#39;VALUE&#39; =&gt; $newPropertyValue</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="x">]);</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="x">// Legacy</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="x">$result = CCatalogProduct::SetProductProperties($productId, [</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="x">    $propertyId =&gt; $newPropertyValue</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-product-property">Delete Product Property | Удаление свойства товара</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::delete($propertyId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogProduct::DeleteProductProperties($productId, [$propertyId]);</span>
+<h4 id="delete-product-property">Delete Product Property | Удаление свойства товара<a class="headerlink" href="#delete-product-property" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="x">// D7</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::delete($propertyId);</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="x">$result = CCatalogProduct::DeleteProductProperties($productId, [$propertyId]);</span>
 </code></pre></div>
-<h3 id="product-sections">Product Sections | Разделы товаров</h3>
-<h4 id="get-section">Get Section | Получение раздела</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$section = \Bitrix\Iblock\SectionTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $sectionId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$section = CCatalogSection::GetByID($sectionId);</span>
+<h3 id="product-sections">Product Sections | Разделы товаров<a class="headerlink" href="#product-sections" title="Permanent link">&para;</a></h3>
+<h4 id="get-section">Get Section | Получение раздела<a class="headerlink" href="#get-section" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="x">// D7</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="x">$section = \Bitrix\Iblock\SectionTable::getList([</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $sectionId],</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="x">$section = CCatalogSection::GetByID($sectionId);</span>
 </code></pre></div>
-<h4 id="get-section-list">Get Section List | Получение списка разделов</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$sections = \Bitrix\Iblock\SectionTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ID&#39; =&gt; $iblockId, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$sections = CCatalogSection::GetList(</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;IBLOCK_ID&#39; =&gt; $iblockId, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;]</span>
-<span class="x">);</span>
+<h4 id="get-section-list">Get Section List | Получение списка разделов<a class="headerlink" href="#get-section-list" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="x">// D7</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="x">$sections = \Bitrix\Iblock\SectionTable::getList([</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ID&#39; =&gt; $iblockId, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;]</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="x">])-&gt;fetchAll();</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="x">$sections = CCatalogSection::GetList(</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="x">    [&#39;IBLOCK_ID&#39; =&gt; $iblockId, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;]</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="x">);</span>
 </code></pre></div>
-<h4 id="add-section">Add Section | Добавление раздела</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\SectionTable::add([</span>
-<span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;,</span>
-<span class="x">    &#39;DESCRIPTION_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;PICTURE&#39; =&gt; null,</span>
-<span class="x">    &#39;DETAIL_PICTURE&#39; =&gt; null,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_SECTION_XML_ID&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogSection::Add([</span>
-<span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;,</span>
-<span class="x">    &#39;DESCRIPTION_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;PICTURE&#39; =&gt; null,</span>
-<span class="x">    &#39;DETAIL_PICTURE&#39; =&gt; null,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_SECTION_XML_ID&#39;</span>
-<span class="x">]);</span>
+<h4 id="add-section">Add Section | Добавление раздела<a class="headerlink" href="#add-section" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="x">// D7</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="x">$result = \Bitrix\Iblock\SectionTable::add([</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;,</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="x">    &#39;DESCRIPTION_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="x">    &#39;PICTURE&#39; =&gt; null,</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="x">    &#39;DETAIL_PICTURE&#39; =&gt; null,</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_SECTION_XML_ID&#39;</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="x">]);</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="x">// Legacy</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="x">$result = CCatalogSection::Add([</span>
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
+<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a><span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Section description&#39;,</span>
+<a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a><span class="x">    &#39;DESCRIPTION_TYPE&#39; =&gt; &#39;text&#39;,</span>
+<a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a><span class="x">    &#39;PICTURE&#39; =&gt; null,</span>
+<a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a><span class="x">    &#39;DETAIL_PICTURE&#39; =&gt; null,</span>
+<a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a><span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_SECTION_XML_ID&#39;</span>
+<a id="__codelineno-20-31" name="__codelineno-20-31" href="#__codelineno-20-31"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-section">Update Section | Обновление раздела</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\SectionTable::update($sectionId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogSection::Update($sectionId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
+<h4 id="update-section">Update Section | Обновление раздела<a class="headerlink" href="#update-section" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="x">// D7</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="x">$result = \Bitrix\Iblock\SectionTable::update($sectionId, [</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="x">    &#39;SORT&#39; =&gt; 200</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="x">]);</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="x">$result = CCatalogSection::Update($sectionId, [</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="x">    &#39;SORT&#39; =&gt; 200</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-section">Delete Section | Удаление раздела</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\SectionTable::delete($sectionId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<span class="x">$result = CCatalogSection::Delete($sectionId);</span>
+<h4 id="delete-section">Delete Section | Удаление раздела<a class="headerlink" href="#delete-section" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="x">// D7</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="x">$result = \Bitrix\Iblock\SectionTable::delete($sectionId);</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="x">$result = CCatalogSection::Delete($sectionId);</span>
 </code></pre></div>
 
 
@@ -2227,6 +1495,9 @@
 
 
 
+
+  
+  
 
 
 
@@ -2285,7 +1556,7 @@
       
       
     
-    <a href="https://t.me/axbuild" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+    <a href="https://t.me/bitrixdevelopers" target="_blank" rel="noopener" title="t.me" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8m114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.45 10.45 0 0 1 3.53 6.716 43.8 43.8 0 0 1 .417 9.769"/></svg>
     </a>
   
@@ -2301,9 +1572,84 @@
     </div>
     
     
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Принять</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Управлять настройками</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.expand", "navigation.path", "toc.integrate", "search.highlight", "search.share", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": ["Bitrix24", "API", "REST API", "CRM", "Development", "Integration", "Modules", "Documentation"], "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
