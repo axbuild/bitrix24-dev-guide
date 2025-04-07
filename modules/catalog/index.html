@@ -1147,819 +1147,817 @@
 <p>The Catalog module provides functionality for managing product catalogs, prices, and product properties in Bitrix24. It enables users to create and manage product catalogs, set up pricing rules, handle product properties, and integrate with other modules like CRM and Sales. | Модуль Catalog предоставляет функциональность для управления каталогами товаров, ценами и свойствами товаров в Bitrix24. Он позволяет пользователям создавать и управлять каталогами товаров, настраивать правила ценообразования, обрабатывать свойства товаров и интегрироваться с другими модулями, такими как CRM и Sales.</p>
 <h2 id="methods">Methods | Методы<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="product-management">Product Management | Управление товарами<a class="headerlink" href="#product-management" title="Permanent link">&para;</a></h3>
-<h4 id="create-product">Create Product | Создание товара<a class="headerlink" href="#create-product" title="Permanent link">&para;</a></h4>
+<h4 id="create-product-php">Create Product | Создание товара```php<a class="headerlink" href="#create-product-php" title="Permanent link">&para;</a></h4>
+<p>// D7
+// Requires: Bitrix\Main\Loader::includeModule('catalog')
+// Требуется: Bitrix\Main\Loader::includeModule('catalog')
+$product = \Bitrix\Catalog\Model\Product::add([
+    'NAME' =&gt; 'Product Name',
+    'CODE' =&gt; 'PRODUCT_CODE',
+    'IBLOCK_ID' =&gt; $iblockId,
+    'IBLOCK_SECTION_ID' =&gt; $sectionId,
+    'VAT_ID' =&gt; $vatId,
+    'VAT_INCLUDED' =&gt; 'Y',
+    'QUANTITY' =&gt; 100,
+    'QUANTITY_TRACE' =&gt; 'Y',
+    'CAN_BUY_ZERO' =&gt; 'N',
+    'PRICE_TYPE' =&gt; 'S',
+    'TMP_ID' =&gt; null,
+    'PROPERTY_VALUES' =&gt; [
+        'PROPERTY_CODE' =&gt; 'Property Value'
+    ]
+]);</p>
+<p>// Legacy
+// Requires: CModule::IncludeModule('catalog')
+// Требуется: CModule::IncludeModule('catalog')
+$productId = CCatalogProduct::Add([
+    'IBLOCK_ID' =&gt; $iblockId,
+    'NAME' =&gt; 'Product Name',
+    'CODE' =&gt; 'PRODUCT_CODE',
+    'IBLOCK_SECTION_ID' =&gt; $sectionId,
+    'VAT_ID' =&gt; $vatId,
+    'VAT_INCLUDED' =&gt; 'Y',
+    'QUANTITY' =&gt; 100,
+    'QUANTITY_TRACE' =&gt; 'Y',
+    'CAN_BUY_ZERO' =&gt; 'N',
+    'PRICE_TYPE' =&gt; 'S',
+    'TMP_ID' =&gt; null,
+    'PROPERTY_VALUES' =&gt; [
+        'PROPERTY_CODE' =&gt; 'Property Value'
+    ]
+]);```</p>
+<h4 id="get-product">Get Product | Получение товара<a class="headerlink" href="#get-product" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">// D7</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">$product = \Bitrix\Catalog\Model\Product::add([</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Product Name&#39;,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;PRODUCT_CODE&#39;,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">    &#39;IBLOCK_SECTION_ID&#39; =&gt; $sectionId,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">    &#39;VAT_ID&#39; =&gt; $vatId,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">    &#39;VAT_INCLUDED&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="x">    &#39;PROPERTY_VALUES&#39; =&gt; [</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="x">        &#39;PROPERTY_CODE&#39; =&gt; &#39;Property Value&#39;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="x">    ]</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="x">]);</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="x">// Legacy</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="x">$productId = CCatalogProduct::Add([</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Product Name&#39;,</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;PRODUCT_CODE&#39;,</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="x">    &#39;IBLOCK_SECTION_ID&#39; =&gt; $sectionId,</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="x">    &#39;VAT_ID&#39; =&gt; $vatId,</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="x">    &#39;VAT_INCLUDED&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="x">    &#39;PROPERTY_VALUES&#39; =&gt; [</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="x">        &#39;PROPERTY_CODE&#39; =&gt; &#39;Property Value&#39;</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="x">    ]</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="x">]);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">$product = \Bitrix\Catalog\Model\Product::getList([</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;ID&#39; =&gt; $productId],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY_*&#39;]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="x">$product = CCatalogProduct::GetByID($productId);</span>
 </code></pre></div>
-<h4 id="get-product">Get Product | Получение товара<a class="headerlink" href="#get-product" title="Permanent link">&para;</a></h4>
+<h4 id="update-product">Update Product | Обновление товара<a class="headerlink" href="#update-product" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">// D7</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">$product = \Bitrix\Catalog\Model\Product::getList([</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;ID&#39; =&gt; $productId],</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY_*&#39;]</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">])-&gt;fetch();</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">// Legacy</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="x">$product = CCatalogProduct::GetByID($productId);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Product::update($productId, [</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Product Name&#39;,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 200,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">    &#39;PROPERTY_VALUES&#39; =&gt; [</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="x">        &#39;PROPERTY_CODE&#39; =&gt; &#39;Updated Property Value&#39;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">    ]</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="x">]);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="x">// Legacy</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="x">$result = CCatalogProduct::Update($productId, [</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Product Name&#39;,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 200,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="x">    &#39;PROPERTY_VALUES&#39; =&gt; [</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="x">        &#39;PROPERTY_CODE&#39; =&gt; &#39;Updated Property Value&#39;</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="x">    ]</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-product">Update Product | Обновление товара<a class="headerlink" href="#update-product" title="Permanent link">&para;</a></h4>
+<h4 id="delete-product">Delete Product | Удаление товара<a class="headerlink" href="#delete-product" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">// D7</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Product::update($productId, [</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Product Name&#39;,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 200,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">    &#39;PROPERTY_VALUES&#39; =&gt; [</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">        &#39;PROPERTY_CODE&#39; =&gt; &#39;Updated Property Value&#39;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">    ]</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">]);</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="x">// Legacy</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="x">$result = CCatalogProduct::Update($productId, [</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Product Name&#39;,</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="x">    &#39;QUANTITY&#39; =&gt; 200,</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="x">    &#39;PROPERTY_VALUES&#39; =&gt; [</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="x">        &#39;PROPERTY_CODE&#39; =&gt; &#39;Updated Property Value&#39;</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="x">    ]</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="x">]);</span>
-</code></pre></div>
-<h4 id="delete-product">Delete Product | Удаление товара<a class="headerlink" href="#delete-product" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// D7</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Product::delete($productId);</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">$result = CCatalogProduct::Delete($productId);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Product::delete($productId);</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">$result = CCatalogProduct::Delete($productId);</span>
 </code></pre></div>
 <h3 id="price-management">Price Management | Управление ценами<a class="headerlink" href="#price-management" title="Permanent link">&para;</a></h3>
 <h4 id="set-price">Set Price | Установка цены<a class="headerlink" href="#set-price" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// D7</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$price = \Bitrix\Catalog\Model\Price::add([</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">    &#39;CATALOG_GROUP_ID&#39; =&gt; $priceTypeId,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">    &#39;PRICE&#39; =&gt; 1000.00,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;,</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">    &#39;QUANTITY_FROM&#39; =&gt; 0,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="x">    &#39;QUANTITY_TO&#39; =&gt; 0</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">]);</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="x">// Legacy</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="x">$priceId = CPrice::Add([</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="x">    &#39;CATALOG_GROUP_ID&#39; =&gt; $priceTypeId,</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="x">    &#39;PRICE&#39; =&gt; 1000.00,</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;,</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="x">    &#39;QUANTITY_FROM&#39; =&gt; 0,</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="x">    &#39;QUANTITY_TO&#39; =&gt; 0</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-price">Get Price | Получение цены<a class="headerlink" href="#get-price" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">// D7</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$price = \Bitrix\Catalog\Model\Price::add([</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">    &#39;CATALOG_GROUP_ID&#39; =&gt; $priceTypeId,</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">    &#39;PRICE&#39; =&gt; 1000.00,</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;,</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">    &#39;QUANTITY_FROM&#39; =&gt; 0,</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">    &#39;QUANTITY_TO&#39; =&gt; 0</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">]);</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="x">// Legacy</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="x">$priceId = CPrice::Add([</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="x">    &#39;CATALOG_GROUP_ID&#39; =&gt; $priceTypeId,</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="x">    &#39;PRICE&#39; =&gt; 1000.00,</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;,</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="x">    &#39;QUANTITY_FROM&#39; =&gt; 0,</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="x">    &#39;QUANTITY_TO&#39; =&gt; 0</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="x">]);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$price = \Bitrix\Catalog\Model\Price::getList([</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;PRODUCT_ID&#39; =&gt; $productId],</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="x">$price = CPrice::GetBasePrice($productId);</span>
 </code></pre></div>
-<h4 id="get-price">Get Price | Получение цены<a class="headerlink" href="#get-price" title="Permanent link">&para;</a></h4>
+<h4 id="update-price">Update Price | Обновление цены<a class="headerlink" href="#update-price" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">// D7</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$price = \Bitrix\Catalog\Model\Price::getList([</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;PRODUCT_ID&#39; =&gt; $productId],</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Price::update($priceId, [</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">    &#39;PRICE&#39; =&gt; 1500.00,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">]);</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="x">// Legacy</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">$price = CPrice::GetBasePrice($productId);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">$result = CPrice::Update($priceId, [</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="x">    &#39;PRICE&#39; =&gt; 1500.00,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-price">Update Price | Обновление цены<a class="headerlink" href="#update-price" title="Permanent link">&para;</a></h4>
+<h4 id="delete-price">Delete Price | Удаление цены<a class="headerlink" href="#delete-price" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// D7</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Price::update($priceId, [</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">    &#39;PRICE&#39; =&gt; 1500.00,</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">]);</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">// Legacy</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="x">$result = CPrice::Update($priceId, [</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="x">    &#39;PRICE&#39; =&gt; 1500.00,</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="x">    &#39;CURRENCY&#39; =&gt; &#39;RUB&#39;</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="x">]);</span>
-</code></pre></div>
-<h4 id="delete-price">Delete Price | Удаление цены<a class="headerlink" href="#delete-price" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// D7</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Price::delete($priceId);</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">$result = CPrice::Delete($priceId);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Price::delete($priceId);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">$result = CPrice::Delete($priceId);</span>
 </code></pre></div>
 <h3 id="store-management">Store Management | Управление складами<a class="headerlink" href="#store-management" title="Permanent link">&para;</a></h3>
 <h4 id="create-store">Create Store | Создание склада<a class="headerlink" href="#create-store" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// D7</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$store = \Bitrix\Catalog\Model\Store::add([</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Main Store&#39;,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Store Address&#39;,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Store Description&#39;,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">    &#39;GPS_N&#39; =&gt; &#39;55.7558&#39;,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">    &#39;GPS_S&#39; =&gt; &#39;37.6173&#39;,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="x">    &#39;ISSUING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="x">    &#39;SHIPPING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="x">    &#39;SITE_ID&#39; =&gt; &#39;s1&#39;,</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;MAIN_STORE&#39;,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="x">    &#39;IMAGE_ID&#39; =&gt; $imageId,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="x">    &#39;LOCATION_ID&#39; =&gt; $locationId,</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 123-45-67&#39;,</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="x">    &#39;SCHEDULE&#39; =&gt; &#39;Mon-Fri: 9:00-18:00&#39;,</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="x">    &#39;EMAIL&#39; =&gt; &#39;store@example.com&#39;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="x">]);</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="x">// Legacy</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="x">$storeId = CCatalogStore::Add([</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Main Store&#39;,</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Store Address&#39;,</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Store Description&#39;,</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="x">    &#39;GPS_N&#39; =&gt; &#39;55.7558&#39;,</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="x">    &#39;GPS_S&#39; =&gt; &#39;37.6173&#39;,</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="x">    &#39;ISSUING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="x">    &#39;SHIPPING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="x">    &#39;SITE_ID&#39; =&gt; &#39;s1&#39;,</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;MAIN_STORE&#39;,</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="x">    &#39;IMAGE_ID&#39; =&gt; $imageId,</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="x">    &#39;LOCATION_ID&#39; =&gt; $locationId,</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 123-45-67&#39;,</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="x">    &#39;SCHEDULE&#39; =&gt; &#39;Mon-Fri: 9:00-18:00&#39;,</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="x">    &#39;EMAIL&#39; =&gt; &#39;store@example.com&#39;</span>
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-store">Get Store | Получение склада<a class="headerlink" href="#get-store" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">// D7</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$store = \Bitrix\Catalog\Model\Store::add([</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Main Store&#39;,</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Store Address&#39;,</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Store Description&#39;,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="x">    &#39;GPS_N&#39; =&gt; &#39;55.7558&#39;,</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">    &#39;GPS_S&#39; =&gt; &#39;37.6173&#39;,</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">    &#39;ISSUING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">    &#39;SHIPPING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="x">    &#39;SITE_ID&#39; =&gt; &#39;s1&#39;,</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;MAIN_STORE&#39;,</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="x">    &#39;IMAGE_ID&#39; =&gt; $imageId,</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="x">    &#39;LOCATION_ID&#39; =&gt; $locationId,</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 123-45-67&#39;,</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="x">    &#39;SCHEDULE&#39; =&gt; &#39;Mon-Fri: 9:00-18:00&#39;,</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="x">    &#39;EMAIL&#39; =&gt; &#39;store@example.com&#39;</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="x">]);</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="x">// Legacy</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="x">$storeId = CCatalogStore::Add([</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Main Store&#39;,</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Store Address&#39;,</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Store Description&#39;,</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="x">    &#39;GPS_N&#39; =&gt; &#39;55.7558&#39;,</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="x">    &#39;GPS_S&#39; =&gt; &#39;37.6173&#39;,</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="x">    &#39;ISSUING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="x">    &#39;SHIPPING_CENTER&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="x">    &#39;SITE_ID&#39; =&gt; &#39;s1&#39;,</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;MAIN_STORE&#39;,</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="x">    &#39;IMAGE_ID&#39; =&gt; $imageId,</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="x">    &#39;LOCATION_ID&#39; =&gt; $locationId,</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 123-45-67&#39;,</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="x">    &#39;SCHEDULE&#39; =&gt; &#39;Mon-Fri: 9:00-18:00&#39;,</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="x">    &#39;EMAIL&#39; =&gt; &#39;store@example.com&#39;</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="x">]);</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$store = \Bitrix\Catalog\Model\Store::getList([</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;ID&#39; =&gt; $storeId],</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="x">$store = CCatalogStore::GetByID($storeId);</span>
 </code></pre></div>
-<h4 id="get-store">Get Store | Получение склада<a class="headerlink" href="#get-store" title="Permanent link">&para;</a></h4>
+<h4 id="update-store">Update Store | Обновление склада<a class="headerlink" href="#update-store" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">// D7</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$store = \Bitrix\Catalog\Model\Store::getList([</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;ID&#39; =&gt; $storeId],</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">])-&gt;fetch();</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="x">// Legacy</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="x">$store = CCatalogStore::GetByID($storeId);</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Store::update($storeId, [</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Store Name&#39;,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Updated Store Address&#39;,</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 765-43-21&#39;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="x">]);</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="x">$result = CCatalogStore::Update($storeId, [</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Store Name&#39;,</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Updated Store Address&#39;,</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 765-43-21&#39;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-store">Update Store | Обновление склада<a class="headerlink" href="#update-store" title="Permanent link">&para;</a></h4>
+<h4 id="delete-store">Delete Store | Удаление склада<a class="headerlink" href="#delete-store" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">// D7</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Store::update($storeId, [</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Store Name&#39;,</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Updated Store Address&#39;,</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 765-43-21&#39;</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">]);</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">// Legacy</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="x">$result = CCatalogStore::Update($storeId, [</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Store Name&#39;,</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="x">    &#39;ADDRESS&#39; =&gt; &#39;Updated Store Address&#39;,</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="x">    &#39;PHONE&#39; =&gt; &#39;+7 (999) 765-43-21&#39;</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="x">]);</span>
-</code></pre></div>
-<h4 id="delete-store">Delete Store | Удаление склада<a class="headerlink" href="#delete-store" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">// D7</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Store::delete($storeId);</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">$result = CCatalogStore::Delete($storeId);</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$result = \Bitrix\Catalog\Model\Store::delete($storeId);</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">$result = CCatalogStore::Delete($storeId);</span>
 </code></pre></div>
 <h3 id="product-property-management">Product Property Management | Управление свойствами товаров<a class="headerlink" href="#product-property-management" title="Permanent link">&para;</a></h3>
 <h4 id="create-product-property">Create Product Property | Создание свойства товара<a class="headerlink" href="#create-product-property" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">// D7</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$property = \Bitrix\Catalog\Model\ProductProperty::add([</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Property Name&#39;,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;PROPERTY_CODE&#39;,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="x">    &#39;MULTIPLE_CNT&#39; =&gt; 1,</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="x">    &#39;USER_TYPE&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="x">    &#39;USER_TYPE_SETTINGS&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="x">    &#39;HINT&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="x">    &#39;LINK_IBLOCK_ID&#39; =&gt; 0,</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="x">    &#39;FILTRABLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="x">    &#39;SEARCHABLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="x">    &#39;SHOW_FILTER&#39; =&gt; &#39;S&#39;,</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="x">    &#39;SHOW_IN_LIST&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="x">    &#39;SHOW_COLUMN&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="x">    &#39;SHOW_QUICK_VIEW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="x">    &#39;SHOW_QUICK_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="x">]);</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="x">// Legacy</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a><span class="x">$propertyId = CCatalogProduct::AddProperty([</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Property Name&#39;,</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;PROPERTY_CODE&#39;,</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a><span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a><span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a><span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a><span class="x">    &#39;MULTIPLE_CNT&#39; =&gt; 1,</span>
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a><span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a><span class="x">    &#39;USER_TYPE&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a><span class="x">    &#39;USER_TYPE_SETTINGS&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a><span class="x">    &#39;HINT&#39; =&gt; &#39;&#39;,</span>
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="x">    &#39;LINK_IBLOCK_ID&#39; =&gt; 0,</span>
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a><span class="x">    &#39;FILTRABLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a><span class="x">    &#39;SEARCHABLE&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a><span class="x">    &#39;SHOW_FILTER&#39; =&gt; &#39;S&#39;,</span>
+<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a><span class="x">    &#39;SHOW_IN_LIST&#39; =&gt; &#39;Y&#39;,</span>
+<a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a><span class="x">    &#39;SHOW_COLUMN&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a><span class="x">    &#39;SHOW_QUICK_VIEW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-66" name="__codelineno-11-66" href="#__codelineno-11-66"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-67" name="__codelineno-11-67" href="#__codelineno-11-67"></a><span class="x">    &#39;SHOW_QUICK_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-68" name="__codelineno-11-68" href="#__codelineno-11-68"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-69" name="__codelineno-11-69" href="#__codelineno-11-69"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-70" name="__codelineno-11-70" href="#__codelineno-11-70"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-73" name="__codelineno-11-73" href="#__codelineno-11-73"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-74" name="__codelineno-11-74" href="#__codelineno-11-74"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-75" name="__codelineno-11-75" href="#__codelineno-11-75"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-76" name="__codelineno-11-76" href="#__codelineno-11-76"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-77" name="__codelineno-11-77" href="#__codelineno-11-77"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
+<a id="__codelineno-11-78" name="__codelineno-11-78" href="#__codelineno-11-78"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;</span>
+<a id="__codelineno-11-79" name="__codelineno-11-79" href="#__codelineno-11-79"></a><span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-product-property">Get Product Property | Получение свойства товара<a class="headerlink" href="#get-product-property" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">// D7</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">$property = \Bitrix\Catalog\Model\ProductProperty::add([</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Property Name&#39;,</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;PROPERTY_CODE&#39;,</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">    &#39;MULTIPLE_CNT&#39; =&gt; 1,</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="x">    &#39;USER_TYPE&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="x">    &#39;USER_TYPE_SETTINGS&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="x">    &#39;HINT&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="x">    &#39;LINK_IBLOCK_ID&#39; =&gt; 0,</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="x">    &#39;FILTRABLE&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="x">    &#39;SEARCHABLE&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="x">    &#39;SHOW_FILTER&#39; =&gt; &#39;S&#39;,</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="x">    &#39;SHOW_IN_LIST&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="x">    &#39;SHOW_COLUMN&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="x">    &#39;SHOW_QUICK_VIEW&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="x">    &#39;SHOW_QUICK_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;</span>
-<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="x">]);</span>
-<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a>
-<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="x">// Legacy</span>
-<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a><span class="x">$propertyId = CCatalogProduct::AddProperty([</span>
-<a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a><span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Property Name&#39;,</span>
-<a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a><span class="x">    &#39;CODE&#39; =&gt; &#39;PROPERTY_CODE&#39;,</span>
-<a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a><span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a><span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a><span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a><span class="x">    &#39;MULTIPLE_CNT&#39; =&gt; 1,</span>
-<a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a><span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a><span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<a id="__codelineno-12-54" name="__codelineno-12-54" href="#__codelineno-12-54"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a><span class="x">    &#39;USER_TYPE&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-56" name="__codelineno-12-56" href="#__codelineno-12-56"></a><span class="x">    &#39;USER_TYPE_SETTINGS&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-57" name="__codelineno-12-57" href="#__codelineno-12-57"></a><span class="x">    &#39;HINT&#39; =&gt; &#39;&#39;,</span>
-<a id="__codelineno-12-58" name="__codelineno-12-58" href="#__codelineno-12-58"></a><span class="x">    &#39;LINK_IBLOCK_ID&#39; =&gt; 0,</span>
-<a id="__codelineno-12-59" name="__codelineno-12-59" href="#__codelineno-12-59"></a><span class="x">    &#39;FILTRABLE&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-12-60" name="__codelineno-12-60" href="#__codelineno-12-60"></a><span class="x">    &#39;SEARCHABLE&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-12-61" name="__codelineno-12-61" href="#__codelineno-12-61"></a><span class="x">    &#39;SHOW_FILTER&#39; =&gt; &#39;S&#39;,</span>
-<a id="__codelineno-12-62" name="__codelineno-12-62" href="#__codelineno-12-62"></a><span class="x">    &#39;SHOW_IN_LIST&#39; =&gt; &#39;Y&#39;,</span>
-<a id="__codelineno-12-63" name="__codelineno-12-63" href="#__codelineno-12-63"></a><span class="x">    &#39;SHOW_COLUMN&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-64" name="__codelineno-12-64" href="#__codelineno-12-64"></a><span class="x">    &#39;SHOW_QUICK_VIEW&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-65" name="__codelineno-12-65" href="#__codelineno-12-65"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-66" name="__codelineno-12-66" href="#__codelineno-12-66"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-67" name="__codelineno-12-67" href="#__codelineno-12-67"></a><span class="x">    &#39;SHOW_QUICK_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-68" name="__codelineno-12-68" href="#__codelineno-12-68"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-69" name="__codelineno-12-69" href="#__codelineno-12-69"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-70" name="__codelineno-12-70" href="#__codelineno-12-70"></a><span class="x">    &#39;SHOW_QUICK_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-71" name="__codelineno-12-71" href="#__codelineno-12-71"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-72" name="__codelineno-12-72" href="#__codelineno-12-72"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-73" name="__codelineno-12-73" href="#__codelineno-12-73"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-74" name="__codelineno-12-74" href="#__codelineno-12-74"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-75" name="__codelineno-12-75" href="#__codelineno-12-75"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-76" name="__codelineno-12-76" href="#__codelineno-12-76"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-77" name="__codelineno-12-77" href="#__codelineno-12-77"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_EDIT_DETAIL&#39; =&gt; &#39;N&#39;,</span>
-<a id="__codelineno-12-78" name="__codelineno-12-78" href="#__codelineno-12-78"></a><span class="x">    &#39;SHOW_QUICK_VIEW_VIEW_EDIT_DETAIL_VIEW_EDIT_DETAIL&#39; =&gt; &#39;N&#39;</span>
-<a id="__codelineno-12-79" name="__codelineno-12-79" href="#__codelineno-12-79"></a><span class="x">]);</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">$property = \Bitrix\Catalog\Model\ProductProperty::getList([</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;ID&#39; =&gt; $propertyId],</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">])-&gt;fetch();</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">// Legacy</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="x">$property = CCatalogProduct::GetPropertyByID($propertyId);</span>
 </code></pre></div>
-<h4 id="get-product-property">Get Product Property | Получение свойства товара<a class="headerlink" href="#get-product-property" title="Permanent link">&para;</a></h4>
+<h4 id="update-product-property">Update Product Property | Обновление свойства товара<a class="headerlink" href="#update-product-property" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">// D7</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">$property = \Bitrix\Catalog\Model\ProductProperty::getList([</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="x">    &#39;filter&#39; =&gt; [&#39;ID&#39; =&gt; $propertyId],</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">])-&gt;fetch();</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="x">// Legacy</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="x">$property = CCatalogProduct::GetPropertyByID($propertyId);</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">$result = \Bitrix\Catalog\Model\ProductProperty::update($propertyId, [</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property Name&#39;,</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">    &#39;SORT&#39; =&gt; 200,</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;Updated Default Value&#39;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="x">]);</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="x">$result = CCatalogProduct::UpdateProperty($propertyId, [</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property Name&#39;,</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="x">    &#39;SORT&#39; =&gt; 200,</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;Updated Default Value&#39;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-product-property">Update Product Property | Обновление свойства товара<a class="headerlink" href="#update-product-property" title="Permanent link">&para;</a></h4>
+<h4 id="delete-product-property">Delete Product Property | Удаление свойства товара<a class="headerlink" href="#delete-product-property" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="x">// D7</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="x">$result = \Bitrix\Catalog\Model\ProductProperty::update($propertyId, [</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property Name&#39;,</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="x">    &#39;SORT&#39; =&gt; 200,</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;Updated Default Value&#39;</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="x">]);</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="x">// Legacy</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="x">$result = CCatalogProduct::UpdateProperty($propertyId, [</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property Name&#39;,</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="x">    &#39;SORT&#39; =&gt; 200,</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="x">    &#39;DEFAULT_VALUE&#39; =&gt; &#39;Updated Default Value&#39;</span>
-<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="x">]);</span>
-</code></pre></div>
-<h4 id="delete-product-property">Delete Product Property | Удаление свойства товара<a class="headerlink" href="#delete-product-property" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">// D7</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="x">$result = \Bitrix\Catalog\Model\ProductProperty::delete($propertyId);</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="x">$result = CCatalogProduct::DeleteProperty($propertyId);</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="x">$result = \Bitrix\Catalog\Model\ProductProperty::delete($propertyId);</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="x">// Legacy</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="x">$result = CCatalogProduct::DeleteProperty($propertyId);</span>
 </code></pre></div>
 <h2 id="handlers">Handlers | Обработчики<a class="headerlink" href="#handlers" title="Permanent link">&para;</a></h2>
 <h3 id="product-handlers">Product Handlers | Обработчики товаров<a class="headerlink" href="#product-handlers" title="Permanent link">&para;</a></h3>
 <h4 id="product-handler">Product Handler | Обработчик товаров<a class="headerlink" href="#product-handler" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">// D7</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="x">class CustomProductHandler extends \Bitrix\Catalog\Model\Product\Handler</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="x">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">    public function onBeforeProductCreate($params)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="x">    {</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="x">        // Code executed before product is created</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="x">        // Код, выполняемый перед созданием товара</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="x">        return $params;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="x">    }</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="x">    public function onAfterProductCreate($params, $result)</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="x">    {</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="x">        // Code executed after product is created</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="x">        // Код, выполняемый после создания товара</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="x">        return $result;</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="x">    }</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="x">    public function onBeforeProductUpdate($params)</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="x">    {</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="x">        // Code executed before product is updated</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="x">        // Код, выполняемый перед обновлением товара</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="x">        return $params;</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="x">    }</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="x">    public function onAfterProductUpdate($params, $result)</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="x">    {</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a><span class="x">        // Code executed after product is updated</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a><span class="x">        // Код, выполняемый после обновления товара</span>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="x">        return $result;</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a><span class="x">    }</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a><span class="x">    public function onBeforeProductDelete($params)</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a><span class="x">    {</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a><span class="x">        // Code executed before product is deleted</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a><span class="x">        // Код, выполняемый перед удалением товара</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a><span class="x">        return $params;</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a><span class="x">    }</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a><span class="x">    public function onAfterProductDelete($params, $result)</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a><span class="x">    {</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a><span class="x">        // Code executed after product is deleted</span>
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a><span class="x">        // Код, выполняемый после удаления товара</span>
+<a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a><span class="x">        return $result;</span>
+<a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a><span class="x">    }</span>
+<a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a><span class="x">}</span>
+<a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>
+<a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a><span class="x">// Register handler</span>
+<a id="__codelineno-15-50" name="__codelineno-15-50" href="#__codelineno-15-50"></a><span class="x">// Регистрация обработчика</span>
+<a id="__codelineno-15-51" name="__codelineno-15-51" href="#__codelineno-15-51"></a><span class="x">\Bitrix\Catalog\Model\Product\Handler::register(&#39;custom_product&#39;, CustomProductHandler::class);</span>
+<a id="__codelineno-15-52" name="__codelineno-15-52" href="#__codelineno-15-52"></a>
+<a id="__codelineno-15-53" name="__codelineno-15-53" href="#__codelineno-15-53"></a><span class="x">// Legacy</span>
+<a id="__codelineno-15-54" name="__codelineno-15-54" href="#__codelineno-15-54"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<a id="__codelineno-15-56" name="__codelineno-15-56" href="#__codelineno-15-56"></a><span class="x">class CCustomProductHandler extends CCatalogProduct</span>
+<a id="__codelineno-15-57" name="__codelineno-15-57" href="#__codelineno-15-57"></a><span class="x">{</span>
+<a id="__codelineno-15-58" name="__codelineno-15-58" href="#__codelineno-15-58"></a><span class="x">    public function OnBeforeProductCreate($params)</span>
+<a id="__codelineno-15-59" name="__codelineno-15-59" href="#__codelineno-15-59"></a><span class="x">    {</span>
+<a id="__codelineno-15-60" name="__codelineno-15-60" href="#__codelineno-15-60"></a><span class="x">        // Code executed before product is created</span>
+<a id="__codelineno-15-61" name="__codelineno-15-61" href="#__codelineno-15-61"></a><span class="x">        // Код, выполняемый перед созданием товара</span>
+<a id="__codelineno-15-62" name="__codelineno-15-62" href="#__codelineno-15-62"></a><span class="x">        return $params;</span>
+<a id="__codelineno-15-63" name="__codelineno-15-63" href="#__codelineno-15-63"></a><span class="x">    }</span>
+<a id="__codelineno-15-64" name="__codelineno-15-64" href="#__codelineno-15-64"></a>
+<a id="__codelineno-15-65" name="__codelineno-15-65" href="#__codelineno-15-65"></a><span class="x">    public function OnAfterProductCreate($params, $result)</span>
+<a id="__codelineno-15-66" name="__codelineno-15-66" href="#__codelineno-15-66"></a><span class="x">    {</span>
+<a id="__codelineno-15-67" name="__codelineno-15-67" href="#__codelineno-15-67"></a><span class="x">        // Code executed after product is created</span>
+<a id="__codelineno-15-68" name="__codelineno-15-68" href="#__codelineno-15-68"></a><span class="x">        // Код, выполняемый после создания товара</span>
+<a id="__codelineno-15-69" name="__codelineno-15-69" href="#__codelineno-15-69"></a><span class="x">        return $result;</span>
+<a id="__codelineno-15-70" name="__codelineno-15-70" href="#__codelineno-15-70"></a><span class="x">    }</span>
+<a id="__codelineno-15-71" name="__codelineno-15-71" href="#__codelineno-15-71"></a>
+<a id="__codelineno-15-72" name="__codelineno-15-72" href="#__codelineno-15-72"></a><span class="x">    public function OnBeforeProductUpdate($params)</span>
+<a id="__codelineno-15-73" name="__codelineno-15-73" href="#__codelineno-15-73"></a><span class="x">    {</span>
+<a id="__codelineno-15-74" name="__codelineno-15-74" href="#__codelineno-15-74"></a><span class="x">        // Code executed before product is updated</span>
+<a id="__codelineno-15-75" name="__codelineno-15-75" href="#__codelineno-15-75"></a><span class="x">        // Код, выполняемый перед обновлением товара</span>
+<a id="__codelineno-15-76" name="__codelineno-15-76" href="#__codelineno-15-76"></a><span class="x">        return $params;</span>
+<a id="__codelineno-15-77" name="__codelineno-15-77" href="#__codelineno-15-77"></a><span class="x">    }</span>
+<a id="__codelineno-15-78" name="__codelineno-15-78" href="#__codelineno-15-78"></a>
+<a id="__codelineno-15-79" name="__codelineno-15-79" href="#__codelineno-15-79"></a><span class="x">    public function OnAfterProductUpdate($params, $result)</span>
+<a id="__codelineno-15-80" name="__codelineno-15-80" href="#__codelineno-15-80"></a><span class="x">    {</span>
+<a id="__codelineno-15-81" name="__codelineno-15-81" href="#__codelineno-15-81"></a><span class="x">        // Code executed after product is updated</span>
+<a id="__codelineno-15-82" name="__codelineno-15-82" href="#__codelineno-15-82"></a><span class="x">        // Код, выполняемый после обновления товара</span>
+<a id="__codelineno-15-83" name="__codelineno-15-83" href="#__codelineno-15-83"></a><span class="x">        return $result;</span>
+<a id="__codelineno-15-84" name="__codelineno-15-84" href="#__codelineno-15-84"></a><span class="x">    }</span>
+<a id="__codelineno-15-85" name="__codelineno-15-85" href="#__codelineno-15-85"></a>
+<a id="__codelineno-15-86" name="__codelineno-15-86" href="#__codelineno-15-86"></a><span class="x">    public function OnBeforeProductDelete($params)</span>
+<a id="__codelineno-15-87" name="__codelineno-15-87" href="#__codelineno-15-87"></a><span class="x">    {</span>
+<a id="__codelineno-15-88" name="__codelineno-15-88" href="#__codelineno-15-88"></a><span class="x">        // Code executed before product is deleted</span>
+<a id="__codelineno-15-89" name="__codelineno-15-89" href="#__codelineno-15-89"></a><span class="x">        // Код, выполняемый перед удалением товара</span>
+<a id="__codelineno-15-90" name="__codelineno-15-90" href="#__codelineno-15-90"></a><span class="x">        return $params;</span>
+<a id="__codelineno-15-91" name="__codelineno-15-91" href="#__codelineno-15-91"></a><span class="x">    }</span>
+<a id="__codelineno-15-92" name="__codelineno-15-92" href="#__codelineno-15-92"></a>
+<a id="__codelineno-15-93" name="__codelineno-15-93" href="#__codelineno-15-93"></a><span class="x">    public function OnAfterProductDelete($params, $result)</span>
+<a id="__codelineno-15-94" name="__codelineno-15-94" href="#__codelineno-15-94"></a><span class="x">    {</span>
+<a id="__codelineno-15-95" name="__codelineno-15-95" href="#__codelineno-15-95"></a><span class="x">        // Code executed after product is deleted</span>
+<a id="__codelineno-15-96" name="__codelineno-15-96" href="#__codelineno-15-96"></a><span class="x">        // Код, выполняемый после удаления товара</span>
+<a id="__codelineno-15-97" name="__codelineno-15-97" href="#__codelineno-15-97"></a><span class="x">        return $result;</span>
+<a id="__codelineno-15-98" name="__codelineno-15-98" href="#__codelineno-15-98"></a><span class="x">    }</span>
+<a id="__codelineno-15-99" name="__codelineno-15-99" href="#__codelineno-15-99"></a><span class="x">}</span>
+<a id="__codelineno-15-100" name="__codelineno-15-100" href="#__codelineno-15-100"></a>
+<a id="__codelineno-15-101" name="__codelineno-15-101" href="#__codelineno-15-101"></a><span class="x">// Register handler</span>
+<a id="__codelineno-15-102" name="__codelineno-15-102" href="#__codelineno-15-102"></a><span class="x">// Регистрация обработчика</span>
+<a id="__codelineno-15-103" name="__codelineno-15-103" href="#__codelineno-15-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductCreate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnBeforeProductCreate&#39;]);</span>
+<a id="__codelineno-15-104" name="__codelineno-15-104" href="#__codelineno-15-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductCreate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnAfterProductCreate&#39;]);</span>
+<a id="__codelineno-15-105" name="__codelineno-15-105" href="#__codelineno-15-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductUpdate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnBeforeProductUpdate&#39;]);</span>
+<a id="__codelineno-15-106" name="__codelineno-15-106" href="#__codelineno-15-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductUpdate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnAfterProductUpdate&#39;]);</span>
+<a id="__codelineno-15-107" name="__codelineno-15-107" href="#__codelineno-15-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductDelete&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnBeforeProductDelete&#39;]);</span>
+<a id="__codelineno-15-108" name="__codelineno-15-108" href="#__codelineno-15-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductDelete&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnAfterProductDelete&#39;]);</span>
+</code></pre></div>
+<h3 id="price-handlers">Price Handlers | Обработчики цен<a class="headerlink" href="#price-handlers" title="Permanent link">&para;</a></h3>
+<h4 id="price-handler">Price Handler | Обработчик цен<a class="headerlink" href="#price-handler" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">// D7</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="x">class CustomProductHandler extends \Bitrix\Catalog\Model\Product\Handler</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="x">class CustomPriceHandler extends \Bitrix\Catalog\Model\Price\Handler</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="x">{</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="x">    public function onBeforeProductCreate($params)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="x">    public function onBeforePriceCreate($params)</span>
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="x">    {</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="x">        // Code executed before product is created</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="x">        // Код, выполняемый перед созданием товара</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="x">        // Code executed before price is created</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="x">        // Код, выполняемый перед созданием цены</span>
 <a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="x">        return $params;</span>
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="x">    }</span>
 <a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
-<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="x">    public function onAfterProductCreate($params, $result)</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="x">    public function onAfterPriceCreate($params, $result)</span>
 <a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="x">    {</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="x">        // Code executed after product is created</span>
-<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="x">        // Код, выполняемый после создания товара</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="x">        // Code executed after price is created</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="x">        // Код, выполняемый после создания цены</span>
 <a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="x">        return $result;</span>
 <a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="x">    }</span>
 <a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>
-<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="x">    public function onBeforeProductUpdate($params)</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="x">    public function onBeforePriceUpdate($params)</span>
 <a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="x">    {</span>
-<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="x">        // Code executed before product is updated</span>
-<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="x">        // Код, выполняемый перед обновлением товара</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="x">        // Code executed before price is updated</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="x">        // Код, выполняемый перед обновлением цены</span>
 <a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="x">        return $params;</span>
 <a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="x">    }</span>
 <a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>
-<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="x">    public function onAfterProductUpdate($params, $result)</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="x">    public function onAfterPriceUpdate($params, $result)</span>
 <a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="x">    {</span>
-<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="x">        // Code executed after product is updated</span>
-<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="x">        // Код, выполняемый после обновления товара</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="x">        // Code executed after price is updated</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="x">        // Код, выполняемый после обновления цены</span>
 <a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="x">        return $result;</span>
 <a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="x">    }</span>
 <a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>
-<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a><span class="x">    public function onBeforeProductDelete($params)</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a><span class="x">    public function onBeforePriceDelete($params)</span>
 <a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="x">    {</span>
-<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="x">        // Code executed before product is deleted</span>
-<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="x">        // Код, выполняемый перед удалением товара</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="x">        // Code executed before price is deleted</span>
+<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="x">        // Код, выполняемый перед удалением цены</span>
 <a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a><span class="x">        return $params;</span>
 <a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a><span class="x">    }</span>
 <a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>
-<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="x">    public function onAfterProductDelete($params, $result)</span>
+<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="x">    public function onAfterPriceDelete($params, $result)</span>
 <a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a><span class="x">    {</span>
-<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="x">        // Code executed after product is deleted</span>
-<a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="x">        // Код, выполняемый после удаления товара</span>
+<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="x">        // Code executed after price is deleted</span>
+<a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="x">        // Код, выполняемый после удаления цены</span>
 <a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="x">        return $result;</span>
 <a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a><span class="x">    }</span>
 <a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="x">}</span>
 <a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a>
 <a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a><span class="x">// Register handler</span>
 <a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="x">\Bitrix\Catalog\Model\Product\Handler::register(&#39;custom_product&#39;, CustomProductHandler::class);</span>
+<a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="x">\Bitrix\Catalog\Model\Price\Handler::register(&#39;custom_price&#39;, CustomPriceHandler::class);</span>
 <a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a>
 <a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a><span class="x">// Legacy</span>
 <a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a><span class="x">class CCustomProductHandler extends CCatalogProduct</span>
+<a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a><span class="x">class CCustomPriceHandler extends CPrice</span>
 <a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a><span class="x">{</span>
-<a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a><span class="x">    public function OnBeforeProductCreate($params)</span>
+<a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a><span class="x">    public function OnBeforePriceCreate($params)</span>
 <a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a><span class="x">    {</span>
-<a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a><span class="x">        // Code executed before product is created</span>
-<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a><span class="x">        // Код, выполняемый перед созданием товара</span>
+<a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a><span class="x">        // Code executed before price is created</span>
+<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a><span class="x">        // Код, выполняемый перед созданием цены</span>
 <a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a><span class="x">        return $params;</span>
 <a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a><span class="x">    }</span>
 <a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a>
-<a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a><span class="x">    public function OnAfterProductCreate($params, $result)</span>
+<a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a><span class="x">    public function OnAfterPriceCreate($params, $result)</span>
 <a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a><span class="x">    {</span>
-<a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a><span class="x">        // Code executed after product is created</span>
-<a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a><span class="x">        // Код, выполняемый после создания товара</span>
+<a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a><span class="x">        // Code executed after price is created</span>
+<a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a><span class="x">        // Код, выполняемый после создания цены</span>
 <a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a><span class="x">        return $result;</span>
 <a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a><span class="x">    }</span>
 <a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a>
-<a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a><span class="x">    public function OnBeforeProductUpdate($params)</span>
+<a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a><span class="x">    public function OnBeforePriceUpdate($params)</span>
 <a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a><span class="x">    {</span>
-<a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a><span class="x">        // Code executed before product is updated</span>
-<a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a><span class="x">        // Код, выполняемый перед обновлением товара</span>
+<a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a><span class="x">        // Code executed before price is updated</span>
+<a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a><span class="x">        // Код, выполняемый перед обновлением цены</span>
 <a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a><span class="x">        return $params;</span>
 <a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a><span class="x">    }</span>
 <a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a>
-<a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a><span class="x">    public function OnAfterProductUpdate($params, $result)</span>
+<a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a><span class="x">    public function OnAfterPriceUpdate($params, $result)</span>
 <a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a><span class="x">    {</span>
-<a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a><span class="x">        // Code executed after product is updated</span>
-<a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a><span class="x">        // Код, выполняемый после обновления товара</span>
+<a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a><span class="x">        // Code executed after price is updated</span>
+<a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a><span class="x">        // Код, выполняемый после обновления цены</span>
 <a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a><span class="x">        return $result;</span>
 <a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a><span class="x">    }</span>
 <a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a>
-<a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a><span class="x">    public function OnBeforeProductDelete($params)</span>
+<a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a><span class="x">    public function OnBeforePriceDelete($params)</span>
 <a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a><span class="x">    {</span>
-<a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a><span class="x">        // Code executed before product is deleted</span>
-<a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a><span class="x">        // Код, выполняемый перед удалением товара</span>
+<a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a><span class="x">        // Code executed before price is deleted</span>
+<a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a><span class="x">        // Код, выполняемый перед удалением цены</span>
 <a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a><span class="x">        return $params;</span>
 <a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a><span class="x">    }</span>
 <a id="__codelineno-16-92" name="__codelineno-16-92" href="#__codelineno-16-92"></a>
-<a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a><span class="x">    public function OnAfterProductDelete($params, $result)</span>
+<a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a><span class="x">    public function OnAfterPriceDelete($params, $result)</span>
 <a id="__codelineno-16-94" name="__codelineno-16-94" href="#__codelineno-16-94"></a><span class="x">    {</span>
-<a id="__codelineno-16-95" name="__codelineno-16-95" href="#__codelineno-16-95"></a><span class="x">        // Code executed after product is deleted</span>
-<a id="__codelineno-16-96" name="__codelineno-16-96" href="#__codelineno-16-96"></a><span class="x">        // Код, выполняемый после удаления товара</span>
+<a id="__codelineno-16-95" name="__codelineno-16-95" href="#__codelineno-16-95"></a><span class="x">        // Code executed after price is deleted</span>
+<a id="__codelineno-16-96" name="__codelineno-16-96" href="#__codelineno-16-96"></a><span class="x">        // Код, выполняемый после удаления цены</span>
 <a id="__codelineno-16-97" name="__codelineno-16-97" href="#__codelineno-16-97"></a><span class="x">        return $result;</span>
 <a id="__codelineno-16-98" name="__codelineno-16-98" href="#__codelineno-16-98"></a><span class="x">    }</span>
 <a id="__codelineno-16-99" name="__codelineno-16-99" href="#__codelineno-16-99"></a><span class="x">}</span>
 <a id="__codelineno-16-100" name="__codelineno-16-100" href="#__codelineno-16-100"></a>
 <a id="__codelineno-16-101" name="__codelineno-16-101" href="#__codelineno-16-101"></a><span class="x">// Register handler</span>
 <a id="__codelineno-16-102" name="__codelineno-16-102" href="#__codelineno-16-102"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-16-103" name="__codelineno-16-103" href="#__codelineno-16-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductCreate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnBeforeProductCreate&#39;]);</span>
-<a id="__codelineno-16-104" name="__codelineno-16-104" href="#__codelineno-16-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductCreate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnAfterProductCreate&#39;]);</span>
-<a id="__codelineno-16-105" name="__codelineno-16-105" href="#__codelineno-16-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductUpdate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnBeforeProductUpdate&#39;]);</span>
-<a id="__codelineno-16-106" name="__codelineno-16-106" href="#__codelineno-16-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductUpdate&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnAfterProductUpdate&#39;]);</span>
-<a id="__codelineno-16-107" name="__codelineno-16-107" href="#__codelineno-16-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductDelete&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnBeforeProductDelete&#39;]);</span>
-<a id="__codelineno-16-108" name="__codelineno-16-108" href="#__codelineno-16-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductDelete&#39;, [&#39;CCustomProductHandler&#39;, &#39;OnAfterProductDelete&#39;]);</span>
+<a id="__codelineno-16-103" name="__codelineno-16-103" href="#__codelineno-16-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforePriceCreate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnBeforePriceCreate&#39;]);</span>
+<a id="__codelineno-16-104" name="__codelineno-16-104" href="#__codelineno-16-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterPriceCreate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnAfterPriceCreate&#39;]);</span>
+<a id="__codelineno-16-105" name="__codelineno-16-105" href="#__codelineno-16-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforePriceUpdate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnBeforePriceUpdate&#39;]);</span>
+<a id="__codelineno-16-106" name="__codelineno-16-106" href="#__codelineno-16-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterPriceUpdate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnAfterPriceUpdate&#39;]);</span>
+<a id="__codelineno-16-107" name="__codelineno-16-107" href="#__codelineno-16-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforePriceDelete&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnBeforePriceDelete&#39;]);</span>
+<a id="__codelineno-16-108" name="__codelineno-16-108" href="#__codelineno-16-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterPriceDelete&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnAfterPriceDelete&#39;]);</span>
 </code></pre></div>
-<h3 id="price-handlers">Price Handlers | Обработчики цен<a class="headerlink" href="#price-handlers" title="Permanent link">&para;</a></h3>
-<h4 id="price-handler">Price Handler | Обработчик цен<a class="headerlink" href="#price-handler" title="Permanent link">&para;</a></h4>
+<h3 id="store-handlers">Store Handlers | Обработчики складов<a class="headerlink" href="#store-handlers" title="Permanent link">&para;</a></h3>
+<h4 id="store-handler">Store Handler | Обработчик складов<a class="headerlink" href="#store-handler" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="x">// D7</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="x">class CustomPriceHandler extends \Bitrix\Catalog\Model\Price\Handler</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="x">class CustomStoreHandler extends \Bitrix\Catalog\Model\Store\Handler</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="x">{</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="x">    public function onBeforePriceCreate($params)</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="x">    public function onBeforeStoreCreate($params)</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="x">    {</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="x">        // Code executed before price is created</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="x">        // Код, выполняемый перед созданием цены</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="x">        // Code executed before store is created</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="x">        // Код, выполняемый перед созданием склада</span>
 <a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="x">        return $params;</span>
 <a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="x">    }</span>
 <a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
-<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="x">    public function onAfterPriceCreate($params, $result)</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="x">    public function onAfterStoreCreate($params, $result)</span>
 <a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="x">    {</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="x">        // Code executed after price is created</span>
-<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="x">        // Код, выполняемый после создания цены</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="x">        // Code executed after store is created</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="x">        // Код, выполняемый после создания склада</span>
 <a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="x">        return $result;</span>
 <a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="x">    }</span>
 <a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>
-<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="x">    public function onBeforePriceUpdate($params)</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="x">    public function onBeforeStoreUpdate($params)</span>
 <a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="x">    {</span>
-<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="x">        // Code executed before price is updated</span>
-<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="x">        // Код, выполняемый перед обновлением цены</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="x">        // Code executed before store is updated</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="x">        // Код, выполняемый перед обновлением склада</span>
 <a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="x">        return $params;</span>
 <a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="x">    }</span>
 <a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>
-<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="x">    public function onAfterPriceUpdate($params, $result)</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="x">    public function onAfterStoreUpdate($params, $result)</span>
 <a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a><span class="x">    {</span>
-<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a><span class="x">        // Code executed after price is updated</span>
-<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a><span class="x">        // Код, выполняемый после обновления цены</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a><span class="x">        // Code executed after store is updated</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a><span class="x">        // Код, выполняемый после обновления склада</span>
 <a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a><span class="x">        return $result;</span>
 <a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a><span class="x">    }</span>
 <a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>
-<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="x">    public function onBeforePriceDelete($params)</span>
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="x">    public function onBeforeStoreDelete($params)</span>
 <a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a><span class="x">    {</span>
-<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a><span class="x">        // Code executed before price is deleted</span>
-<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a><span class="x">        // Код, выполняемый перед удалением цены</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a><span class="x">        // Code executed before store is deleted</span>
+<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a><span class="x">        // Код, выполняемый перед удалением склада</span>
 <a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a><span class="x">        return $params;</span>
 <a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a><span class="x">    }</span>
 <a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a>
-<a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a><span class="x">    public function onAfterPriceDelete($params, $result)</span>
+<a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a><span class="x">    public function onAfterStoreDelete($params, $result)</span>
 <a id="__codelineno-17-42" name="__codelineno-17-42" href="#__codelineno-17-42"></a><span class="x">    {</span>
-<a id="__codelineno-17-43" name="__codelineno-17-43" href="#__codelineno-17-43"></a><span class="x">        // Code executed after price is deleted</span>
-<a id="__codelineno-17-44" name="__codelineno-17-44" href="#__codelineno-17-44"></a><span class="x">        // Код, выполняемый после удаления цены</span>
+<a id="__codelineno-17-43" name="__codelineno-17-43" href="#__codelineno-17-43"></a><span class="x">        // Code executed after store is deleted</span>
+<a id="__codelineno-17-44" name="__codelineno-17-44" href="#__codelineno-17-44"></a><span class="x">        // Код, выполняемый после удаления склада</span>
 <a id="__codelineno-17-45" name="__codelineno-17-45" href="#__codelineno-17-45"></a><span class="x">        return $result;</span>
 <a id="__codelineno-17-46" name="__codelineno-17-46" href="#__codelineno-17-46"></a><span class="x">    }</span>
 <a id="__codelineno-17-47" name="__codelineno-17-47" href="#__codelineno-17-47"></a><span class="x">}</span>
 <a id="__codelineno-17-48" name="__codelineno-17-48" href="#__codelineno-17-48"></a>
 <a id="__codelineno-17-49" name="__codelineno-17-49" href="#__codelineno-17-49"></a><span class="x">// Register handler</span>
 <a id="__codelineno-17-50" name="__codelineno-17-50" href="#__codelineno-17-50"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-17-51" name="__codelineno-17-51" href="#__codelineno-17-51"></a><span class="x">\Bitrix\Catalog\Model\Price\Handler::register(&#39;custom_price&#39;, CustomPriceHandler::class);</span>
+<a id="__codelineno-17-51" name="__codelineno-17-51" href="#__codelineno-17-51"></a><span class="x">\Bitrix\Catalog\Model\Store\Handler::register(&#39;custom_store&#39;, CustomStoreHandler::class);</span>
 <a id="__codelineno-17-52" name="__codelineno-17-52" href="#__codelineno-17-52"></a>
 <a id="__codelineno-17-53" name="__codelineno-17-53" href="#__codelineno-17-53"></a><span class="x">// Legacy</span>
 <a id="__codelineno-17-54" name="__codelineno-17-54" href="#__codelineno-17-54"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-17-55" name="__codelineno-17-55" href="#__codelineno-17-55"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-17-56" name="__codelineno-17-56" href="#__codelineno-17-56"></a><span class="x">class CCustomPriceHandler extends CPrice</span>
+<a id="__codelineno-17-56" name="__codelineno-17-56" href="#__codelineno-17-56"></a><span class="x">class CCustomStoreHandler extends CCatalogStore</span>
 <a id="__codelineno-17-57" name="__codelineno-17-57" href="#__codelineno-17-57"></a><span class="x">{</span>
-<a id="__codelineno-17-58" name="__codelineno-17-58" href="#__codelineno-17-58"></a><span class="x">    public function OnBeforePriceCreate($params)</span>
+<a id="__codelineno-17-58" name="__codelineno-17-58" href="#__codelineno-17-58"></a><span class="x">    public function OnBeforeStoreCreate($params)</span>
 <a id="__codelineno-17-59" name="__codelineno-17-59" href="#__codelineno-17-59"></a><span class="x">    {</span>
-<a id="__codelineno-17-60" name="__codelineno-17-60" href="#__codelineno-17-60"></a><span class="x">        // Code executed before price is created</span>
-<a id="__codelineno-17-61" name="__codelineno-17-61" href="#__codelineno-17-61"></a><span class="x">        // Код, выполняемый перед созданием цены</span>
+<a id="__codelineno-17-60" name="__codelineno-17-60" href="#__codelineno-17-60"></a><span class="x">        // Code executed before store is created</span>
+<a id="__codelineno-17-61" name="__codelineno-17-61" href="#__codelineno-17-61"></a><span class="x">        // Код, выполняемый перед созданием склада</span>
 <a id="__codelineno-17-62" name="__codelineno-17-62" href="#__codelineno-17-62"></a><span class="x">        return $params;</span>
 <a id="__codelineno-17-63" name="__codelineno-17-63" href="#__codelineno-17-63"></a><span class="x">    }</span>
 <a id="__codelineno-17-64" name="__codelineno-17-64" href="#__codelineno-17-64"></a>
-<a id="__codelineno-17-65" name="__codelineno-17-65" href="#__codelineno-17-65"></a><span class="x">    public function OnAfterPriceCreate($params, $result)</span>
+<a id="__codelineno-17-65" name="__codelineno-17-65" href="#__codelineno-17-65"></a><span class="x">    public function OnAfterStoreCreate($params, $result)</span>
 <a id="__codelineno-17-66" name="__codelineno-17-66" href="#__codelineno-17-66"></a><span class="x">    {</span>
-<a id="__codelineno-17-67" name="__codelineno-17-67" href="#__codelineno-17-67"></a><span class="x">        // Code executed after price is created</span>
-<a id="__codelineno-17-68" name="__codelineno-17-68" href="#__codelineno-17-68"></a><span class="x">        // Код, выполняемый после создания цены</span>
+<a id="__codelineno-17-67" name="__codelineno-17-67" href="#__codelineno-17-67"></a><span class="x">        // Code executed after store is created</span>
+<a id="__codelineno-17-68" name="__codelineno-17-68" href="#__codelineno-17-68"></a><span class="x">        // Код, выполняемый после создания склада</span>
 <a id="__codelineno-17-69" name="__codelineno-17-69" href="#__codelineno-17-69"></a><span class="x">        return $result;</span>
 <a id="__codelineno-17-70" name="__codelineno-17-70" href="#__codelineno-17-70"></a><span class="x">    }</span>
 <a id="__codelineno-17-71" name="__codelineno-17-71" href="#__codelineno-17-71"></a>
-<a id="__codelineno-17-72" name="__codelineno-17-72" href="#__codelineno-17-72"></a><span class="x">    public function OnBeforePriceUpdate($params)</span>
+<a id="__codelineno-17-72" name="__codelineno-17-72" href="#__codelineno-17-72"></a><span class="x">    public function OnBeforeStoreUpdate($params)</span>
 <a id="__codelineno-17-73" name="__codelineno-17-73" href="#__codelineno-17-73"></a><span class="x">    {</span>
-<a id="__codelineno-17-74" name="__codelineno-17-74" href="#__codelineno-17-74"></a><span class="x">        // Code executed before price is updated</span>
-<a id="__codelineno-17-75" name="__codelineno-17-75" href="#__codelineno-17-75"></a><span class="x">        // Код, выполняемый перед обновлением цены</span>
+<a id="__codelineno-17-74" name="__codelineno-17-74" href="#__codelineno-17-74"></a><span class="x">        // Code executed before store is updated</span>
+<a id="__codelineno-17-75" name="__codelineno-17-75" href="#__codelineno-17-75"></a><span class="x">        // Код, выполняемый перед обновлением склада</span>
 <a id="__codelineno-17-76" name="__codelineno-17-76" href="#__codelineno-17-76"></a><span class="x">        return $params;</span>
 <a id="__codelineno-17-77" name="__codelineno-17-77" href="#__codelineno-17-77"></a><span class="x">    }</span>
 <a id="__codelineno-17-78" name="__codelineno-17-78" href="#__codelineno-17-78"></a>
-<a id="__codelineno-17-79" name="__codelineno-17-79" href="#__codelineno-17-79"></a><span class="x">    public function OnAfterPriceUpdate($params, $result)</span>
+<a id="__codelineno-17-79" name="__codelineno-17-79" href="#__codelineno-17-79"></a><span class="x">    public function OnAfterStoreUpdate($params, $result)</span>
 <a id="__codelineno-17-80" name="__codelineno-17-80" href="#__codelineno-17-80"></a><span class="x">    {</span>
-<a id="__codelineno-17-81" name="__codelineno-17-81" href="#__codelineno-17-81"></a><span class="x">        // Code executed after price is updated</span>
-<a id="__codelineno-17-82" name="__codelineno-17-82" href="#__codelineno-17-82"></a><span class="x">        // Код, выполняемый после обновления цены</span>
+<a id="__codelineno-17-81" name="__codelineno-17-81" href="#__codelineno-17-81"></a><span class="x">        // Code executed after store is updated</span>
+<a id="__codelineno-17-82" name="__codelineno-17-82" href="#__codelineno-17-82"></a><span class="x">        // Код, выполняемый после обновления склада</span>
 <a id="__codelineno-17-83" name="__codelineno-17-83" href="#__codelineno-17-83"></a><span class="x">        return $result;</span>
 <a id="__codelineno-17-84" name="__codelineno-17-84" href="#__codelineno-17-84"></a><span class="x">    }</span>
 <a id="__codelineno-17-85" name="__codelineno-17-85" href="#__codelineno-17-85"></a>
-<a id="__codelineno-17-86" name="__codelineno-17-86" href="#__codelineno-17-86"></a><span class="x">    public function OnBeforePriceDelete($params)</span>
+<a id="__codelineno-17-86" name="__codelineno-17-86" href="#__codelineno-17-86"></a><span class="x">    public function OnBeforeStoreDelete($params)</span>
 <a id="__codelineno-17-87" name="__codelineno-17-87" href="#__codelineno-17-87"></a><span class="x">    {</span>
-<a id="__codelineno-17-88" name="__codelineno-17-88" href="#__codelineno-17-88"></a><span class="x">        // Code executed before price is deleted</span>
-<a id="__codelineno-17-89" name="__codelineno-17-89" href="#__codelineno-17-89"></a><span class="x">        // Код, выполняемый перед удалением цены</span>
+<a id="__codelineno-17-88" name="__codelineno-17-88" href="#__codelineno-17-88"></a><span class="x">        // Code executed before store is deleted</span>
+<a id="__codelineno-17-89" name="__codelineno-17-89" href="#__codelineno-17-89"></a><span class="x">        // Код, выполняемый перед удалением склада</span>
 <a id="__codelineno-17-90" name="__codelineno-17-90" href="#__codelineno-17-90"></a><span class="x">        return $params;</span>
 <a id="__codelineno-17-91" name="__codelineno-17-91" href="#__codelineno-17-91"></a><span class="x">    }</span>
 <a id="__codelineno-17-92" name="__codelineno-17-92" href="#__codelineno-17-92"></a>
-<a id="__codelineno-17-93" name="__codelineno-17-93" href="#__codelineno-17-93"></a><span class="x">    public function OnAfterPriceDelete($params, $result)</span>
+<a id="__codelineno-17-93" name="__codelineno-17-93" href="#__codelineno-17-93"></a><span class="x">    public function OnAfterStoreDelete($params, $result)</span>
 <a id="__codelineno-17-94" name="__codelineno-17-94" href="#__codelineno-17-94"></a><span class="x">    {</span>
-<a id="__codelineno-17-95" name="__codelineno-17-95" href="#__codelineno-17-95"></a><span class="x">        // Code executed after price is deleted</span>
-<a id="__codelineno-17-96" name="__codelineno-17-96" href="#__codelineno-17-96"></a><span class="x">        // Код, выполняемый после удаления цены</span>
+<a id="__codelineno-17-95" name="__codelineno-17-95" href="#__codelineno-17-95"></a><span class="x">        // Code executed after store is deleted</span>
+<a id="__codelineno-17-96" name="__codelineno-17-96" href="#__codelineno-17-96"></a><span class="x">        // Код, выполняемый после удаления склада</span>
 <a id="__codelineno-17-97" name="__codelineno-17-97" href="#__codelineno-17-97"></a><span class="x">        return $result;</span>
 <a id="__codelineno-17-98" name="__codelineno-17-98" href="#__codelineno-17-98"></a><span class="x">    }</span>
 <a id="__codelineno-17-99" name="__codelineno-17-99" href="#__codelineno-17-99"></a><span class="x">}</span>
 <a id="__codelineno-17-100" name="__codelineno-17-100" href="#__codelineno-17-100"></a>
 <a id="__codelineno-17-101" name="__codelineno-17-101" href="#__codelineno-17-101"></a><span class="x">// Register handler</span>
 <a id="__codelineno-17-102" name="__codelineno-17-102" href="#__codelineno-17-102"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-17-103" name="__codelineno-17-103" href="#__codelineno-17-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforePriceCreate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnBeforePriceCreate&#39;]);</span>
-<a id="__codelineno-17-104" name="__codelineno-17-104" href="#__codelineno-17-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterPriceCreate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnAfterPriceCreate&#39;]);</span>
-<a id="__codelineno-17-105" name="__codelineno-17-105" href="#__codelineno-17-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforePriceUpdate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnBeforePriceUpdate&#39;]);</span>
-<a id="__codelineno-17-106" name="__codelineno-17-106" href="#__codelineno-17-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterPriceUpdate&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnAfterPriceUpdate&#39;]);</span>
-<a id="__codelineno-17-107" name="__codelineno-17-107" href="#__codelineno-17-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforePriceDelete&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnBeforePriceDelete&#39;]);</span>
-<a id="__codelineno-17-108" name="__codelineno-17-108" href="#__codelineno-17-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterPriceDelete&#39;, [&#39;CCustomPriceHandler&#39;, &#39;OnAfterPriceDelete&#39;]);</span>
+<a id="__codelineno-17-103" name="__codelineno-17-103" href="#__codelineno-17-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeStoreCreate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnBeforeStoreCreate&#39;]);</span>
+<a id="__codelineno-17-104" name="__codelineno-17-104" href="#__codelineno-17-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterStoreCreate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnAfterStoreCreate&#39;]);</span>
+<a id="__codelineno-17-105" name="__codelineno-17-105" href="#__codelineno-17-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeStoreUpdate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnBeforeStoreUpdate&#39;]);</span>
+<a id="__codelineno-17-106" name="__codelineno-17-106" href="#__codelineno-17-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterStoreUpdate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnAfterStoreUpdate&#39;]);</span>
+<a id="__codelineno-17-107" name="__codelineno-17-107" href="#__codelineno-17-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeStoreDelete&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnBeforeStoreDelete&#39;]);</span>
+<a id="__codelineno-17-108" name="__codelineno-17-108" href="#__codelineno-17-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterStoreDelete&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnAfterStoreDelete&#39;]);</span>
 </code></pre></div>
-<h3 id="store-handlers">Store Handlers | Обработчики складов<a class="headerlink" href="#store-handlers" title="Permanent link">&para;</a></h3>
-<h4 id="store-handler">Store Handler | Обработчик складов<a class="headerlink" href="#store-handler" title="Permanent link">&para;</a></h4>
+<h3 id="product-property-handlers">Product Property Handlers | Обработчики свойств товаров<a class="headerlink" href="#product-property-handlers" title="Permanent link">&para;</a></h3>
+<h4 id="product-property-handler">Product Property Handler | Обработчик свойств товаров<a class="headerlink" href="#product-property-handler" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="x">// D7</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="x">class CustomStoreHandler extends \Bitrix\Catalog\Model\Store\Handler</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="x">class CustomProductPropertyHandler extends \Bitrix\Catalog\Model\ProductProperty\Handler</span>
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="x">{</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="x">    public function onBeforeStoreCreate($params)</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="x">    public function onBeforeProductPropertyCreate($params)</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="x">    {</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="x">        // Code executed before store is created</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="x">        // Код, выполняемый перед созданием склада</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="x">        // Code executed before product property is created</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="x">        // Код, выполняемый перед созданием свойства товара</span>
 <a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="x">        return $params;</span>
 <a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="x">    }</span>
 <a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>
-<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="x">    public function onAfterStoreCreate($params, $result)</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="x">    public function onAfterProductPropertyCreate($params, $result)</span>
 <a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="x">    {</span>
-<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="x">        // Code executed after store is created</span>
-<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="x">        // Код, выполняемый после создания склада</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="x">        // Code executed after product property is created</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="x">        // Код, выполняемый после создания свойства товара</span>
 <a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="x">        return $result;</span>
 <a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="x">    }</span>
 <a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>
-<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="x">    public function onBeforeStoreUpdate($params)</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="x">    public function onBeforeProductPropertyUpdate($params)</span>
 <a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="x">    {</span>
-<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="x">        // Code executed before store is updated</span>
-<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="x">        // Код, выполняемый перед обновлением склада</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="x">        // Code executed before product property is updated</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="x">        // Код, выполняемый перед обновлением свойства товара</span>
 <a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="x">        return $params;</span>
 <a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="x">    }</span>
 <a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a>
-<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="x">    public function onAfterStoreUpdate($params, $result)</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="x">    public function onAfterProductPropertyUpdate($params, $result)</span>
 <a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="x">    {</span>
-<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="x">        // Code executed after store is updated</span>
-<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="x">        // Код, выполняемый после обновления склада</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="x">        // Code executed after product property is updated</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="x">        // Код, выполняемый после обновления свойства товара</span>
 <a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="x">        return $result;</span>
 <a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a><span class="x">    }</span>
 <a id="__codelineno-18-33" name="__codelineno-18-33" href="#__codelineno-18-33"></a>
-<a id="__codelineno-18-34" name="__codelineno-18-34" href="#__codelineno-18-34"></a><span class="x">    public function onBeforeStoreDelete($params)</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34" href="#__codelineno-18-34"></a><span class="x">    public function onBeforeProductPropertyDelete($params)</span>
 <a id="__codelineno-18-35" name="__codelineno-18-35" href="#__codelineno-18-35"></a><span class="x">    {</span>
-<a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a><span class="x">        // Code executed before store is deleted</span>
-<a id="__codelineno-18-37" name="__codelineno-18-37" href="#__codelineno-18-37"></a><span class="x">        // Код, выполняемый перед удалением склада</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a><span class="x">        // Code executed before product property is deleted</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37" href="#__codelineno-18-37"></a><span class="x">        // Код, выполняемый перед удалением свойства товара</span>
 <a id="__codelineno-18-38" name="__codelineno-18-38" href="#__codelineno-18-38"></a><span class="x">        return $params;</span>
 <a id="__codelineno-18-39" name="__codelineno-18-39" href="#__codelineno-18-39"></a><span class="x">    }</span>
 <a id="__codelineno-18-40" name="__codelineno-18-40" href="#__codelineno-18-40"></a>
-<a id="__codelineno-18-41" name="__codelineno-18-41" href="#__codelineno-18-41"></a><span class="x">    public function onAfterStoreDelete($params, $result)</span>
+<a id="__codelineno-18-41" name="__codelineno-18-41" href="#__codelineno-18-41"></a><span class="x">    public function onAfterProductPropertyDelete($params, $result)</span>
 <a id="__codelineno-18-42" name="__codelineno-18-42" href="#__codelineno-18-42"></a><span class="x">    {</span>
-<a id="__codelineno-18-43" name="__codelineno-18-43" href="#__codelineno-18-43"></a><span class="x">        // Code executed after store is deleted</span>
-<a id="__codelineno-18-44" name="__codelineno-18-44" href="#__codelineno-18-44"></a><span class="x">        // Код, выполняемый после удаления склада</span>
+<a id="__codelineno-18-43" name="__codelineno-18-43" href="#__codelineno-18-43"></a><span class="x">        // Code executed after product property is deleted</span>
+<a id="__codelineno-18-44" name="__codelineno-18-44" href="#__codelineno-18-44"></a><span class="x">        // Код, выполняемый после удаления свойства товара</span>
 <a id="__codelineno-18-45" name="__codelineno-18-45" href="#__codelineno-18-45"></a><span class="x">        return $result;</span>
 <a id="__codelineno-18-46" name="__codelineno-18-46" href="#__codelineno-18-46"></a><span class="x">    }</span>
 <a id="__codelineno-18-47" name="__codelineno-18-47" href="#__codelineno-18-47"></a><span class="x">}</span>
 <a id="__codelineno-18-48" name="__codelineno-18-48" href="#__codelineno-18-48"></a>
 <a id="__codelineno-18-49" name="__codelineno-18-49" href="#__codelineno-18-49"></a><span class="x">// Register handler</span>
 <a id="__codelineno-18-50" name="__codelineno-18-50" href="#__codelineno-18-50"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-18-51" name="__codelineno-18-51" href="#__codelineno-18-51"></a><span class="x">\Bitrix\Catalog\Model\Store\Handler::register(&#39;custom_store&#39;, CustomStoreHandler::class);</span>
+<a id="__codelineno-18-51" name="__codelineno-18-51" href="#__codelineno-18-51"></a><span class="x">\Bitrix\Catalog\Model\ProductProperty\Handler::register(&#39;custom_product_property&#39;, CustomProductPropertyHandler::class);</span>
 <a id="__codelineno-18-52" name="__codelineno-18-52" href="#__codelineno-18-52"></a>
 <a id="__codelineno-18-53" name="__codelineno-18-53" href="#__codelineno-18-53"></a><span class="x">// Legacy</span>
 <a id="__codelineno-18-54" name="__codelineno-18-54" href="#__codelineno-18-54"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
 <a id="__codelineno-18-55" name="__codelineno-18-55" href="#__codelineno-18-55"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-18-56" name="__codelineno-18-56" href="#__codelineno-18-56"></a><span class="x">class CCustomStoreHandler extends CCatalogStore</span>
+<a id="__codelineno-18-56" name="__codelineno-18-56" href="#__codelineno-18-56"></a><span class="x">class CCustomProductPropertyHandler extends CCatalogProduct</span>
 <a id="__codelineno-18-57" name="__codelineno-18-57" href="#__codelineno-18-57"></a><span class="x">{</span>
-<a id="__codelineno-18-58" name="__codelineno-18-58" href="#__codelineno-18-58"></a><span class="x">    public function OnBeforeStoreCreate($params)</span>
+<a id="__codelineno-18-58" name="__codelineno-18-58" href="#__codelineno-18-58"></a><span class="x">    public function OnBeforeProductPropertyCreate($params)</span>
 <a id="__codelineno-18-59" name="__codelineno-18-59" href="#__codelineno-18-59"></a><span class="x">    {</span>
-<a id="__codelineno-18-60" name="__codelineno-18-60" href="#__codelineno-18-60"></a><span class="x">        // Code executed before store is created</span>
-<a id="__codelineno-18-61" name="__codelineno-18-61" href="#__codelineno-18-61"></a><span class="x">        // Код, выполняемый перед созданием склада</span>
+<a id="__codelineno-18-60" name="__codelineno-18-60" href="#__codelineno-18-60"></a><span class="x">        // Code executed before product property is created</span>
+<a id="__codelineno-18-61" name="__codelineno-18-61" href="#__codelineno-18-61"></a><span class="x">        // Код, выполняемый перед созданием свойства товара</span>
 <a id="__codelineno-18-62" name="__codelineno-18-62" href="#__codelineno-18-62"></a><span class="x">        return $params;</span>
 <a id="__codelineno-18-63" name="__codelineno-18-63" href="#__codelineno-18-63"></a><span class="x">    }</span>
 <a id="__codelineno-18-64" name="__codelineno-18-64" href="#__codelineno-18-64"></a>
-<a id="__codelineno-18-65" name="__codelineno-18-65" href="#__codelineno-18-65"></a><span class="x">    public function OnAfterStoreCreate($params, $result)</span>
+<a id="__codelineno-18-65" name="__codelineno-18-65" href="#__codelineno-18-65"></a><span class="x">    public function OnAfterProductPropertyCreate($params, $result)</span>
 <a id="__codelineno-18-66" name="__codelineno-18-66" href="#__codelineno-18-66"></a><span class="x">    {</span>
-<a id="__codelineno-18-67" name="__codelineno-18-67" href="#__codelineno-18-67"></a><span class="x">        // Code executed after store is created</span>
-<a id="__codelineno-18-68" name="__codelineno-18-68" href="#__codelineno-18-68"></a><span class="x">        // Код, выполняемый после создания склада</span>
+<a id="__codelineno-18-67" name="__codelineno-18-67" href="#__codelineno-18-67"></a><span class="x">        // Code executed after product property is created</span>
+<a id="__codelineno-18-68" name="__codelineno-18-68" href="#__codelineno-18-68"></a><span class="x">        // Код, выполняемый после создания свойства товара</span>
 <a id="__codelineno-18-69" name="__codelineno-18-69" href="#__codelineno-18-69"></a><span class="x">        return $result;</span>
 <a id="__codelineno-18-70" name="__codelineno-18-70" href="#__codelineno-18-70"></a><span class="x">    }</span>
 <a id="__codelineno-18-71" name="__codelineno-18-71" href="#__codelineno-18-71"></a>
-<a id="__codelineno-18-72" name="__codelineno-18-72" href="#__codelineno-18-72"></a><span class="x">    public function OnBeforeStoreUpdate($params)</span>
+<a id="__codelineno-18-72" name="__codelineno-18-72" href="#__codelineno-18-72"></a><span class="x">    public function OnBeforeProductPropertyUpdate($params)</span>
 <a id="__codelineno-18-73" name="__codelineno-18-73" href="#__codelineno-18-73"></a><span class="x">    {</span>
-<a id="__codelineno-18-74" name="__codelineno-18-74" href="#__codelineno-18-74"></a><span class="x">        // Code executed before store is updated</span>
-<a id="__codelineno-18-75" name="__codelineno-18-75" href="#__codelineno-18-75"></a><span class="x">        // Код, выполняемый перед обновлением склада</span>
+<a id="__codelineno-18-74" name="__codelineno-18-74" href="#__codelineno-18-74"></a><span class="x">        // Code executed before product property is updated</span>
+<a id="__codelineno-18-75" name="__codelineno-18-75" href="#__codelineno-18-75"></a><span class="x">        // Код, выполняемый перед обновлением свойства товара</span>
 <a id="__codelineno-18-76" name="__codelineno-18-76" href="#__codelineno-18-76"></a><span class="x">        return $params;</span>
 <a id="__codelineno-18-77" name="__codelineno-18-77" href="#__codelineno-18-77"></a><span class="x">    }</span>
 <a id="__codelineno-18-78" name="__codelineno-18-78" href="#__codelineno-18-78"></a>
-<a id="__codelineno-18-79" name="__codelineno-18-79" href="#__codelineno-18-79"></a><span class="x">    public function OnAfterStoreUpdate($params, $result)</span>
+<a id="__codelineno-18-79" name="__codelineno-18-79" href="#__codelineno-18-79"></a><span class="x">    public function OnAfterProductPropertyUpdate($params, $result)</span>
 <a id="__codelineno-18-80" name="__codelineno-18-80" href="#__codelineno-18-80"></a><span class="x">    {</span>
-<a id="__codelineno-18-81" name="__codelineno-18-81" href="#__codelineno-18-81"></a><span class="x">        // Code executed after store is updated</span>
-<a id="__codelineno-18-82" name="__codelineno-18-82" href="#__codelineno-18-82"></a><span class="x">        // Код, выполняемый после обновления склада</span>
+<a id="__codelineno-18-81" name="__codelineno-18-81" href="#__codelineno-18-81"></a><span class="x">        // Code executed after product property is updated</span>
+<a id="__codelineno-18-82" name="__codelineno-18-82" href="#__codelineno-18-82"></a><span class="x">        // Код, выполняемый после обновления свойства товара</span>
 <a id="__codelineno-18-83" name="__codelineno-18-83" href="#__codelineno-18-83"></a><span class="x">        return $result;</span>
 <a id="__codelineno-18-84" name="__codelineno-18-84" href="#__codelineno-18-84"></a><span class="x">    }</span>
 <a id="__codelineno-18-85" name="__codelineno-18-85" href="#__codelineno-18-85"></a>
-<a id="__codelineno-18-86" name="__codelineno-18-86" href="#__codelineno-18-86"></a><span class="x">    public function OnBeforeStoreDelete($params)</span>
+<a id="__codelineno-18-86" name="__codelineno-18-86" href="#__codelineno-18-86"></a><span class="x">    public function OnBeforeProductPropertyDelete($params)</span>
 <a id="__codelineno-18-87" name="__codelineno-18-87" href="#__codelineno-18-87"></a><span class="x">    {</span>
-<a id="__codelineno-18-88" name="__codelineno-18-88" href="#__codelineno-18-88"></a><span class="x">        // Code executed before store is deleted</span>
-<a id="__codelineno-18-89" name="__codelineno-18-89" href="#__codelineno-18-89"></a><span class="x">        // Код, выполняемый перед удалением склада</span>
+<a id="__codelineno-18-88" name="__codelineno-18-88" href="#__codelineno-18-88"></a><span class="x">        // Code executed before product property is deleted</span>
+<a id="__codelineno-18-89" name="__codelineno-18-89" href="#__codelineno-18-89"></a><span class="x">        // Код, выполняемый перед удалением свойства товара</span>
 <a id="__codelineno-18-90" name="__codelineno-18-90" href="#__codelineno-18-90"></a><span class="x">        return $params;</span>
 <a id="__codelineno-18-91" name="__codelineno-18-91" href="#__codelineno-18-91"></a><span class="x">    }</span>
 <a id="__codelineno-18-92" name="__codelineno-18-92" href="#__codelineno-18-92"></a>
-<a id="__codelineno-18-93" name="__codelineno-18-93" href="#__codelineno-18-93"></a><span class="x">    public function OnAfterStoreDelete($params, $result)</span>
+<a id="__codelineno-18-93" name="__codelineno-18-93" href="#__codelineno-18-93"></a><span class="x">    public function OnAfterProductPropertyDelete($params, $result)</span>
 <a id="__codelineno-18-94" name="__codelineno-18-94" href="#__codelineno-18-94"></a><span class="x">    {</span>
-<a id="__codelineno-18-95" name="__codelineno-18-95" href="#__codelineno-18-95"></a><span class="x">        // Code executed after store is deleted</span>
-<a id="__codelineno-18-96" name="__codelineno-18-96" href="#__codelineno-18-96"></a><span class="x">        // Код, выполняемый после удаления склада</span>
+<a id="__codelineno-18-95" name="__codelineno-18-95" href="#__codelineno-18-95"></a><span class="x">        // Code executed after product property is deleted</span>
+<a id="__codelineno-18-96" name="__codelineno-18-96" href="#__codelineno-18-96"></a><span class="x">        // Код, выполняемый после удаления свойства товара</span>
 <a id="__codelineno-18-97" name="__codelineno-18-97" href="#__codelineno-18-97"></a><span class="x">        return $result;</span>
 <a id="__codelineno-18-98" name="__codelineno-18-98" href="#__codelineno-18-98"></a><span class="x">    }</span>
 <a id="__codelineno-18-99" name="__codelineno-18-99" href="#__codelineno-18-99"></a><span class="x">}</span>
 <a id="__codelineno-18-100" name="__codelineno-18-100" href="#__codelineno-18-100"></a>
 <a id="__codelineno-18-101" name="__codelineno-18-101" href="#__codelineno-18-101"></a><span class="x">// Register handler</span>
 <a id="__codelineno-18-102" name="__codelineno-18-102" href="#__codelineno-18-102"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-18-103" name="__codelineno-18-103" href="#__codelineno-18-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeStoreCreate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnBeforeStoreCreate&#39;]);</span>
-<a id="__codelineno-18-104" name="__codelineno-18-104" href="#__codelineno-18-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterStoreCreate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnAfterStoreCreate&#39;]);</span>
-<a id="__codelineno-18-105" name="__codelineno-18-105" href="#__codelineno-18-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeStoreUpdate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnBeforeStoreUpdate&#39;]);</span>
-<a id="__codelineno-18-106" name="__codelineno-18-106" href="#__codelineno-18-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterStoreUpdate&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnAfterStoreUpdate&#39;]);</span>
-<a id="__codelineno-18-107" name="__codelineno-18-107" href="#__codelineno-18-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeStoreDelete&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnBeforeStoreDelete&#39;]);</span>
-<a id="__codelineno-18-108" name="__codelineno-18-108" href="#__codelineno-18-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterStoreDelete&#39;, [&#39;CCustomStoreHandler&#39;, &#39;OnAfterStoreDelete&#39;]);</span>
-</code></pre></div>
-<h3 id="product-property-handlers">Product Property Handlers | Обработчики свойств товаров<a class="headerlink" href="#product-property-handlers" title="Permanent link">&para;</a></h3>
-<h4 id="product-property-handler">Product Property Handler | Обработчик свойств товаров<a class="headerlink" href="#product-property-handler" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="x">// D7</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="x">class CustomProductPropertyHandler extends \Bitrix\Catalog\Model\ProductProperty\Handler</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="x">{</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="x">    public function onBeforeProductPropertyCreate($params)</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="x">    {</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="x">        // Code executed before product property is created</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="x">        // Код, выполняемый перед созданием свойства товара</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="x">        return $params;</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="x">    }</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="x">    public function onAfterProductPropertyCreate($params, $result)</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="x">    {</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="x">        // Code executed after product property is created</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="x">        // Код, выполняемый после создания свойства товара</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="x">        return $result;</span>
-<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="x">    }</span>
-<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>
-<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="x">    public function onBeforeProductPropertyUpdate($params)</span>
-<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="x">    {</span>
-<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="x">        // Code executed before product property is updated</span>
-<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="x">        // Код, выполняемый перед обновлением свойства товара</span>
-<a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="x">        return $params;</span>
-<a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="x">    }</span>
-<a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a>
-<a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="x">    public function onAfterProductPropertyUpdate($params, $result)</span>
-<a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="x">    {</span>
-<a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a><span class="x">        // Code executed after product property is updated</span>
-<a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a><span class="x">        // Код, выполняемый после обновления свойства товара</span>
-<a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="x">        return $result;</span>
-<a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a><span class="x">    }</span>
-<a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a>
-<a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="x">    public function onBeforeProductPropertyDelete($params)</span>
-<a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a><span class="x">    {</span>
-<a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="x">        // Code executed before product property is deleted</span>
-<a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a><span class="x">        // Код, выполняемый перед удалением свойства товара</span>
-<a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a><span class="x">        return $params;</span>
-<a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a><span class="x">    }</span>
-<a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a>
-<a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a><span class="x">    public function onAfterProductPropertyDelete($params, $result)</span>
-<a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a><span class="x">    {</span>
-<a id="__codelineno-19-43" name="__codelineno-19-43" href="#__codelineno-19-43"></a><span class="x">        // Code executed after product property is deleted</span>
-<a id="__codelineno-19-44" name="__codelineno-19-44" href="#__codelineno-19-44"></a><span class="x">        // Код, выполняемый после удаления свойства товара</span>
-<a id="__codelineno-19-45" name="__codelineno-19-45" href="#__codelineno-19-45"></a><span class="x">        return $result;</span>
-<a id="__codelineno-19-46" name="__codelineno-19-46" href="#__codelineno-19-46"></a><span class="x">    }</span>
-<a id="__codelineno-19-47" name="__codelineno-19-47" href="#__codelineno-19-47"></a><span class="x">}</span>
-<a id="__codelineno-19-48" name="__codelineno-19-48" href="#__codelineno-19-48"></a>
-<a id="__codelineno-19-49" name="__codelineno-19-49" href="#__codelineno-19-49"></a><span class="x">// Register handler</span>
-<a id="__codelineno-19-50" name="__codelineno-19-50" href="#__codelineno-19-50"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-19-51" name="__codelineno-19-51" href="#__codelineno-19-51"></a><span class="x">\Bitrix\Catalog\Model\ProductProperty\Handler::register(&#39;custom_product_property&#39;, CustomProductPropertyHandler::class);</span>
-<a id="__codelineno-19-52" name="__codelineno-19-52" href="#__codelineno-19-52"></a>
-<a id="__codelineno-19-53" name="__codelineno-19-53" href="#__codelineno-19-53"></a><span class="x">// Legacy</span>
-<a id="__codelineno-19-54" name="__codelineno-19-54" href="#__codelineno-19-54"></a><span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-19-55" name="__codelineno-19-55" href="#__codelineno-19-55"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
-<a id="__codelineno-19-56" name="__codelineno-19-56" href="#__codelineno-19-56"></a><span class="x">class CCustomProductPropertyHandler extends CCatalogProduct</span>
-<a id="__codelineno-19-57" name="__codelineno-19-57" href="#__codelineno-19-57"></a><span class="x">{</span>
-<a id="__codelineno-19-58" name="__codelineno-19-58" href="#__codelineno-19-58"></a><span class="x">    public function OnBeforeProductPropertyCreate($params)</span>
-<a id="__codelineno-19-59" name="__codelineno-19-59" href="#__codelineno-19-59"></a><span class="x">    {</span>
-<a id="__codelineno-19-60" name="__codelineno-19-60" href="#__codelineno-19-60"></a><span class="x">        // Code executed before product property is created</span>
-<a id="__codelineno-19-61" name="__codelineno-19-61" href="#__codelineno-19-61"></a><span class="x">        // Код, выполняемый перед созданием свойства товара</span>
-<a id="__codelineno-19-62" name="__codelineno-19-62" href="#__codelineno-19-62"></a><span class="x">        return $params;</span>
-<a id="__codelineno-19-63" name="__codelineno-19-63" href="#__codelineno-19-63"></a><span class="x">    }</span>
-<a id="__codelineno-19-64" name="__codelineno-19-64" href="#__codelineno-19-64"></a>
-<a id="__codelineno-19-65" name="__codelineno-19-65" href="#__codelineno-19-65"></a><span class="x">    public function OnAfterProductPropertyCreate($params, $result)</span>
-<a id="__codelineno-19-66" name="__codelineno-19-66" href="#__codelineno-19-66"></a><span class="x">    {</span>
-<a id="__codelineno-19-67" name="__codelineno-19-67" href="#__codelineno-19-67"></a><span class="x">        // Code executed after product property is created</span>
-<a id="__codelineno-19-68" name="__codelineno-19-68" href="#__codelineno-19-68"></a><span class="x">        // Код, выполняемый после создания свойства товара</span>
-<a id="__codelineno-19-69" name="__codelineno-19-69" href="#__codelineno-19-69"></a><span class="x">        return $result;</span>
-<a id="__codelineno-19-70" name="__codelineno-19-70" href="#__codelineno-19-70"></a><span class="x">    }</span>
-<a id="__codelineno-19-71" name="__codelineno-19-71" href="#__codelineno-19-71"></a>
-<a id="__codelineno-19-72" name="__codelineno-19-72" href="#__codelineno-19-72"></a><span class="x">    public function OnBeforeProductPropertyUpdate($params)</span>
-<a id="__codelineno-19-73" name="__codelineno-19-73" href="#__codelineno-19-73"></a><span class="x">    {</span>
-<a id="__codelineno-19-74" name="__codelineno-19-74" href="#__codelineno-19-74"></a><span class="x">        // Code executed before product property is updated</span>
-<a id="__codelineno-19-75" name="__codelineno-19-75" href="#__codelineno-19-75"></a><span class="x">        // Код, выполняемый перед обновлением свойства товара</span>
-<a id="__codelineno-19-76" name="__codelineno-19-76" href="#__codelineno-19-76"></a><span class="x">        return $params;</span>
-<a id="__codelineno-19-77" name="__codelineno-19-77" href="#__codelineno-19-77"></a><span class="x">    }</span>
-<a id="__codelineno-19-78" name="__codelineno-19-78" href="#__codelineno-19-78"></a>
-<a id="__codelineno-19-79" name="__codelineno-19-79" href="#__codelineno-19-79"></a><span class="x">    public function OnAfterProductPropertyUpdate($params, $result)</span>
-<a id="__codelineno-19-80" name="__codelineno-19-80" href="#__codelineno-19-80"></a><span class="x">    {</span>
-<a id="__codelineno-19-81" name="__codelineno-19-81" href="#__codelineno-19-81"></a><span class="x">        // Code executed after product property is updated</span>
-<a id="__codelineno-19-82" name="__codelineno-19-82" href="#__codelineno-19-82"></a><span class="x">        // Код, выполняемый после обновления свойства товара</span>
-<a id="__codelineno-19-83" name="__codelineno-19-83" href="#__codelineno-19-83"></a><span class="x">        return $result;</span>
-<a id="__codelineno-19-84" name="__codelineno-19-84" href="#__codelineno-19-84"></a><span class="x">    }</span>
-<a id="__codelineno-19-85" name="__codelineno-19-85" href="#__codelineno-19-85"></a>
-<a id="__codelineno-19-86" name="__codelineno-19-86" href="#__codelineno-19-86"></a><span class="x">    public function OnBeforeProductPropertyDelete($params)</span>
-<a id="__codelineno-19-87" name="__codelineno-19-87" href="#__codelineno-19-87"></a><span class="x">    {</span>
-<a id="__codelineno-19-88" name="__codelineno-19-88" href="#__codelineno-19-88"></a><span class="x">        // Code executed before product property is deleted</span>
-<a id="__codelineno-19-89" name="__codelineno-19-89" href="#__codelineno-19-89"></a><span class="x">        // Код, выполняемый перед удалением свойства товара</span>
-<a id="__codelineno-19-90" name="__codelineno-19-90" href="#__codelineno-19-90"></a><span class="x">        return $params;</span>
-<a id="__codelineno-19-91" name="__codelineno-19-91" href="#__codelineno-19-91"></a><span class="x">    }</span>
-<a id="__codelineno-19-92" name="__codelineno-19-92" href="#__codelineno-19-92"></a>
-<a id="__codelineno-19-93" name="__codelineno-19-93" href="#__codelineno-19-93"></a><span class="x">    public function OnAfterProductPropertyDelete($params, $result)</span>
-<a id="__codelineno-19-94" name="__codelineno-19-94" href="#__codelineno-19-94"></a><span class="x">    {</span>
-<a id="__codelineno-19-95" name="__codelineno-19-95" href="#__codelineno-19-95"></a><span class="x">        // Code executed after product property is deleted</span>
-<a id="__codelineno-19-96" name="__codelineno-19-96" href="#__codelineno-19-96"></a><span class="x">        // Код, выполняемый после удаления свойства товара</span>
-<a id="__codelineno-19-97" name="__codelineno-19-97" href="#__codelineno-19-97"></a><span class="x">        return $result;</span>
-<a id="__codelineno-19-98" name="__codelineno-19-98" href="#__codelineno-19-98"></a><span class="x">    }</span>
-<a id="__codelineno-19-99" name="__codelineno-19-99" href="#__codelineno-19-99"></a><span class="x">}</span>
-<a id="__codelineno-19-100" name="__codelineno-19-100" href="#__codelineno-19-100"></a>
-<a id="__codelineno-19-101" name="__codelineno-19-101" href="#__codelineno-19-101"></a><span class="x">// Register handler</span>
-<a id="__codelineno-19-102" name="__codelineno-19-102" href="#__codelineno-19-102"></a><span class="x">// Регистрация обработчика</span>
-<a id="__codelineno-19-103" name="__codelineno-19-103" href="#__codelineno-19-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductPropertyCreate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnBeforeProductPropertyCreate&#39;]);</span>
-<a id="__codelineno-19-104" name="__codelineno-19-104" href="#__codelineno-19-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductPropertyCreate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnAfterProductPropertyCreate&#39;]);</span>
-<a id="__codelineno-19-105" name="__codelineno-19-105" href="#__codelineno-19-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductPropertyUpdate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnBeforeProductPropertyUpdate&#39;]);</span>
-<a id="__codelineno-19-106" name="__codelineno-19-106" href="#__codelineno-19-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductPropertyUpdate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnAfterProductPropertyUpdate&#39;]);</span>
-<a id="__codelineno-19-107" name="__codelineno-19-107" href="#__codelineno-19-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductPropertyDelete&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnBeforeProductPropertyDelete&#39;]);</span>
-<a id="__codelineno-19-108" name="__codelineno-19-108" href="#__codelineno-19-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductPropertyDelete&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnAfterProductPropertyDelete&#39;]);</span>
+<a id="__codelineno-18-103" name="__codelineno-18-103" href="#__codelineno-18-103"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductPropertyCreate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnBeforeProductPropertyCreate&#39;]);</span>
+<a id="__codelineno-18-104" name="__codelineno-18-104" href="#__codelineno-18-104"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductPropertyCreate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnAfterProductPropertyCreate&#39;]);</span>
+<a id="__codelineno-18-105" name="__codelineno-18-105" href="#__codelineno-18-105"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductPropertyUpdate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnBeforeProductPropertyUpdate&#39;]);</span>
+<a id="__codelineno-18-106" name="__codelineno-18-106" href="#__codelineno-18-106"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductPropertyUpdate&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnAfterProductPropertyUpdate&#39;]);</span>
+<a id="__codelineno-18-107" name="__codelineno-18-107" href="#__codelineno-18-107"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnBeforeProductPropertyDelete&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnBeforeProductPropertyDelete&#39;]);</span>
+<a id="__codelineno-18-108" name="__codelineno-18-108" href="#__codelineno-18-108"></a><span class="x">AddEventHandler(&#39;catalog&#39;, &#39;OnAfterProductPropertyDelete&#39;, [&#39;CCustomProductPropertyHandler&#39;, &#39;OnAfterProductPropertyDelete&#39;]);</span>
 </code></pre></div>
 
 
