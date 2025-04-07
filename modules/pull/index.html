@@ -12,13 +12,13 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/tasks/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/pull/">
       
       
-        <link rel="prev" href="../crm/leads/">
+        <link rel="prev" href="../form/">
       
       
-        <link rel="next" href="../iblock/">
+        <link rel="next" href="../sale/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Tasks - Bitrix24 Developer Guide</title>
+        <title>Pull - Bitrix24 Developer Guide</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tasks-module" class="md-skip">
+        <a href="#pull-module-pull" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tasks
+              Pull
             
           </span>
         </div>
@@ -683,32 +683,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Tasks
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tasks/" class="md-nav__link">
         
   
   
@@ -719,203 +697,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview | Обзор
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods | Методы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods | Методы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tasks | Задачи
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tasks | Задачи">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task-comments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Task Comments | Комментарии к задачам
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Task Comments | Комментарии к задачам">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task-checklists-" class="md-nav__link">
-    <span class="md-ellipsis">
-      Task Checklists | Чек-листы задач
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Task Checklists | Чек-листы задач">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-list_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get List | Получение списка
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add | Добавление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -994,10 +775,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pull/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pull
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1008,6 +811,311 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration | Конфигурация
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration | Конфигурация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-pull-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize Pull | Инициализация Pull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-pull-settings-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Pull Settings | Получение настроек Pull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-pull-settings-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Pull Settings | Обновление настроек Pull
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel Management | Управление каналами
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Channel Management | Управление каналами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Channel | Создание канала
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Channel | Получение канала
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Channel | Удаление канала
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Management | Управление сообщениями
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Management | Управление сообщениями">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send Message | Отправка сообщения
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-message-to-multiple-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send Message to Multiple Users | Отправка сообщения нескольким пользователям
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-message-to-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Send Message to Group | Отправка сообщения группе
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscription-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscription Management | Управление подписками
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscription Management | Управление подписками">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subscribe-to-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to Channel | Подписка на канал
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsubscribe-from-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsubscribe from Channel | Отписка от канала
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Subscriptions | Получение подписок
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Management | Управление событиями
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Management | Управление событиями">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register Event | Регистрация события
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Events | Получение событий
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Events | Удаление событий
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Integration | Интеграция с клиентом
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Integration | Интеграция с клиентом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-client-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Client Script | Получение клиентского скрипта
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize Client | Инициализация клиента
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe-to-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to Events | Подписка на события
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsubscribe-from-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsubscribe from Events | Отписка от событий
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1398,46 +1506,37 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks | Задачи
+      Configuration | Конфигурация
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tasks | Задачи">
+    <nav class="md-nav" aria-label="Configuration | Конфигурация">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-list" class="md-nav__link">
+  <a href="#initialize-pull-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Get List | Получение списка
+      Initialize Pull | Инициализация Pull
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add" class="md-nav__link">
+  <a href="#get-pull-settings-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Add | Добавление
+      Get Pull Settings | Получение настроек Pull
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update" class="md-nav__link">
+  <a href="#update-pull-settings-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
+      Update Pull Settings | Обновление настроек Pull
     </span>
   </a>
   
@@ -1449,46 +1548,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#task-comments" class="md-nav__link">
+  <a href="#channel-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Task Comments | Комментарии к задачам
+      Channel Management | Управление каналами
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Task Comments | Комментарии к задачам">
+    <nav class="md-nav" aria-label="Channel Management | Управление каналами">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-list_1" class="md-nav__link">
+  <a href="#create-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Get List | Получение списка
+      Create Channel | Создание канала
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add_1" class="md-nav__link">
+  <a href="#get-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Add | Добавление
+      Get Channel | Получение канала
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update_1" class="md-nav__link">
+  <a href="#delete-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Update | Обновление
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete | Удаление
+      Delete Channel | Удаление канала
     </span>
   </a>
   
@@ -1500,46 +1590,172 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#task-checklists-" class="md-nav__link">
+  <a href="#message-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Task Checklists | Чек-листы задач
+      Message Management | Управление сообщениями
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Task Checklists | Чек-листы задач">
+    <nav class="md-nav" aria-label="Message Management | Управление сообщениями">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-list_2" class="md-nav__link">
+  <a href="#send-message" class="md-nav__link">
     <span class="md-ellipsis">
-      Get List | Получение списка
+      Send Message | Отправка сообщения
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add_2" class="md-nav__link">
+  <a href="#send-message-to-multiple-users" class="md-nav__link">
     <span class="md-ellipsis">
-      Add | Добавление
+      Send Message to Multiple Users | Отправка сообщения нескольким пользователям
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update_2" class="md-nav__link">
+  <a href="#send-message-to-group" class="md-nav__link">
     <span class="md-ellipsis">
-      Update | Обновление
+      Send Message to Group | Отправка сообщения группе
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscription-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscription Management | Управление подписками
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscription Management | Управление подписками">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subscribe-to-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to Channel | Подписка на канал
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete_2" class="md-nav__link">
+  <a href="#unsubscribe-from-channel" class="md-nav__link">
     <span class="md-ellipsis">
-      Delete | Удаление
+      Unsubscribe from Channel | Отписка от канала
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Subscriptions | Получение подписок
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Management | Управление событиями
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Management | Управление событиями">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register Event | Регистрация события
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Events | Получение событий
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Events | Удаление событий
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Integration | Интеграция с клиентом
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Integration | Интеграция с клиентом">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-client-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Client Script | Получение клиентского скрипта
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize Client | Инициализация клиента
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe-to-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to Events | Подписка на события
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsubscribe-from-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsubscribe from Events | Отписка от событий
     </span>
   </a>
   
@@ -1574,401 +1790,362 @@
   
 
 
-<h1 id="tasks-module">Tasks Module | Модуль Задачи</h1>
+<h1 id="pull-module-pull">Pull Module | Модуль Pull</h1>
 <h2 id="overview">Overview | Обзор</h2>
-<p>The Tasks module provides functionality for managing tasks, including creating, updating, and tracking task progress. | Модуль Задачи предоставляет функциональность для управления задачами, включая создание, обновление и отслеживание прогресса задач.</p>
+<p>The Pull module provides functionality for real-time push notifications and updates in Bitrix24. It enables instant delivery of messages, events, and data updates to users through various channels including web browsers and mobile applications. | Модуль Pull предоставляет функциональность для отправки push-уведомлений и обновлений в реальном времени в Bitrix24. Он обеспечивает мгновенную доставку сообщений, событий и обновлений данных пользователям через различные каналы, включая веб-браузеры и мобильные приложения.</p>
 <h2 id="methods">Methods | Методы</h2>
-<h3 id="tasks">Tasks | Задачи</h3>
-<h4 id="get-list">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.task.list&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;filter&#39; =&gt; [&#39;RESPONSIBLE_ID&#39; =&gt; 1],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;DEADLINE&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$tasks = \Bitrix\Tasks\TaskTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=RESPONSIBLE_ID&#39; =&gt; 1],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;DEADLINE&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
+<h3 id="configuration">Configuration | Конфигурация</h3>
+<h4 id="initialize-pull-pull">Initialize Pull | Инициализация Pull</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">\Bitrix\Pull\Config::getInstance()-&gt;init([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
+<span class="x">    &#39;serverKey&#39; =&gt; &#39;your_server_key&#39;,</span>
+<span class="x">    &#39;serverSecret&#39; =&gt; &#39;your_server_secret&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$tasks = CTasks::GetList(</span>
-<span class="x">    [&#39;DEADLINE&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;RESPONSIBLE_ID&#39; =&gt; 1],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
-<span class="x">);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">CPullOptions::Init();</span>
 </code></pre></div>
-<h4 id="add">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.task.add&#39;,</span>
+<h4 id="get-pull-settings-pull">Get Pull Settings | Получение настроек Pull</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$settings = \Bitrix\Pull\Config::getInstance()-&gt;getSettings();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$settings = CPullOptions::GetSettings();</span>
+</code></pre></div>
+<h4 id="update-pull-settings-pull">Update Pull Settings | Обновление настроек Pull</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Config::getInstance()-&gt;updateSettings([</span>
+<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://new.pull.example.com&#39;,</span>
+<span class="x">    &#39;serverKey&#39; =&gt; &#39;new_server_key&#39;,</span>
+<span class="x">    &#39;serverSecret&#39; =&gt; &#39;new_server_secret&#39;</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullOptions::UpdateSettings([</span>
+<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://new.pull.example.com&#39;,</span>
+<span class="x">    &#39;serverKey&#39; =&gt; &#39;new_server_key&#39;,</span>
+<span class="x">    &#39;serverSecret&#39; =&gt; &#39;new_server_secret&#39;</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h3 id="channel-management">Channel Management | Управление каналами</h3>
+<h4 id="create-channel">Create Channel | Создание канала</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$channel = \Bitrix\Pull\Channel::create([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;type&#39; =&gt; &#39;user&#39;,</span>
+<span class="x">    &#39;expires&#39; =&gt; 86400 // 24 hours</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$channel = CPullChannel::Create([</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;,</span>
+<span class="x">    &#39;EXPIRES&#39; =&gt; 86400 // 24 hours</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-channel">Get Channel | Получение канала</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$channel = \Bitrix\Pull\Channel::get([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;type&#39; =&gt; &#39;user&#39;</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$channel = CPullChannel::Get([</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="delete-channel">Delete Channel | Удаление канала</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Channel::delete([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;type&#39; =&gt; &#39;user&#39;</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullChannel::Delete([</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;TYPE&#39; =&gt; &#39;user&#39;</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h3 id="message-management">Message Management | Управление сообщениями</h3>
+<h4 id="send-message">Send Message | Отправка сообщения</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Message::send([</span>
+<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<span class="x">    &#39;params&#39; =&gt; [</span>
+<span class="x">        &#39;title&#39; =&gt; &#39;New Message&#39;,</span>
+<span class="x">        &#39;text&#39; =&gt; &#39;You have a new message&#39;,</span>
+<span class="x">        &#39;link&#39; =&gt; &#39;/messages/&#39;</span>
+<span class="x">    ]</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullWatch::AddToStack(&#39;user_&#39; . $USER-&gt;GetID(), [</span>
+<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<span class="x">    &#39;params&#39; =&gt; [</span>
+<span class="x">        &#39;title&#39; =&gt; &#39;New Message&#39;,</span>
+<span class="x">        &#39;text&#39; =&gt; &#39;You have a new message&#39;,</span>
+<span class="x">        &#39;link&#39; =&gt; &#39;/messages/&#39;</span>
+<span class="x">    ]</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="send-message-to-multiple-users">Send Message to Multiple Users | Отправка сообщения нескольким пользователям</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Message::sendToUsers(</span>
+<span class="x">    [1, 2, 3], // User IDs</span>
 <span class="x">    [</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New Task&#39;,</span>
-<span class="x">            &#39;DESCRIPTION&#39; =&gt; &#39;Task description&#39;,</span>
-<span class="x">            &#39;RESPONSIBLE_ID&#39; =&gt; 1,</span>
-<span class="x">            &#39;CREATED_BY&#39; =&gt; 1,</span>
-<span class="x">            &#39;DEADLINE&#39; =&gt; &#39;2023-12-31&#39;,</span>
-<span class="x">            &#39;PRIORITY&#39; =&gt; 2</span>
+<span class="x">        &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">        &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<span class="x">        &#39;params&#39; =&gt; [</span>
+<span class="x">            &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<span class="x">            &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<span class="x">            &#39;link&#39; =&gt; &#39;/group/&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\Task::add([</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Task&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Task description&#39;,</span>
-<span class="x">    &#39;RESPONSIBLE_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;CREATED_BY&#39; =&gt; 1,</span>
-<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2023-12-31&#39;,</span>
-<span class="x">    &#39;PRIORITY&#39; =&gt; 2</span>
-<span class="x">]);</span>
-
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$taskFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New Task&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Task description&#39;,</span>
-<span class="x">    &#39;RESPONSIBLE_ID&#39; =&gt; 1,</span>
-<span class="x">    &#39;CREATED_BY&#39; =&gt; 1,</span>
-<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2023-12-31&#39;,</span>
-<span class="x">    &#39;PRIORITY&#39; =&gt; 2</span>
-<span class="x">];</span>
-<span class="x">$task = new CTasks();</span>
-<span class="x">$taskId = $task-&gt;Add($taskFields);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullWatch::AddToStack(&#39;user_1,user_2,user_3&#39;, [</span>
+<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<span class="x">    &#39;params&#39; =&gt; [</span>
+<span class="x">        &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<span class="x">        &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<span class="x">        &#39;link&#39; =&gt; &#39;/group/&#39;</span>
+<span class="x">    ]</span>
+<span class="x">]);</span>
 </code></pre></div>
-<h4 id="update">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.task.update&#39;,</span>
+<h4 id="send-message-to-group">Send Message to Group | Отправка сообщения группе</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Message::sendToGroup(</span>
+<span class="x">    &#39;group_1&#39;, // Group ID</span>
 <span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated Task&#39;,</span>
-<span class="x">            &#39;STATUS&#39; =&gt; 5,</span>
-<span class="x">            &#39;DEADLINE&#39; =&gt; &#39;2024-01-15&#39;</span>
+<span class="x">        &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">        &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<span class="x">        &#39;params&#39; =&gt; [</span>
+<span class="x">            &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<span class="x">            &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<span class="x">            &#39;link&#39; =&gt; &#39;/group/&#39;</span>
 <span class="x">        ]</span>
 <span class="x">    ]</span>
 <span class="x">);</span>
 
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\Task::update(123, [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Task&#39;,</span>
-<span class="x">    &#39;STATUS&#39; =&gt; 5,</span>
-<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2024-01-15&#39;</span>
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullWatch::AddToStack(&#39;group_1&#39;, [</span>
+<span class="x">    &#39;module_id&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">    &#39;command&#39; =&gt; &#39;notification&#39;,</span>
+<span class="x">    &#39;params&#39; =&gt; [</span>
+<span class="x">        &#39;title&#39; =&gt; &#39;Group Message&#39;,</span>
+<span class="x">        &#39;text&#39; =&gt; &#39;This is a group message&#39;,</span>
+<span class="x">        &#39;link&#39; =&gt; &#39;/group/&#39;</span>
+<span class="x">    ]</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h3 id="subscription-management">Subscription Management | Управление подписками</h3>
+<h4 id="subscribe-to-channel">Subscribe to Channel | Подписка на канал</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Watch::subscribe([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$taskFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated Task&#39;,</span>
-<span class="x">    &#39;STATUS&#39; =&gt; 5,</span>
-<span class="x">    &#39;DEADLINE&#39; =&gt; &#39;2024-01-15&#39;</span>
-<span class="x">];</span>
-<span class="x">$task = new CTasks();</span>
-<span class="x">$task-&gt;Update(123, $taskFields);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullWatch::Add($USER-&gt;GetID(), &#39;user_&#39; . $USER-&gt;GetID(), true);</span>
 </code></pre></div>
-<h4 id="delete">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.task.delete&#39;,</span>
-<span class="x">    [&#39;taskId&#39; =&gt; 123]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\Task::delete(123);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$task = new CTasks();</span>
-<span class="x">$task-&gt;Delete(123);</span>
-</code></pre></div>
-<h3 id="task-comments">Task Comments | Комментарии к задачам</h3>
-<h4 id="get-list_1">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.comment.list&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;POST_DATE&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$comments = \Bitrix\Tasks\CommentTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=TASK_ID&#39; =&gt; 123],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;POST_DATE&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
+<h4 id="unsubscribe-from-channel">Unsubscribe from Channel | Отписка от канала</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Watch::unsubscribe([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$comments = CTaskComment::GetList(</span>
-<span class="x">    [&#39;POST_DATE&#39; =&gt; &#39;DESC&#39;],</span>
-<span class="x">    [&#39;TASK_ID&#39; =&gt; 123],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
-<span class="x">);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullWatch::Delete($USER-&gt;GetID(), &#39;user_&#39; . $USER-&gt;GetID());</span>
 </code></pre></div>
-<h4 id="add_1">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.comment.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;POST_MESSAGE&#39; =&gt; &#39;New comment&#39;,</span>
-<span class="x">            &#39;AUTHOR_ID&#39; =&gt; 1</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\Comment::add([</span>
-<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;New comment&#39;,</span>
-<span class="x">    &#39;AUTHOR_ID&#39; =&gt; 1</span>
+<h4 id="get-subscriptions">Get Subscriptions | Получение подписок</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$subscriptions = \Bitrix\Pull\Watch::getSubscriptions([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID()</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$commentFields = [</span>
-<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;New comment&#39;,</span>
-<span class="x">    &#39;AUTHOR_ID&#39; =&gt; 1</span>
-<span class="x">];</span>
-<span class="x">$comment = new CTaskComment();</span>
-<span class="x">$commentId = $comment-&gt;Add($commentFields);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$subscriptions = CPullWatch::GetList([</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID()</span>
+<span class="x">]);</span>
 </code></pre></div>
-<h4 id="update_1">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.comment.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;commentId&#39; =&gt; 456,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;POST_MESSAGE&#39; =&gt; &#39;Updated comment&#39;</span>
-<span class="x">        ]</span>
+<h3 id="event-management">Event Management | Управление событиями</h3>
+<h4 id="register-event">Register Event | Регистрация события</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Event::register([</span>
+<span class="x">    &#39;moduleId&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">    &#39;event&#39; =&gt; &#39;user_login&#39;,</span>
+<span class="x">    &#39;params&#39; =&gt; [</span>
+<span class="x">        &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">        &#39;userName&#39; =&gt; $USER-&gt;GetLogin()</span>
 <span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\Comment::update(456, [</span>
-<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;Updated comment&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$commentFields = [</span>
-<span class="x">    &#39;POST_MESSAGE&#39; =&gt; &#39;Updated comment&#39;</span>
-<span class="x">];</span>
-<span class="x">$comment = new CTaskComment();</span>
-<span class="x">$comment-&gt;Update(456, $commentFields);</span>
-</code></pre></div>
-<h4 id="delete_1">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.comment.delete&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;commentId&#39; =&gt; 456</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullEvent::Add([</span>
+<span class="x">    &#39;MODULE_ID&#39; =&gt; &#39;main&#39;,</span>
+<span class="x">    &#39;EVENT&#39; =&gt; &#39;user_login&#39;,</span>
+<span class="x">    &#39;PARAMS&#39; =&gt; [</span>
+<span class="x">        &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">        &#39;USER_NAME&#39; =&gt; $USER-&gt;GetLogin()</span>
 <span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\Comment::delete(456);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$comment = new CTaskComment();</span>
-<span class="x">$comment-&gt;Delete(456);</span>
+<span class="x">]);</span>
 </code></pre></div>
-<h3 id="task-checklists-">Task Checklists | Чек-листы задач</h3>
-<h4 id="get-list_2">Get List | Получение списка</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.checklistitem.list&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">        &#39;order&#39; =&gt; [&#39;SORT_INDEX&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">        &#39;start&#39; =&gt; 0</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$checklistItems = \Bitrix\Tasks\CheckListTable::getList([</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=TASK_ID&#39; =&gt; 123],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT_INDEX&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    &#39;limit&#39; =&gt; 50,</span>
-<span class="x">    &#39;offset&#39; =&gt; 0</span>
+<h4 id="get-events">Get Events | Получение событий</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$events = \Bitrix\Pull\Event::get([</span>
+<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;lastId&#39; =&gt; 0,</span>
+<span class="x">    &#39;limit&#39; =&gt; 50</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$checklistItems = CTaskCheckListItem::GetList(</span>
-<span class="x">    [&#39;SORT_INDEX&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;TASK_ID&#39; =&gt; 123],</span>
-<span class="x">    [&#39;*&#39;, &#39;UF_*&#39;],</span>
-<span class="x">    [&#39;nTopCount&#39; =&gt; 50]</span>
-<span class="x">);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$events = CPullEvent::GetList([</span>
+<span class="x">    &#39;CHANNEL_ID&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;LAST_ID&#39; =&gt; 0,</span>
+<span class="x">    &#39;LIMIT&#39; =&gt; 50</span>
+<span class="x">]);</span>
 </code></pre></div>
-<h4 id="add_2">Add | Добавление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.checklistitem.add&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;New checklist item&#39;,</span>
-<span class="x">            &#39;IS_COMPLETE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">            &#39;SORT_INDEX&#39; =&gt; 0</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\CheckList::add([</span>
-<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New checklist item&#39;,</span>
-<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;SORT_INDEX&#39; =&gt; 0</span>
+<h4 id="delete-events">Delete Events | Удаление событий</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$result = \Bitrix\Pull\Event::delete([</span>
+<span class="x">    &#39;channel&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;lastId&#39; =&gt; 100</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$checklistFields = [</span>
-<span class="x">    &#39;TASK_ID&#39; =&gt; 123,</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;New checklist item&#39;,</span>
-<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;SORT_INDEX&#39; =&gt; 0</span>
-<span class="x">];</span>
-<span class="x">$checklist = new CTaskCheckListItem();</span>
-<span class="x">$checklistId = $checklist-&gt;Add($checklistFields);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$result = CPullEvent::Delete([</span>
+<span class="x">    &#39;CHANNEL_ID&#39; =&gt; &#39;user_&#39; . $USER-&gt;GetID(),</span>
+<span class="x">    &#39;LAST_ID&#39; =&gt; 100</span>
+<span class="x">]);</span>
 </code></pre></div>
-<h4 id="update_2">Update | Обновление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.checklistitem.update&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;itemId&#39; =&gt; 456,</span>
-<span class="x">        &#39;fields&#39; =&gt; [</span>
-<span class="x">            &#39;TITLE&#39; =&gt; &#39;Updated checklist item&#39;,</span>
-<span class="x">            &#39;IS_COMPLETE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">        ]</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\CheckList::update(456, [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated checklist item&#39;,</span>
-<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;Y&#39;</span>
+<h3 id="client-integration">Client Integration | Интеграция с клиентом</h3>
+<h4 id="get-client-script">Get Client Script | Получение клиентского скрипта</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;pull&#39;)</span>
+<span class="x">$script = \Bitrix\Pull\Client::getScript([</span>
+<span class="x">    &#39;userId&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;serverUrl&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
+<span class="x">    &#39;serverKey&#39; =&gt; &#39;your_server_key&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$checklistFields = [</span>
-<span class="x">    &#39;TITLE&#39; =&gt; &#39;Updated checklist item&#39;,</span>
-<span class="x">    &#39;IS_COMPLETE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">];</span>
-<span class="x">$checklist = new CTaskCheckListItem();</span>
-<span class="x">$checklist-&gt;Update(456, $checklistFields);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;pull&#39;)</span>
+<span class="x">$script = CPullWatch::GetScript([</span>
+<span class="x">    &#39;USER_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<span class="x">    &#39;SERVER_URL&#39; =&gt; &#39;https://pull.example.com&#39;,</span>
+<span class="x">    &#39;SERVER_KEY&#39; =&gt; &#39;your_server_key&#39;</span>
+<span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete_2">Delete | Удаление</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// REST API</span>
-<span class="x">// Requires: CRest::Init() with proper credentials</span>
-<span class="x">// Требуется: CRest::Init() с правильными учетными данными</span>
-<span class="x">$result = CRest::call(</span>
-<span class="x">    &#39;tasks.checklistitem.delete&#39;,</span>
-<span class="x">    [</span>
-<span class="x">        &#39;taskId&#39; =&gt; 123,</span>
-<span class="x">        &#39;itemId&#39; =&gt; 456</span>
-<span class="x">    ]</span>
-<span class="x">);</span>
-
-<span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;tasks&#39;)</span>
-<span class="x">$result = \Bitrix\Tasks\CheckList::delete(456);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;tasks&#39;)</span>
-<span class="x">$checklist = new CTaskCheckListItem();</span>
-<span class="x">$checklist-&gt;Delete(456);</span>
+<h4 id="initialize-client">Initialize Client | Инициализация клиента</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// JavaScript</span>
+<span class="x">// Requires: Pull client script</span>
+<span class="x">// Требуется: Скрипт клиента Pull</span>
+<span class="x">BX.Pull.init({</span>
+<span class="x">    userId: 1,</span>
+<span class="x">    serverUrl: &#39;https://pull.example.com&#39;,</span>
+<span class="x">    serverKey: &#39;your_server_key&#39;,</span>
+<span class="x">    onConnect: function() {</span>
+<span class="x">        console.log(&#39;Connected to Pull server&#39;);</span>
+<span class="x">    },</span>
+<span class="x">    onError: function(error) {</span>
+<span class="x">        console.error(&#39;Pull error:&#39;, error);</span>
+<span class="x">    }</span>
+<span class="x">});</span>
+</code></pre></div>
+<h4 id="subscribe-to-events">Subscribe to Events | Подписка на события</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// JavaScript</span>
+<span class="x">// Requires: Pull client script</span>
+<span class="x">// Требуется: Скрипт клиента Pull</span>
+<span class="x">BX.Pull.subscribe({</span>
+<span class="x">    moduleId: &#39;main&#39;,</span>
+<span class="x">    callback: function(data) {</span>
+<span class="x">        console.log(&#39;Received event:&#39;, data);</span>
+<span class="x">    }</span>
+<span class="x">});</span>
+</code></pre></div>
+<h4 id="unsubscribe-from-events">Unsubscribe from Events | Отписка от событий</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// JavaScript</span>
+<span class="x">// Requires: Pull client script</span>
+<span class="x">// Требуется: Скрипт клиента Pull</span>
+<span class="x">BX.Pull.unsubscribe({</span>
+<span class="x">    moduleId: &#39;main&#39;</span>
+<span class="x">});</span>
 </code></pre></div>
 
 

@@ -13,6 +13,10 @@
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/catalog/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/crm/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
@@ -37,11 +41,23 @@
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/ldap/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/main/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/menu/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/pull/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/sale/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>

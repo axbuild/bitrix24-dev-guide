@@ -12,7 +12,7 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/menu/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/ldap/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Index - Bitrix24 Developer Guide</title>
+        <title>LDAP Module | Модуль LDAP - Bitrix24 Developer Guide</title>
       
     
     
@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ldap-module-ldap" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              LDAP Module | Модуль LDAP
             
           </span>
         </div>
@@ -1131,6 +1136,247 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection | Подключение
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection | Подключение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-ldap-connection-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize LDAP Connection | Инициализация LDAP подключения
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Connection | Проверка подключения
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Operations | Операции с пользователями
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Operations | Операции с пользователями">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Users | Поиск пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get User Details | Получение деталей пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticate-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authenticate User | Аутентификация пользователя
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronization | Синхронизация
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synchronization | Синхронизация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Synchronization | Запуск синхронизации
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-synchronization-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Synchronization Status | Получение статуса синхронизации
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Operations | Операции с группами
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Group Operations | Операции с группами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Groups | Поиск групп
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-group-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Group Members | Получение участников группы
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings | Настройки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings | Настройки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-ldap-settings-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get LDAP Settings | Получение настроек LDAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-ldap-settings-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update LDAP Settings | Обновление настроек LDAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling | Обработка ошибок
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling | Обработка ошибок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-last-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Last Error | Получение последней ошибки
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-connection-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Connection Status | Проверка статуса подключения
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1149,9 +1395,205 @@
   
 
 
-  <h1>Index</h1>
+<h1 id="ldap-module-ldap">LDAP Module | Модуль LDAP</h1>
+<h2 id="overview">Overview | Обзор</h2>
+<p>The LDAP module provides functionality for integration with external authentication systems and directories using the LDAP protocol. It allows for user synchronization, authentication, and directory services integration. | Модуль LDAP предоставляет функциональность для интеграции с внешними системами аутентификации и каталогами с использованием протокола LDAP. Он позволяет синхронизировать пользователей, выполнять аутентификацию и интегрировать сервисы каталогов.</p>
+<h2 id="methods">Methods | Методы</h2>
+<h3 id="connection">Connection | Подключение</h3>
+<h4 id="initialize-ldap-connection-ldap">Initialize LDAP Connection | Инициализация LDAP подключения</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$ldapServer = new \Bitrix\Ldap\LdapServer([</span>
+<span class="x">    &#39;SERVER&#39; =&gt; &#39;ldap.example.com&#39;,</span>
+<span class="x">    &#39;PORT&#39; =&gt; 389,</span>
+<span class="x">    &#39;BASE_DN&#39; =&gt; &#39;dc=example,dc=com&#39;,</span>
+<span class="x">    &#39;ADMIN_LOGIN&#39; =&gt; &#39;admin&#39;,</span>
+<span class="x">    &#39;ADMIN_PASSWORD&#39; =&gt; &#39;password&#39;,</span>
+<span class="x">    &#39;USE_TLS&#39; =&gt; true</span>
+<span class="x">]);</span>
 
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$ldapServer = new CLDAPServer();</span>
+<span class="x">$ldapServer-&gt;Connect(&#39;ldap.example.com&#39;, 389, &#39;admin&#39;, &#39;password&#39;, &#39;dc=example,dc=com&#39;);</span>
+</code></pre></div>
+<h4 id="test-connection">Test Connection | Проверка подключения</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$result = $ldapServer-&gt;testConnection();</span>
 
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$result = $ldapServer-&gt;TestConnection();</span>
+</code></pre></div>
+<h3 id="user-operations">User Operations | Операции с пользователями</h3>
+<h4 id="search-users">Search Users | Поиск пользователей</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$users = $ldapServer-&gt;searchUsers([</span>
+<span class="x">    &#39;filter&#39; =&gt; [</span>
+<span class="x">        &#39;objectClass&#39; =&gt; &#39;person&#39;,</span>
+<span class="x">        &#39;cn&#39; =&gt; &#39;*John*&#39;</span>
+<span class="x">    ],</span>
+<span class="x">    &#39;attributes&#39; =&gt; [&#39;cn&#39;, &#39;mail&#39;, &#39;telephoneNumber&#39;]</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$users = $ldapServer-&gt;SearchUsers(</span>
+<span class="x">    &#39;(objectClass=person)(cn=*John*)&#39;,</span>
+<span class="x">    [&#39;cn&#39;, &#39;mail&#39;, &#39;telephoneNumber&#39;]</span>
+<span class="x">);</span>
+</code></pre></div>
+<h4 id="get-user-details">Get User Details | Получение деталей пользователя</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$userDetails = $ldapServer-&gt;getUserDetails(&#39;cn=John Doe,dc=example,dc=com&#39;);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$userDetails = $ldapServer-&gt;GetUserDetails(&#39;cn=John Doe,dc=example,dc=com&#39;);</span>
+</code></pre></div>
+<h4 id="authenticate-user">Authenticate User | Аутентификация пользователя</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$result = $ldapServer-&gt;authenticateUser(&#39;username&#39;, &#39;password&#39;);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$result = $ldapServer-&gt;AuthenticateUser(&#39;username&#39;, &#39;password&#39;);</span>
+</code></pre></div>
+<h3 id="synchronization">Synchronization | Синхронизация</h3>
+<h4 id="start-synchronization">Start Synchronization | Запуск синхронизации</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$sync = new \Bitrix\Ldap\Synchronization($ldapServer);</span>
+<span class="x">$result = $sync-&gt;start([</span>
+<span class="x">    &#39;sync_users&#39; =&gt; true,</span>
+<span class="x">    &#39;sync_groups&#39; =&gt; true,</span>
+<span class="x">    &#39;create_users&#39; =&gt; true,</span>
+<span class="x">    &#39;update_users&#39; =&gt; true</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$sync = new CLDAPSync($ldapServer);</span>
+<span class="x">$result = $sync-&gt;Start([</span>
+<span class="x">    &#39;sync_users&#39; =&gt; true,</span>
+<span class="x">    &#39;sync_groups&#39; =&gt; true,</span>
+<span class="x">    &#39;create_users&#39; =&gt; true,</span>
+<span class="x">    &#39;update_users&#39; =&gt; true</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-synchronization-status">Get Synchronization Status | Получение статуса синхронизации</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$status = $sync-&gt;getStatus();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$status = $sync-&gt;GetStatus();</span>
+</code></pre></div>
+<h3 id="group-operations">Group Operations | Операции с группами</h3>
+<h4 id="search-groups">Search Groups | Поиск групп</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$groups = $ldapServer-&gt;searchGroups([</span>
+<span class="x">    &#39;filter&#39; =&gt; [</span>
+<span class="x">        &#39;objectClass&#39; =&gt; &#39;groupOfNames&#39;,</span>
+<span class="x">        &#39;cn&#39; =&gt; &#39;*Admin*&#39;</span>
+<span class="x">    ],</span>
+<span class="x">    &#39;attributes&#39; =&gt; [&#39;cn&#39;, &#39;member&#39;]</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$groups = $ldapServer-&gt;SearchGroups(</span>
+<span class="x">    &#39;(objectClass=groupOfNames)(cn=*Admin*)&#39;,</span>
+<span class="x">    [&#39;cn&#39;, &#39;member&#39;]</span>
+<span class="x">);</span>
+</code></pre></div>
+<h4 id="get-group-members">Get Group Members | Получение участников группы</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$members = $ldapServer-&gt;getGroupMembers(&#39;cn=Administrators,dc=example,dc=com&#39;);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$members = $ldapServer-&gt;GetGroupMembers(&#39;cn=Administrators,dc=example,dc=com&#39;);</span>
+</code></pre></div>
+<h3 id="settings">Settings | Настройки</h3>
+<h4 id="get-ldap-settings-ldap">Get LDAP Settings | Получение настроек LDAP</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$settings = \Bitrix\Ldap\Settings::getInstance()-&gt;getSettings();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$settings = CLDAPSettings::GetSettings();</span>
+</code></pre></div>
+<h4 id="update-ldap-settings-ldap">Update LDAP Settings | Обновление настроек LDAP</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$result = \Bitrix\Ldap\Settings::getInstance()-&gt;updateSettings([</span>
+<span class="x">    &#39;SERVER&#39; =&gt; &#39;new.ldap.example.com&#39;,</span>
+<span class="x">    &#39;PORT&#39; =&gt; 636,</span>
+<span class="x">    &#39;USE_SSL&#39; =&gt; true</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$result = CLDAPSettings::UpdateSettings([</span>
+<span class="x">    &#39;SERVER&#39; =&gt; &#39;new.ldap.example.com&#39;,</span>
+<span class="x">    &#39;PORT&#39; =&gt; 636,</span>
+<span class="x">    &#39;USE_SSL&#39; =&gt; true</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h3 id="error-handling">Error Handling | Обработка ошибок</h3>
+<h4 id="get-last-error">Get Last Error | Получение последней ошибки</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$error = $ldapServer-&gt;getLastError();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$error = $ldapServer-&gt;GetLastError();</span>
+</code></pre></div>
+<h4 id="check-connection-status">Check Connection Status | Проверка статуса подключения</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;ldap&#39;)</span>
+<span class="x">$isConnected = $ldapServer-&gt;isConnected();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;ldap&#39;)</span>
+<span class="x">$isConnected = $ldapServer-&gt;IsConnected();</span>
+</code></pre></div>
 
 
 

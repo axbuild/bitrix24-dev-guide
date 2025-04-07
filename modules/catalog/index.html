@@ -12,13 +12,11 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/iblock/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/catalog/">
       
       
-        <link rel="prev" href="../tasks/">
+        <link rel="prev" href="../sale/">
       
-      
-        <link rel="next" href="../form/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Iblock - Bitrix24 Developer Guide</title>
+        <title>Catalog - Bitrix24 Developer Guide</title>
       
     
     
@@ -88,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#iblock-module" class="md-skip">
+        <a href="#catalog-module" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Iblock
+              Catalog
             
           </span>
         </div>
@@ -706,32 +704,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Iblock
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../iblock/" class="md-nav__link">
         
   
   
@@ -742,350 +718,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview | Обзор
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods | Методы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods | Методы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#information-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Information Blocks | Информационные блоки
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Information Blocks | Информационные блоки">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-iblock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Iblock | Получение информационного блока
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-iblock-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Iblock List | Получение списка информационных блоков
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-iblock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Iblock | Добавление информационного блока
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-iblock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Iblock | Обновление информационного блока
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-iblock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Iblock | Удаление информационного блока
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elements | Элементы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Elements | Элементы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-element" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Element | Получение элемента
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-element-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Element List | Получение списка элементов
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-element" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Element | Добавление элемента
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-element" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Element | Обновление элемента
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-element" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Element | Удаление элемента
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sections | Разделы
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sections | Разделы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Section | Получение раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-section-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Section List | Получение списка разделов
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Section | Добавление раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Section | Обновление раздела
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Section | Удаление раздела
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties | Свойства
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties | Свойства">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property | Получение свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-property-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property List | Получение списка свойств
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Property | Добавление свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Property | Обновление свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Property | Удаление свойства
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#property-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Property Values | Значения свойств
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Property Values | Значения свойств">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property Value | Получение значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-property-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property Values | Получение значений свойств
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Property Value | Установка значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Property Value | Обновление значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Property Value | Удаление значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1279,10 +911,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../catalog/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Catalog
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1293,6 +947,332 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#products" class="md-nav__link">
+    <span class="md-ellipsis">
+      Products | Товары
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Products | Товары">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Product | Получение товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-product-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Product List | Получение списка товаров
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Product | Добавление товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Product | Обновление товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Product | Удаление товара
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prices | Цены
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prices | Цены">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Price | Получение цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-price-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Price List | Получение списка цен
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Price | Установка цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Price | Обновление цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Price | Удаление цены
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Types | Типы цен
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Types | Типы цен">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-price-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Price Types | Получение типов цен
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-price-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Price Type | Добавление типа цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-price-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Price Type | Обновление типа цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-price-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Price Type | Удаление типа цены
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Properties | Свойства товаров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Properties | Свойства товаров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-product-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Product Properties | Получение свойств товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-product-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Product Property | Установка свойства товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-product-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Product Property | Обновление свойства товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-product-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Product Property | Удаление свойства товара
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Sections | Разделы товаров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Sections | Разделы товаров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Section | Получение раздела
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-section-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Section List | Получение списка разделов
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Section | Добавление раздела
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Section | Обновление раздела
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Section | Удаление раздела
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1545,55 +1525,55 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#information-blocks" class="md-nav__link">
+  <a href="#products" class="md-nav__link">
     <span class="md-ellipsis">
-      Information Blocks | Информационные блоки
+      Products | Товары
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Information Blocks | Информационные блоки">
+    <nav class="md-nav" aria-label="Products | Товары">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-iblock" class="md-nav__link">
+  <a href="#get-product" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Iblock | Получение информационного блока
+      Get Product | Получение товара
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-iblock-list" class="md-nav__link">
+  <a href="#get-product-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Iblock List | Получение списка информационных блоков
+      Get Product List | Получение списка товаров
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-iblock" class="md-nav__link">
+  <a href="#add-product" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Iblock | Добавление информационного блока
+      Add Product | Добавление товара
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-iblock" class="md-nav__link">
+  <a href="#update-product" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Iblock | Обновление информационного блока
+      Update Product | Обновление товара
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete-iblock" class="md-nav__link">
+  <a href="#delete-product" class="md-nav__link">
     <span class="md-ellipsis">
-      Delete Iblock | Удаление информационного блока
+      Delete Product | Удаление товара
     </span>
   </a>
   
@@ -1605,55 +1585,55 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#elements" class="md-nav__link">
+  <a href="#prices" class="md-nav__link">
     <span class="md-ellipsis">
-      Elements | Элементы
+      Prices | Цены
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Elements | Элементы">
+    <nav class="md-nav" aria-label="Prices | Цены">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-element" class="md-nav__link">
+  <a href="#get-price" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Element | Получение элемента
+      Get Price | Получение цены
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-element-list" class="md-nav__link">
+  <a href="#get-price-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Element List | Получение списка элементов
+      Get Price List | Получение списка цен
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-element" class="md-nav__link">
+  <a href="#set-price" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Element | Добавление элемента
+      Set Price | Установка цены
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-element" class="md-nav__link">
+  <a href="#update-price" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Element | Обновление элемента
+      Update Price | Обновление цены
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete-element" class="md-nav__link">
+  <a href="#delete-price" class="md-nav__link">
     <span class="md-ellipsis">
-      Delete Element | Удаление элемента
+      Delete Price | Удаление цены
     </span>
   </a>
   
@@ -1665,13 +1645,115 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
+  <a href="#price-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Sections | Разделы
+      Price Types | Типы цен
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sections | Разделы">
+    <nav class="md-nav" aria-label="Price Types | Типы цен">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-price-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Price Types | Получение типов цен
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-price-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Price Type | Добавление типа цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-price-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Price Type | Обновление типа цены
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-price-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Price Type | Удаление типа цены
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Properties | Свойства товаров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Properties | Свойства товаров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-product-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Product Properties | Получение свойств товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-product-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Product Property | Установка свойства товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-product-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Product Property | Обновление свойства товара
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-product-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Product Property | Удаление свойства товара
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Sections | Разделы товаров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Sections | Разделы товаров">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1724,126 +1806,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties | Свойства
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties | Свойства">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property | Получение свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-property-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property List | Получение списка свойств
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add Property | Добавление свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Property | Обновление свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Property | Удаление свойства
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#property-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Property Values | Значения свойств
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Property Values | Значения свойств">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property Value | Получение значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-property-values" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Property Values | Получение значений свойств
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Property Value | Установка значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Property Value | Обновление значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-property-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Property Value | Удаление значения свойства
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1868,251 +1830,340 @@
   
 
 
-<h1 id="iblock-module">Iblock Module | Модуль Информационные блоки</h1>
+<h1 id="catalog-module">Catalog Module | Модуль Каталог</h1>
 <h2 id="overview">Overview | Обзор</h2>
-<p>The Iblock module provides functionality for managing information blocks, their elements, sections, and properties in Bitrix24. It is a core module for content management and data structuring. | Модуль Информационные блоки предоставляет функциональность для управления информационными блоками, их элементами, разделами и свойствами в Bitrix24. Это основной модуль для управления контентом и структурирования данных.</p>
+<p>The Catalog module provides functionality for managing products, prices, and product properties in Bitrix24. It is essential for e-commerce operations and product management. | Модуль Каталог предоставляет функциональность для управления товарами, ценами и свойствами товаров в Bitrix24. Он необходим для операций электронной коммерции и управления товарами.</p>
 <h2 id="methods">Methods | Методы</h2>
-<h3 id="information-blocks">Information Blocks | Информационные блоки</h3>
-<h4 id="get-iblock">Get Iblock | Получение информационного блока</h4>
+<h3 id="products">Products | Товары</h3>
+<h4 id="get-product">Get Product | Получение товара</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$iblock = \Bitrix\Iblock\IblockTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $iblockId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$product = \Bitrix\Catalog\ProductTable::getList([</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $productId],</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;]</span>
 <span class="x">])-&gt;fetch();</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$iblock = CIBlock::GetByID($iblockId)-&gt;Fetch();</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$product = CCatalogProduct::GetByID($productId);</span>
 </code></pre></div>
-<h4 id="get-iblock-list">Get Iblock List | Получение списка информационных блоков</h4>
+<h4 id="get-product-list">Get Product List | Получение списка товаров</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$iblocks = \Bitrix\Iblock\IblockTable::getList([</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$products = \Bitrix\Catalog\ProductTable::getList([</span>
 <span class="x">    &#39;filter&#39; =&gt; [&#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$iblocks = CIBlock::GetList(</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;]</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="add-iblock">Add Iblock | Добавление информационного блока</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\IblockTable::add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;News&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;news&#39;,</span>
-<span class="x">    &#39;IBLOCK_TYPE_ID&#39; =&gt; &#39;content&#39;,</span>
-<span class="x">    &#39;SITE_ID&#39; =&gt; [&#39;s1&#39;],</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;GROUP_ID&#39; =&gt; [&#39;1&#39; =&gt; &#39;X&#39;, &#39;2&#39; =&gt; &#39;R&#39;],</span>
-<span class="x">    &#39;VERSION&#39; =&gt; 2,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;News information block&#39;,</span>
-<span class="x">    &#39;DESCRIPTION_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEWS_IBLOCK_XML_ID&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlock::Add([</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;News&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;news&#39;,</span>
-<span class="x">    &#39;IBLOCK_TYPE_ID&#39; =&gt; &#39;content&#39;,</span>
-<span class="x">    &#39;SITE_ID&#39; =&gt; [&#39;s1&#39;],</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;GROUP_ID&#39; =&gt; [&#39;1&#39; =&gt; &#39;X&#39;, &#39;2&#39; =&gt; &#39;R&#39;],</span>
-<span class="x">    &#39;VERSION&#39; =&gt; 2,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;News information block&#39;,</span>
-<span class="x">    &#39;DESCRIPTION_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEWS_IBLOCK_XML_ID&#39;</span>
-<span class="x">]);</span>
-</code></pre></div>
-<h4 id="update-iblock">Update Iblock | Обновление информационного блока</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\IblockTable::update($iblockId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated News&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlock::SetFields($iblockId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated News&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
-</code></pre></div>
-<h4 id="delete-iblock">Delete Iblock | Удаление информационного блока</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\IblockTable::delete($iblockId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlock::Delete($iblockId);</span>
-</code></pre></div>
-<h3 id="elements">Elements | Элементы</h3>
-<h4 id="get-element">Get Element | Получение элемента</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$element = \Bitrix\Iblock\ElementTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $elementId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY_*&#39;]</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$element = CIBlockElement::GetByID($elementId)-&gt;Fetch();</span>
-</code></pre></div>
-<h4 id="get-element-list">Get Element List | Получение списка элементов</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$elements = \Bitrix\Iblock\ElementTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [</span>
-<span class="x">        &#39;=IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">        &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">    ],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY_*&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;],</span>
 <span class="x">    &#39;limit&#39; =&gt; 10</span>
 <span class="x">])-&gt;fetchAll();</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$elements = CIBlockElement::GetList(</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;IBLOCK_ID&#39; =&gt; $iblockId, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$products = CCatalogProduct::GetList(</span>
+<span class="x">    [&#39;ID&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    [&#39;ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
 <span class="x">    false,</span>
 <span class="x">    [&#39;nTopCount&#39; =&gt; 10],</span>
-<span class="x">    [&#39;*&#39;, &#39;PROPERTY_*&#39;]</span>
+<span class="x">    [&#39;*&#39;, &#39;ELEMENT.NAME&#39;, &#39;ELEMENT.DETAIL_PAGE_URL&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
-<h4 id="add-element">Add Element | Добавление элемента</h4>
+<h4 id="add-product">Add Product | Добавление товара</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\ElementTable::add([</span>
-<span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Element&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;new-element&#39;,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;PREVIEW_TEXT&#39; =&gt; &#39;Preview text&#39;,</span>
-<span class="x">    &#39;PREVIEW_TEXT_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;DETAIL_TEXT&#39; =&gt; &#39;Detail text&#39;,</span>
-<span class="x">    &#39;DETAIL_TEXT_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;DATE_ACTIVE_FROM&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">    &#39;DATE_ACTIVE_TO&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_ELEMENT_XML_ID&#39;</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\ProductTable::add([</span>
+<span class="x">    &#39;ID&#39; =&gt; $elementId,</span>
+<span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
+<span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;WEIGHT&#39; =&gt; 1000,</span>
+<span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;NEGATIVE_AMOUNT_TRACE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
+<span class="x">    &#39;TYPE&#39; =&gt; \Bitrix\Catalog\ProductTable::TYPE_PRODUCT,</span>
+<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;BUNDLE&#39; =&gt; &#39;N&#39;</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockElement::Add([</span>
-<span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Element&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;new-element&#39;,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;PREVIEW_TEXT&#39; =&gt; &#39;Preview text&#39;,</span>
-<span class="x">    &#39;PREVIEW_TEXT_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;DETAIL_TEXT&#39; =&gt; &#39;Detail text&#39;,</span>
-<span class="x">    &#39;DETAIL_TEXT_TYPE&#39; =&gt; &#39;text&#39;,</span>
-<span class="x">    &#39;DATE_ACTIVE_FROM&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">    &#39;DATE_ACTIVE_TO&#39; =&gt; new \Bitrix\Main\Type\DateTime(),</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_ELEMENT_XML_ID&#39;</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::Add([</span>
+<span class="x">    &#39;ID&#39; =&gt; $elementId,</span>
+<span class="x">    &#39;QUANTITY&#39; =&gt; 100,</span>
+<span class="x">    &#39;QUANTITY_TRACE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;WEIGHT&#39; =&gt; 1000,</span>
+<span class="x">    &#39;PRICE_TYPE&#39; =&gt; &#39;S&#39;,</span>
+<span class="x">    &#39;CAN_BUY_ZERO&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;NEGATIVE_AMOUNT_TRACE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;TMP_ID&#39; =&gt; null,</span>
+<span class="x">    &#39;TYPE&#39; =&gt; CCatalogProduct::TYPE_PRODUCT,</span>
+<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;,</span>
+<span class="x">    &#39;BUNDLE&#39; =&gt; &#39;N&#39;</span>
 <span class="x">]);</span>
 </code></pre></div>
-<h4 id="update-element">Update Element | Обновление элемента</h4>
+<h4 id="update-product">Update Product | Обновление товара</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\ElementTable::update($elementId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Element&#39;,</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\ProductTable::update($productId, [</span>
+<span class="x">    &#39;QUANTITY&#39; =&gt; 50,</span>
+<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::Update($productId, [</span>
+<span class="x">    &#39;QUANTITY&#39; =&gt; 50,</span>
+<span class="x">    &#39;AVAILABLE&#39; =&gt; &#39;Y&#39;</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="delete-product">Delete Product | Удаление товара</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\ProductTable::delete($productId);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::Delete($productId);</span>
+</code></pre></div>
+<h3 id="prices">Prices | Цены</h3>
+<h4 id="get-price">Get Price | Получение цены</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$price = \Bitrix\Catalog\PriceTable::getList([</span>
+<span class="x">    &#39;filter&#39; =&gt; [</span>
+<span class="x">        &#39;=PRODUCT_ID&#39; =&gt; $productId,</span>
+<span class="x">        &#39;=CATALOG_GROUP_ID&#39; =&gt; $priceTypeId</span>
+<span class="x">    ]</span>
+<span class="x">])-&gt;fetch();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$price = CCatalogProduct::GetOptimalPrice($productId, 1, $USER-&gt;GetUserGroupArray());</span>
+</code></pre></div>
+<h4 id="get-price-list">Get Price List | Получение списка цен</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$prices = \Bitrix\Catalog\PriceTable::getList([</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=PRODUCT_ID&#39; =&gt; $productId],</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;CATALOG_GROUP.NAME&#39;]</span>
+<span class="x">])-&gt;fetchAll();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$prices = CCatalogProduct::GetPriceList($productId);</span>
+</code></pre></div>
+<h4 id="set-price">Set Price | Установка цены</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\PriceTable::setBasePrice($productId, $price, $currency);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::SetOptimalPrice($productId, $price, $currency);</span>
+</code></pre></div>
+<h4 id="update-price">Update Price | Обновление цены</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\PriceTable::update($priceId, [</span>
+<span class="x">    &#39;PRICE&#39; =&gt; $newPrice,</span>
+<span class="x">    &#39;CURRENCY&#39; =&gt; $currency</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::UpdatePrice($productId, $priceTypeId, $newPrice, $currency);</span>
+</code></pre></div>
+<h4 id="delete-price">Delete Price | Удаление цены</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\PriceTable::delete($priceId);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::DeletePrice($productId, $priceTypeId);</span>
+</code></pre></div>
+<h3 id="price-types">Price Types | Типы цен</h3>
+<h4 id="get-price-types">Get Price Types | Получение типов цен</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$priceTypes = \Bitrix\Catalog\GroupTable::getList([</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=BASE&#39; =&gt; &#39;N&#39;],</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
+<span class="x">])-&gt;fetchAll();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$priceTypes = CCatalogGroup::GetList(</span>
+<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
+<span class="x">    [&#39;BASE&#39; =&gt; &#39;N&#39;]</span>
+<span class="x">);</span>
+</code></pre></div>
+<h4 id="add-price-type">Add Price Type | Добавление типа цены</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\GroupTable::add([</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Wholesale Price&#39;,</span>
+<span class="x">    &#39;BASE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<span class="x">    &#39;XML_ID&#39; =&gt; &#39;WHOLESALE&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Wholesale price for bulk purchases&#39;</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogGroup::Add([</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;Wholesale Price&#39;,</span>
+<span class="x">    &#39;BASE&#39; =&gt; &#39;N&#39;,</span>
+<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
+<span class="x">    &#39;XML_ID&#39; =&gt; &#39;WHOLESALE&#39;,</span>
+<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Wholesale price for bulk purchases&#39;</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="update-price-type">Update Price Type | Обновление типа цены</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\GroupTable::update($priceTypeId, [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Wholesale Price&#39;,</span>
 <span class="x">    &#39;SORT&#39; =&gt; 200</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockElement::Update($elementId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Element&#39;,</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogGroup::Update($priceTypeId, [</span>
+<span class="x">    &#39;NAME&#39; =&gt; &#39;New Wholesale Price&#39;,</span>
 <span class="x">    &#39;SORT&#39; =&gt; 200</span>
 <span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-element">Delete Element | Удаление элемента</h4>
+<h4 id="delete-price-type">Delete Price Type | Удаление типа цены</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\ElementTable::delete($elementId);</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\GroupTable::delete($priceTypeId);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockElement::Delete($elementId);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogGroup::Delete($priceTypeId);</span>
 </code></pre></div>
-<h3 id="sections">Sections | Разделы</h3>
+<h3 id="product-properties">Product Properties | Свойства товаров</h3>
+<h4 id="get-product-properties">Get Product Properties | Получение свойств товара</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$properties = \Bitrix\Catalog\ProductPropertyTable::getList([</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=PRODUCT_ID&#39; =&gt; $productId],</span>
+<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY.NAME&#39;]</span>
+<span class="x">])-&gt;fetchAll();</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$properties = CCatalogProduct::GetProductProperties($productId);</span>
+</code></pre></div>
+<h4 id="set-product-property">Set Product Property | Установка свойства товара</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::add([</span>
+<span class="x">    &#39;PRODUCT_ID&#39; =&gt; $productId,</span>
+<span class="x">    &#39;PROPERTY_ID&#39; =&gt; $propertyId,</span>
+<span class="x">    &#39;VALUE&#39; =&gt; $propertyValue</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::SetProductProperties($productId, [</span>
+<span class="x">    $propertyId =&gt; $propertyValue</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="update-product-property">Update Product Property | Обновление свойства товара</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::update($propertyId, [</span>
+<span class="x">    &#39;VALUE&#39; =&gt; $newPropertyValue</span>
+<span class="x">]);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::SetProductProperties($productId, [</span>
+<span class="x">    $propertyId =&gt; $newPropertyValue</span>
+<span class="x">]);</span>
+</code></pre></div>
+<h4 id="delete-product-property">Delete Product Property | Удаление свойства товара</h4>
+<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = \Bitrix\Catalog\ProductPropertyTable::delete($propertyId);</span>
+
+<span class="x">// Legacy</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogProduct::DeleteProductProperties($productId, [$propertyId]);</span>
+</code></pre></div>
+<h3 id="product-sections">Product Sections | Разделы товаров</h3>
 <h4 id="get-section">Get Section | Получение раздела</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <span class="x">$section = \Bitrix\Iblock\SectionTable::getList([</span>
 <span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $sectionId],</span>
 <span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
 <span class="x">])-&gt;fetch();</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$section = CIBlockSection::GetByID($sectionId)-&gt;Fetch();</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$section = CCatalogSection::GetByID($sectionId);</span>
 </code></pre></div>
 <h4 id="get-section-list">Get Section List | Получение списка разделов</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <span class="x">$sections = \Bitrix\Iblock\SectionTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [</span>
-<span class="x">        &#39;=IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">        &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">    ],</span>
+<span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ID&#39; =&gt; $iblockId, &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;],</span>
 <span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
 <span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;]</span>
 <span class="x">])-&gt;fetchAll();</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$sections = CIBlockSection::GetList(</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$sections = CCatalogSection::GetList(</span>
 <span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
 <span class="x">    [&#39;IBLOCK_ID&#39; =&gt; $iblockId, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;]</span>
 <span class="x">);</span>
 </code></pre></div>
 <h4 id="add-section">Add Section | Добавление раздела</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <span class="x">$result = \Bitrix\Iblock\SectionTable::add([</span>
 <span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
 <span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
@@ -2127,9 +2178,9 @@
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockSection::Add([</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogSection::Add([</span>
 <span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
 <span class="x">    &#39;NAME&#39; =&gt; &#39;New Section&#39;,</span>
 <span class="x">    &#39;CODE&#39; =&gt; &#39;new-section&#39;,</span>
@@ -2144,228 +2195,31 @@
 </code></pre></div>
 <h4 id="update-section">Update Section | Обновление раздела</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <span class="x">$result = \Bitrix\Iblock\SectionTable::update($sectionId, [</span>
 <span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
 <span class="x">    &#39;SORT&#39; =&gt; 200</span>
 <span class="x">]);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockSection::Update($sectionId, [</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogSection::Update($sectionId, [</span>
 <span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Section&#39;,</span>
 <span class="x">    &#39;SORT&#39; =&gt; 200</span>
 <span class="x">]);</span>
 </code></pre></div>
 <h4 id="delete-section">Delete Section | Удаление раздела</h4>
 <div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
+<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;catalog&#39;)</span>
 <span class="x">$result = \Bitrix\Iblock\SectionTable::delete($sectionId);</span>
 
 <span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockSection::Delete($sectionId);</span>
-</code></pre></div>
-<h3 id="properties">Properties | Свойства</h3>
-<h4 id="get-property">Get Property | Получение свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$property = \Bitrix\Iblock\PropertyTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=ID&#39; =&gt; $propertyId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$property = CIBlockProperty::GetByID($propertyId)-&gt;Fetch();</span>
-</code></pre></div>
-<h4 id="get-property-list">Get Property List | Получение списка свойств</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$properties = \Bitrix\Iblock\PropertyTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [</span>
-<span class="x">        &#39;=IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">        &#39;=ACTIVE&#39; =&gt; &#39;Y&#39;</span>
-<span class="x">    ],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;],</span>
-<span class="x">    &#39;order&#39; =&gt; [&#39;SORT&#39; =&gt; &#39;ASC&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$properties = CIBlockProperty::GetList(</span>
-<span class="x">    [&#39;SORT&#39; =&gt; &#39;ASC&#39;],</span>
-<span class="x">    [&#39;IBLOCK_ID&#39; =&gt; $iblockId, &#39;ACTIVE&#39; =&gt; &#39;Y&#39;]</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="add-property">Add Property | Добавление свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\PropertyTable::add([</span>
-<span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Property&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;new_property&#39;,</span>
-<span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;MULTIPLE_CNT&#39; =&gt; 1,</span>
-<span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_PROPERTY_XML_ID&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockProperty::Add([</span>
-<span class="x">    &#39;IBLOCK_ID&#39; =&gt; $iblockId,</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;New Property&#39;,</span>
-<span class="x">    &#39;CODE&#39; =&gt; &#39;new_property&#39;,</span>
-<span class="x">    &#39;PROPERTY_TYPE&#39; =&gt; &#39;S&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 100,</span>
-<span class="x">    &#39;ACTIVE&#39; =&gt; &#39;Y&#39;,</span>
-<span class="x">    &#39;WITH_DESCRIPTION&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;MULTIPLE&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;MULTIPLE_CNT&#39; =&gt; 1,</span>
-<span class="x">    &#39;IS_REQUIRED&#39; =&gt; &#39;N&#39;,</span>
-<span class="x">    &#39;XML_ID&#39; =&gt; &#39;NEW_PROPERTY_XML_ID&#39;</span>
-<span class="x">]);</span>
-</code></pre></div>
-<h4 id="update-property">Update Property | Обновление свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\PropertyTable::update($propertyId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockProperty::Update($propertyId, [</span>
-<span class="x">    &#39;NAME&#39; =&gt; &#39;Updated Property&#39;,</span>
-<span class="x">    &#39;SORT&#39; =&gt; 200</span>
-<span class="x">]);</span>
-</code></pre></div>
-<h4 id="delete-property">Delete Property | Удаление свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\PropertyTable::delete($propertyId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockProperty::Delete($propertyId);</span>
-</code></pre></div>
-<h3 id="property-values">Property Values | Значения свойств</h3>
-<h4 id="get-property-value">Get Property Value | Получение значения свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$propertyValue = \Bitrix\Iblock\ElementPropertyTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [</span>
-<span class="x">        &#39;=IBLOCK_PROPERTY_ID&#39; =&gt; $propertyId,</span>
-<span class="x">        &#39;=IBLOCK_ELEMENT_ID&#39; =&gt; $elementId</span>
-<span class="x">    ],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;]</span>
-<span class="x">])-&gt;fetch();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$propertyValue = CIBlockElement::GetProperty(</span>
-<span class="x">    $iblockId,</span>
-<span class="x">    $elementId,</span>
-<span class="x">    [&#39;sort&#39; =&gt; &#39;asc&#39;],</span>
-<span class="x">    [&#39;ID&#39; =&gt; $propertyId]</span>
-<span class="x">)-&gt;Fetch();</span>
-</code></pre></div>
-<h4 id="get-property-values">Get Property Values | Получение значений свойств</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$propertyValues = \Bitrix\Iblock\ElementPropertyTable::getList([</span>
-<span class="x">    &#39;filter&#39; =&gt; [&#39;=IBLOCK_ELEMENT_ID&#39; =&gt; $elementId],</span>
-<span class="x">    &#39;select&#39; =&gt; [&#39;*&#39;, &#39;PROPERTY.NAME&#39;]</span>
-<span class="x">])-&gt;fetchAll();</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$propertyValues = CIBlockElement::GetProperty(</span>
-<span class="x">    $iblockId,</span>
-<span class="x">    $elementId,</span>
-<span class="x">    [&#39;sort&#39; =&gt; &#39;asc&#39;],</span>
-<span class="x">    [&#39;*&#39;]</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="set-property-value">Set Property Value | Установка значения свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\ElementPropertyTable::add([</span>
-<span class="x">    &#39;IBLOCK_PROPERTY_ID&#39; =&gt; $propertyId,</span>
-<span class="x">    &#39;IBLOCK_ELEMENT_ID&#39; =&gt; $elementId,</span>
-<span class="x">    &#39;VALUE&#39; =&gt; &#39;Property value&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Property description&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockElement::SetPropertyValues(</span>
-<span class="x">    $elementId,</span>
-<span class="x">    $iblockId,</span>
-<span class="x">    &#39;Property value&#39;,</span>
-<span class="x">    $propertyId</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="update-property-value">Update Property Value | Обновление значения свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\ElementPropertyTable::update($propertyValueId, [</span>
-<span class="x">    &#39;VALUE&#39; =&gt; &#39;Updated property value&#39;,</span>
-<span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;Updated property description&#39;</span>
-<span class="x">]);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockElement::SetPropertyValues(</span>
-<span class="x">    $elementId,</span>
-<span class="x">    $iblockId,</span>
-<span class="x">    &#39;Updated property value&#39;,</span>
-<span class="x">    $propertyId</span>
-<span class="x">);</span>
-</code></pre></div>
-<h4 id="delete-property-value">Delete Property Value | Удаление значения свойства</h4>
-<div class="highlight"><pre><span></span><code><span class="x">// D7</span>
-<span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = \Bitrix\Iblock\ElementPropertyTable::delete($propertyValueId);</span>
-
-<span class="x">// Legacy</span>
-<span class="x">// Requires: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">// Требуется: CModule::IncludeModule(&#39;iblock&#39;)</span>
-<span class="x">$result = CIBlockElement::SetPropertyValues(</span>
-<span class="x">    $elementId,</span>
-<span class="x">    $iblockId,</span>
-<span class="x">    null,</span>
-<span class="x">    $propertyId</span>
-<span class="x">);</span>
+<span class="x">// Requires: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">// Требуется: CModule::IncludeModule(&#39;catalog&#39;)</span>
+<span class="x">$result = CCatalogSection::Delete($sectionId);</span>
 </code></pre></div>
 
 
