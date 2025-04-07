@@ -8,9 +8,7 @@ The Catalog module provides functionality for managing product catalogs, prices,
 
 ### Product Management | Управление товарами
 
-#### Create Product | Создание товара
-
-```php
+#### Create Product | Создание товара```php
 // D7
 // Requires: Bitrix\Main\Loader::includeModule('catalog')
 // Требуется: Bitrix\Main\Loader::includeModule('catalog')
@@ -49,8 +47,7 @@ $productId = CCatalogProduct::Add([
     'PROPERTY_VALUES' => [
         'PROPERTY_CODE' => 'Property Value'
     ]
-]);
-```
+]);```
 
 #### Get Product | Получение товара
 
@@ -889,3 +886,5 @@ AddEventHandler('catalog', 'OnAfterProductPropertyUpdate', ['CCustomProductPrope
 AddEventHandler('catalog', 'OnBeforeProductPropertyDelete', ['CCustomProductPropertyHandler', 'OnBeforeProductPropertyDelete']);
 AddEventHandler('catalog', 'OnAfterProductPropertyDelete', ['CCustomProductPropertyHandler', 'OnAfterProductPropertyDelete']);
 ```
+
+
