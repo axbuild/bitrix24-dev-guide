@@ -12,13 +12,13 @@
         <meta name="author" content="Axbuild">
       
       
-        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/main/">
+        <link rel="canonical" href="https://axbuild.github.io/bitrix24-dev-guide/modules/disk/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../form/">
       
       
-        <link rel="next" href="../crm/">
+        <link rel="next" href="../pull/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Main - Bitrix24 Developer Guide</title>
+        <title>Disk - Bitrix24 Developer Guide</title>
       
     
     
@@ -75,11 +75,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Main - Bitrix24 Developer Guide" >
+        <meta  property="og:title"  content="Disk - Bitrix24 Developer Guide" >
       
         <meta  property="og:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
       
-        <meta  property="og:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/main/index.png" >
+        <meta  property="og:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/disk/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -87,15 +87,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://axbuild.github.io/bitrix24-dev-guide/modules/main/" >
+        <meta  property="og:url"  content="https://axbuild.github.io/bitrix24-dev-guide/modules/disk/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Main - Bitrix24 Developer Guide" >
+        <meta  name="twitter:title"  content="Disk - Bitrix24 Developer Guide" >
       
         <meta  name="twitter:description"  content="Comprehensive Bitrix24 API Documentation and Developer Guide. Complete reference for Bitrix24 modules, REST API, and development best practices." >
       
-        <meta  name="twitter:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/main/index.png" >
+        <meta  name="twitter:image"  content="https://axbuild.github.io/bitrix24-dev-guide/assets/images/social/modules/disk/index.png" >
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#main-module" class="md-skip">
+        <a href="#disk-module-disk" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Main
+              Disk
             
           </span>
         </div>
@@ -291,7 +291,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../main/" class="md-tabs__link">
           
   
   
@@ -463,7 +463,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../main/" class="md-nav__link ">
               
   
   
@@ -476,7 +476,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -587,10 +587,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../disk/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Disk
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -601,6 +623,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview | Обзор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods | Методы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods | Методы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Management | Управление хранилищем
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Operations | Операции с файлами
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder Operations | Операции с папками
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharing | Общий доступ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control | Контроль версий
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Links | Внешние ссылки
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -989,243 +1109,230 @@
   
 
 
-<h1 id="main-module">Main Module | Модуль Главный<a class="headerlink" href="#main-module" title="Permanent link">&para;</a></h1>
-<p><a href="#english">English</a> | <a href="#russian">Русский</a></p>
-<h2 id="english">English<a class="headerlink" href="#english" title="Permanent link">&para;</a></h2>
-<h3 id="overview">Overview | Обзор<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
-<p>The Main module provides core functionality for Bitrix24, including system settings, user authentication, file management, and database operations. | Модуль Главный предоставляет основную функциональность для Bitrix24, включая системные настройки, аутентификацию пользователей, управление файлами и операции с базой данных.</p>
-<h3 id="available-entities">Available Entities<a class="headerlink" href="#available-entities" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="users.md">Users</a></li>
-<li><a href="groups.md">Groups</a></li>
-<li><a href="departments.md">Departments</a></li>
-<li><a href="files.md">Files</a></li>
-<li><a href="settings.md">Settings</a></li>
-</ul>
-<h2 id="_1">Русский<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">Обзор<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>Основной модуль является ядром Bitrix24 и предоставляет базовую функциональность для всей системы.</p>
-<h3 id="_3">Доступные сущности<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="users.md">Пользователи</a></li>
-<li><a href="groups.md">Группы</a></li>
-<li><a href="departments.md">Подразделения</a></li>
-<li><a href="files.md">Файлы</a></li>
-<li><a href="settings.md">Настройки</a></li>
-</ul>
+<h1 id="disk-module-disk">Disk Module | Модуль Disk<a class="headerlink" href="#disk-module-disk" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview | Обзор<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Disk module provides functionality for managing files and documents in Bitrix24. It enables users to store, share, and collaborate on files within the platform. | Модуль Disk предоставляет функциональность для управления файлами и документами в Bitrix24. Он позволяет пользователям хранить, делиться и совместно работать с файлами в рамках платформы.</p>
 <h2 id="methods">Methods | Методы<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
-<h3 id="system-settings">System Settings | Системные настройки<a class="headerlink" href="#system-settings" title="Permanent link">&para;</a></h3>
-<h4 id="get-option">Get Option | Получение опции<a class="headerlink" href="#get-option" title="Permanent link">&para;</a></h4>
+<h3 id="storage-management">Storage Management | Управление хранилищем<a class="headerlink" href="#storage-management" title="Permanent link">&para;</a></h3>
+<h4 id="get-storage">Get Storage | Получение хранилища<a class="headerlink" href="#get-storage" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">// D7</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">$optionValue = \Bitrix\Main\Config\Option::get(&#39;main&#39;, &#39;option_name&#39;, &#39;default_value&#39;);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="x">$storage = \Bitrix\Disk\Storage::getById($storageId);</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">$optionValue = COption::GetOptionString(&#39;main&#39;, &#39;option_name&#39;, &#39;default_value&#39;);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="x">$storage = CDiskStorage::GetById($storageId);</span>
 </code></pre></div>
-<h4 id="set-option">Set Option | Установка опции<a class="headerlink" href="#set-option" title="Permanent link">&para;</a></h4>
+<h4 id="create-storage">Create Storage | Создание хранилища<a class="headerlink" href="#create-storage" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">// D7</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">\Bitrix\Main\Config\Option::set(&#39;main&#39;, &#39;option_name&#39;, &#39;option_value&#39;);</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">COption::SetOptionString(&#39;main&#39;, &#39;option_name&#39;, &#39;option_value&#39;);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">$storage = \Bitrix\Disk\Storage::add([</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;My Storage&#39;,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="x">    &#39;ENTITY_TYPE&#39; =&gt; &#39;user&#39;,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="x">    &#39;ENTITY_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="x">    &#39;MODULE_ID&#39; =&gt; &#39;disk&#39;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="x">]);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="x">// Legacy</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="x">$storage = CDiskStorage::Add([</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;My Storage&#39;,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="x">    &#39;ENTITY_TYPE&#39; =&gt; &#39;user&#39;,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="x">    &#39;ENTITY_ID&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="x">    &#39;MODULE_ID&#39; =&gt; &#39;disk&#39;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="delete-option">Delete Option | Удаление опции<a class="headerlink" href="#delete-option" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">// D7</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">\Bitrix\Main\Config\Option::delete(&#39;main&#39;, [&#39;option_name&#39;]);</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">COption::RemoveOption(&#39;main&#39;, &#39;option_name&#39;);</span>
-</code></pre></div>
-<h3 id="user-authentication">User Authentication | Аутентификация пользователей<a class="headerlink" href="#user-authentication" title="Permanent link">&para;</a></h3>
-<h4 id="login">Login | Вход в систему<a class="headerlink" href="#login" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// D7</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$result = \Bitrix\Main\UserTable::getList([</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">    &#39;filter&#39; =&gt; [</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">        &#39;=LOGIN&#39; =&gt; &#39;user_login&#39;,</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">        &#39;=PASSWORD&#39; =&gt; md5(&#39;user_password&#39;)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">    ]</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">])-&gt;fetch();</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">if ($result) {</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="x">    $user = new \CUser();</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="x">    $user-&gt;Authorize($result[&#39;ID&#39;]);</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="x">}</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="x">// Legacy</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="x">$user = new CUser();</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="x">$result = $user-&gt;Login(&#39;user_login&#39;, &#39;user_password&#39;);</span>
-</code></pre></div>
-<h4 id="logout">Logout | Выход из системы<a class="headerlink" href="#logout" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">// D7</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$user = new \CUser();</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">$user-&gt;Logout();</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">// Legacy</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">$user = new CUser();</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">$user-&gt;Logout();</span>
-</code></pre></div>
-<h4 id="check-authorization">Check Authorization | Проверка авторизации<a class="headerlink" href="#check-authorization" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">// D7</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$user = new \CUser();</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">$isAuthorized = $user-&gt;IsAuthorized();</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">// Legacy</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="x">$user = new CUser();</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">$isAuthorized = $user-&gt;IsAuthorized();</span>
-</code></pre></div>
-<h3 id="file-management">File Management | Управление файлами<a class="headerlink" href="#file-management" title="Permanent link">&para;</a></h3>
+<h3 id="file-operations">File Operations | Операции с файлами<a class="headerlink" href="#file-operations" title="Permanent link">&para;</a></h3>
 <h4 id="upload-file">Upload File | Загрузка файла<a class="headerlink" href="#upload-file" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// D7</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$fileArray = \CFile::MakeFileArray($_SERVER[&#39;DOCUMENT_ROOT&#39;] . &#39;/upload/temp/file.jpg&#39;);</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">$fileId = \CFile::SaveFile($fileArray, &#39;main&#39;);</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">// Legacy</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="x">$fileArray = CFile::MakeFileArray($_SERVER[&#39;DOCUMENT_ROOT&#39;] . &#39;/upload/temp/file.jpg&#39;);</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">$fileId = CFile::SaveFile($fileArray, &#39;main&#39;);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">// D7</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">$file = \Bitrix\Disk\File::add([</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;document.pdf&#39;,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;CONTENT&#39; =&gt; file_get_contents(&#39;path/to/file.pdf&#39;),</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">    &#39;SIZE&#39; =&gt; filesize(&#39;path/to/file.pdf&#39;),</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">    &#39;STORAGE_ID&#39; =&gt; $storageId,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">]);</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="x">// Legacy</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="x">$file = CDiskFile::Add([</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;document.pdf&#39;,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="x">    &#39;CONTENT&#39; =&gt; file_get_contents(&#39;path/to/file.pdf&#39;),</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="x">    &#39;SIZE&#39; =&gt; filesize(&#39;path/to/file.pdf&#39;),</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="x">    &#39;STORAGE_ID&#39; =&gt; $storageId,</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="get-file">Get File | Получение файла<a class="headerlink" href="#get-file" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// D7</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$fileArray = \CFile::GetFileArray($fileId);</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">$fileArray = CFile::GetFileArray($fileId);</span>
+<h4 id="download-file">Download File | Скачивание файла<a class="headerlink" href="#download-file" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">// D7</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">$content = $file-&gt;getContent();</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">// Legacy</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">$content = $file-&gt;GetContent();</span>
 </code></pre></div>
 <h4 id="delete-file">Delete File | Удаление файла<a class="headerlink" href="#delete-file" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">// D7</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">$result = $file-&gt;delete($USER-&gt;GetID());</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">// Legacy</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">$result = $file-&gt;Delete($USER-&gt;GetID());</span>
+</code></pre></div>
+<h3 id="folder-operations">Folder Operations | Операции с папками<a class="headerlink" href="#folder-operations" title="Permanent link">&para;</a></h3>
+<h4 id="create-folder">Create Folder | Создание папки<a class="headerlink" href="#create-folder" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">// D7</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">$folder = \Bitrix\Disk\Folder::add([</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;My Folder&#39;,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">    &#39;STORAGE_ID&#39; =&gt; $storageId,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="x">]);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="x">// Legacy</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="x">$folder = CDiskFolder::Add([</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="x">    &#39;NAME&#39; =&gt; &#39;My Folder&#39;,</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="x">    &#39;STORAGE_ID&#39; =&gt; $storageId,</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-folder-contents">Get Folder Contents | Получение содержимого папки<a class="headerlink" href="#get-folder-contents" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">// D7</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">$folder = \Bitrix\Disk\Folder::getById($folderId);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">$items = $folder-&gt;getChildren();</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">// Legacy</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="x">$folder = CDiskFolder::GetById($folderId);</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="x">$items = $folder-&gt;GetChildren();</span>
+</code></pre></div>
+<h3 id="sharing">Sharing | Общий доступ<a class="headerlink" href="#sharing" title="Permanent link">&para;</a></h3>
+<h4 id="share-file">Share File | Предоставление доступа к файлу<a class="headerlink" href="#share-file" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">// D7</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">$sharing = $file-&gt;addSharing([</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">    &#39;ENTITY_TYPE&#39; =&gt; &#39;user&#39;,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">    &#39;ENTITY_ID&#39; =&gt; $userId,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="x">    &#39;ACCESS_CODE&#39; =&gt; &#39;full&#39;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">]);</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="x">// Legacy</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="x">$sharing = $file-&gt;AddSharing([</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="x">    &#39;ENTITY_TYPE&#39; =&gt; &#39;user&#39;,</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="x">    &#39;ENTITY_ID&#39; =&gt; $userId,</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="x">    &#39;ACCESS_CODE&#39; =&gt; &#39;full&#39;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="x">]);</span>
+</code></pre></div>
+<h4 id="get-shared-items">Get Shared Items | Получение общих элементов<a class="headerlink" href="#get-shared-items" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">// D7</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">\CFile::Delete($fileId);</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">$sharedItems = \Bitrix\Disk\Sharing::getSharedWithMe($USER-&gt;GetID());</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="x">// Legacy</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">CFile::Delete($fileId);</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">$sharedItems = CDiskSharing::GetSharedWithMe($USER-&gt;GetID());</span>
 </code></pre></div>
-<h3 id="database-operations">Database Operations | Операции с базой данных<a class="headerlink" href="#database-operations" title="Permanent link">&para;</a></h3>
-<h4 id="execute-query">Execute Query | Выполнение запроса<a class="headerlink" href="#execute-query" title="Permanent link">&para;</a></h4>
+<h3 id="version-control">Version Control | Контроль версий<a class="headerlink" href="#version-control" title="Permanent link">&para;</a></h3>
+<h4 id="create-version">Create Version | Создание версии<a class="headerlink" href="#create-version" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">// D7</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$connection = \Bitrix\Main\Application::getConnection();</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="x">$result = $connection-&gt;query(&#39;SELECT * FROM b_user WHERE ID = 1&#39;);</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">// Legacy</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="x">$result = $DB-&gt;Query(&#39;SELECT * FROM b_user WHERE ID = 1&#39;);</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="x">$version = $file-&gt;createVersion([</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="x">    &#39;CONTENT&#39; =&gt; file_get_contents(&#39;path/to/new_version.pdf&#39;),</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="x">    &#39;SIZE&#39; =&gt; filesize(&#39;path/to/new_version.pdf&#39;),</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="x">]);</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="x">// Legacy</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="x">$version = $file-&gt;CreateVersion([</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="x">    &#39;CONTENT&#39; =&gt; file_get_contents(&#39;path/to/new_version.pdf&#39;),</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="x">    &#39;SIZE&#39; =&gt; filesize(&#39;path/to/new_version.pdf&#39;),</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID()</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="x">]);</span>
 </code></pre></div>
-<h4 id="execute-query-with-parameters">Execute Query with Parameters | Выполнение запроса с параметрами<a class="headerlink" href="#execute-query-with-parameters" title="Permanent link">&para;</a></h4>
+<h4 id="get-versions">Get Versions | Получение версий<a class="headerlink" href="#get-versions" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">// D7</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$connection = \Bitrix\Main\Application::getConnection();</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">$sql = &quot;SELECT * FROM b_user WHERE ID = :id AND ACTIVE = :active&quot;;</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">$result = $connection-&gt;query($sql, [&#39;id&#39; =&gt; 1, &#39;active&#39; =&gt; &#39;Y&#39;]);</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">// Legacy</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">$sql = &quot;SELECT * FROM b_user WHERE ID = &quot; . intval($id) . &quot; AND ACTIVE = &#39;Y&#39;&quot;;</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="x">$result = $DB-&gt;Query($sql);</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">$versions = $file-&gt;getVersions();</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">// Legacy</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">$versions = $file-&gt;GetVersions();</span>
 </code></pre></div>
-<h4 id="execute-transaction">Execute Transaction | Выполнение транзакции<a class="headerlink" href="#execute-transaction" title="Permanent link">&para;</a></h4>
+<h3 id="external-links">External Links | Внешние ссылки<a class="headerlink" href="#external-links" title="Permanent link">&para;</a></h3>
+<h4 id="create-external-link">Create External Link | Создание внешней ссылки<a class="headerlink" href="#create-external-link" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">// D7</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$connection = \Bitrix\Main\Application::getConnection();</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">$connection-&gt;startTransaction();</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">try {</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">    $connection-&gt;query(&#39;INSERT INTO b_user (LOGIN, PASSWORD) VALUES (&quot;user1&quot;, &quot;pass1&quot;)&#39;);</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">    $connection-&gt;query(&#39;INSERT INTO b_user (LOGIN, PASSWORD) VALUES (&quot;user2&quot;, &quot;pass2&quot;)&#39;);</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">    $connection-&gt;commitTransaction();</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">} catch (\Exception $e) {</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="x">    $connection-&gt;rollbackTransaction();</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">}</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="x">// Legacy</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="x">$DB-&gt;StartTransaction();</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="x">$DB-&gt;Query(&#39;INSERT INTO b_user (LOGIN, PASSWORD) VALUES (&quot;user1&quot;, &quot;pass1&quot;)&#39;);</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="x">$DB-&gt;Query(&#39;INSERT INTO b_user (LOGIN, PASSWORD) VALUES (&quot;user2&quot;, &quot;pass2&quot;)&#39;);</span>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="x">$DB-&gt;Commit();</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">$link = $file-&gt;addExternalLink([</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">    &#39;TYPE&#39; =&gt; &#39;file&#39;,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">    &#39;OBJECT_ID&#39; =&gt; $fileId,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;External link description&#39;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">]);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">// Legacy</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="x">$link = $file-&gt;AddExternalLink([</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="x">    &#39;CREATED_BY&#39; =&gt; $USER-&gt;GetID(),</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="x">    &#39;TYPE&#39; =&gt; &#39;file&#39;,</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="x">    &#39;OBJECT_ID&#39; =&gt; $fileId,</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="x">    &#39;DESCRIPTION&#39; =&gt; &#39;External link description&#39;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="x">]);</span>
 </code></pre></div>
-<h3 id="event-management">Event Management | Управление событиями<a class="headerlink" href="#event-management" title="Permanent link">&para;</a></h3>
-<h4 id="register-event-handler">Register Event Handler | Регистрация обработчика события<a class="headerlink" href="#register-event-handler" title="Permanent link">&para;</a></h4>
+<h4 id="get-external-links">Get External Links | Получение внешних ссылок<a class="headerlink" href="#get-external-links" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">// D7</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">\Bitrix\Main\EventManager::getInstance()-&gt;addEventHandler(</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">    &#39;main&#39;,</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="x">    &#39;OnBeforeUserAdd&#39;,</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">    &#39;MyEventHandler&#39;,</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="x">    &#39;/local/php_interface/include/events.php&#39;</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">);</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">// Legacy</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="x">AddEventHandler(&#39;main&#39;, &#39;OnBeforeUserAdd&#39;, &#39;MyEventHandler&#39;);</span>
-</code></pre></div>
-<h4 id="unregister-event-handler">Unregister Event Handler | Отмена регистрации обработчика события<a class="headerlink" href="#unregister-event-handler" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">// D7</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">\Bitrix\Main\EventManager::getInstance()-&gt;removeEventHandler(</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="x">    &#39;main&#39;,</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">    &#39;OnBeforeUserAdd&#39;,</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">    &#39;MyEventHandler&#39;</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="x">);</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="x">// Legacy</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="x">RemoveEventHandler(&#39;main&#39;, &#39;OnBeforeUserAdd&#39;, &#39;MyEventHandler&#39;);</span>
-</code></pre></div>
-<h4 id="send-event">Send Event | Отправка события<a class="headerlink" href="#send-event" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="x">// D7</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;main&#39;)</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="x">$event = new \Bitrix\Main\Event(&#39;main&#39;, &#39;OnBeforeUserAdd&#39;, [&#39;fields&#39; =&gt; $userFields]);</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">$event-&gt;send();</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">// Legacy</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;main&#39;)</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="x">$event = new CEvent();</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="x">$event-&gt;Send(&#39;main&#39;, &#39;OnBeforeUserAdd&#39;, [&#39;fields&#39; =&gt; $userFields]);</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">// Requires: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">// Требуется: Bitrix\Main\Loader::includeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">$file = \Bitrix\Disk\File::getById($fileId);</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">$links = $file-&gt;getExternalLinks();</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="x">// Legacy</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="x">// Requires: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="x">// Требуется: CModule::IncludeModule(&#39;disk&#39;)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="x">$file = CDiskFile::GetById($fileId);</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="x">$links = $file-&gt;GetExternalLinks();</span>
 </code></pre></div>
 
 

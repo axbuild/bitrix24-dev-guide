@@ -5,11 +5,19 @@
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/about/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/api/elements/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/api/users/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/calendar/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
@@ -29,6 +37,10 @@
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/disk/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/file/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
@@ -38,6 +50,10 @@
     </url>
     <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/iblock/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/im/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
@@ -53,6 +69,10 @@
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/mobile/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/pull/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
@@ -61,11 +81,19 @@
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/socialnetwork/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/tasks/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
          <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/user/</loc>
+         <lastmod>2025-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://axbuild.github.io/bitrix24-dev-guide/modules/voximplant/</loc>
          <lastmod>2025-04-07</lastmod>
     </url>
     <url>
